@@ -332,10 +332,10 @@ module JVM
 						</classes>
 				  </t>	
 	
-	rule <k> C:ClassDecl C1:ClassFlagsAccess C2:CPool { F:Fields M:Methods } => C ~> C1 ~> C2 ~> F ~> M ... </k> 
+	rule <k> (C:ClassDecl C1:ClassFlagsAccess C2:CPool { F:Fields M:Methods }) => C ~> C1 ~> C2 ~> F ~> M ... </k> 
 		 <crnt> . </crnt>
 		 
-	rule <k> C:ClassDecl C1:ClassFlagsAccess C2:CPool { M:Methods } => C ~> C1 ~> C2 ~> M ... </k> 
+	rule <k> (C:ClassDecl C1:ClassFlagsAccess C2:CPool { M:Methods }) => C ~> C1 ~> C2 ~> M ... </k> 
 		 <crnt> . </crnt>
 		 
 	syntax K ::= "execute" | "initialize" | "addframe" | "removeframe"
@@ -707,7 +707,7 @@ module JVM
 	
 	rule F1:FieldDeclaration F2:FieldFlagsAccess => F1 ~> F2	[structural]
 	
-	rule F1:FieldDeclaration F2:FieldFlagsAccess F3:FConstVal => F1 ~> F2 ~> F3		[structural]
+	rule (F1:FieldDeclaration F2:FieldFlagsAccess F3:FConstVal) => F1 ~> F2 ~> F3		[structural]
 	
 	rule <k> F:FieldDeclaration => . ... </k>
 		<fields> ... (. => <field>
@@ -737,14 +737,14 @@ module JVM
 	
 	rule M1:Methods M2:Methods => M1 ~> M2		[structural]
 	
-	rule M1:MethodDeclaration M2:MethodInfo Code : M4:MethodProperties I:Instructions LineNumberTable : L:LinesNumberTable => M1 ~> M2 ~> M4 ~> I ~> L		[structural]
+	rule (M1:MethodDeclaration M2:MethodInfo Code : M4:MethodProperties I:Instructions LineNumberTable : L:LinesNumberTable) => M1 ~> M2 ~> M4 ~> I ~> L		[structural]
 
-	rule M1:MethodDeclaration M2:MethodInfo Code : M4:MethodProperties I:Instructions LineNumberTable : L:LinesNumberTable LocalVariableTable : L2:LocalVariableTable => M1 ~> M2 ~> M4 ~> I ~> L ~> L2		[structural]
+	rule (M1:MethodDeclaration M2:MethodInfo Code : M4:MethodProperties I:Instructions LineNumberTable : L:LinesNumberTable LocalVariableTable : L2:LocalVariableTable) => M1 ~> M2 ~> M4 ~> I ~> L ~> L2		[structural]
 	
-	rule M1:MethodDeclaration M2:MethodInfo Code : M4:MethodProperties I:Instructions LineNumberTable : L:LinesNumberTable LocalVariableTable : L2:LocalVariableTable StackMapTable : S:StackMapTable => M1 ~> M2 ~> M4 ~> I ~> L ~> L2 ~> S	[structural]
+	rule (M1:MethodDeclaration M2:MethodInfo Code : M4:MethodProperties I:Instructions LineNumberTable : L:LinesNumberTable LocalVariableTable : L2:LocalVariableTable StackMapTable : S:StackMapTable) => M1 ~> M2 ~> M4 ~> I ~> L ~> L2 ~> S	[structural]
 		
 		
-	rule <k> M1:Modifier T:Type I:Id M2:MethodArg ; => . ... </k>
+	rule <k> (M1:Modifier T:Type I:Id M2:MethodArg ;) => . ... </k>
 		<methods> ... (. => <method>
 								<methodDecl> M1 T I M2 ; </methodDecl>
 								//<methodSig> . </methodSig>
@@ -856,7 +856,7 @@ module JVM
 	
 	rule L1:LocalVariables L2:LocalVariables => L1 ~> L2		[structural]
 	
-	rule <k> I1:Int I2:Int I3:Int I4:Id I5:CValue => . ... </k>
+	rule <k> (I1:Int I2:Int I3:Int I4:Id I5:CValue) => . ... </k>
 		 <crnt> M2:MethodDeclaration </crnt>
 		 <methodDecl> M2 </methodDecl>
 		 <localVarTbl> ... . => I3 |-> (I1 , I2 , I4 , I5) </localVarTbl>
@@ -913,19 +913,19 @@ module JVM
 		 <cpoolVals> ... I3:CIndex |-> I4:CValue : I => I3 |-> I4 : I2 ... </cpoolVals>							//NameAndType
 		 
 	//Change Methodref/Fieldref first from Class
-	rule <cpoolStmts> ... I:CIndex |-> U:CType . I2:CValue => I |-> U . I2 ... </cpoolStmts>					//Class
-		 <cpoolVals> ... I3:CIndex |-> I . I4:CValue => I3 |-> I2 . I4 ... </cpoolVals>							//Methodref/Fieldref
+	rule <cpoolStmts> ... I:CIndex |-> (U:CType . I2:CValue) => I |-> (U . I2) ... </cpoolStmts>					//Class
+		 <cpoolVals> ... I3:CIndex |-> (I . I4:CValue) => I3 |-> (I2 . I4) ... </cpoolVals>							//Methodref/Fieldref
 		 
 	//Change Methodref/Fieldref second->first from Utf8
 	rule <cpoolStmts> ... I:CIndex |-> U:CType . I2:CValue => I |-> U . I2 ... </cpoolStmts>					//Utf8
-		 <cpoolVals> ... I3:CIndex |-> I4:CValue . (I : I5:CIndex) => I3 |-> I4 . (I2 : I5) ... </cpoolVals>	//Methodref/Fieldref
+		 <cpoolVals> ... I3:CIndex |-> (I4:CValue . (I : I5:CIndex)) => I3 |-> (I4 . (I2 : I5)) ... </cpoolVals>	//Methodref/Fieldref
 	
 	//Change Methodref/Fieldref second from NameAndType reference to Utf8 references
 	rule <cpoolStmts> ... I:CIndex |-> U:CType . I2:CValue => I |-> U . I2 ... </cpoolStmts>					//NameAndType
-		 <cpoolVals> ... I3:CIndex |-> I4:CValue . I => I3 |-> I4 . I2 ... </cpoolVals>							//Methodref/Fieldref
+		 <cpoolVals> ... I3:CIndex |-> (I4:CValue . I) => I3 |-> (I4 . I2) ... </cpoolVals>							//Methodref/Fieldref
 		 
 	//Change Methodref/Fieldref second->second from Utf8
 	rule <cpoolStmts> ... I:CIndex |-> U:CType . I2:CValue => I |-> U . I2 ... </cpoolStmts>					//Utf8
-		 <cpoolVals> ... I3:CIndex |-> I4:CValue . (I5:CValue : I) => I3 |-> I4 . (I5 : I2) ... </cpoolVals>	//Methodref/Fieldref 		 
+		 <cpoolVals> ... I3:CIndex |-> (I4:CValue . (I5:CValue : I)) => I3 |-> (I4 . (I5 : I2)) ... </cpoolVals>	//Methodref/Fieldref 		 
 
 endmodule
