@@ -1,0 +1,195 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/Constructor.class
+  Last modified May 14, 2014; size 493 bytes
+  MD5 checksum f14d2a443033d09641dcbe0b1dc36e3c
+  Compiled from "Constructor.java"
+public class Constructor
+  SourceFile: "Constructor.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #7.#24         //  java/lang/Object."<init>":()V
+   #2 = Class              #25            //  D
+   #3 = Methodref          #2.#24         //  D."<init>":()V
+   #4 = Methodref          #2.#26         //  D."<init>":(I)V
+   #5 = Methodref          #2.#27         //  D.m:()V
+   #6 = Class              #28            //  Constructor
+   #7 = Class              #29            //  java/lang/Object
+   #8 = Utf8               <init>
+   #9 = Utf8               ()V
+  #10 = Utf8               Code
+  #11 = Utf8               LineNumberTable
+  #12 = Utf8               LocalVariableTable
+  #13 = Utf8               this
+  #14 = Utf8               LConstructor;
+  #15 = Utf8               main
+  #16 = Utf8               ([Ljava/lang/String;)V
+  #17 = Utf8               args
+  #18 = Utf8               [Ljava/lang/String;
+  #19 = Utf8               myD
+  #20 = Utf8               LD;
+  #21 = Utf8               myD2
+  #22 = Utf8               SourceFile
+  #23 = Utf8               Constructor.java
+  #24 = NameAndType        #8:#9          //  "<init>":()V
+  #25 = Utf8               D
+  #26 = NameAndType        #8:#30         //  "<init>":(I)V
+  #27 = NameAndType        #31:#9         //  m:()V
+  #28 = Utf8               Constructor
+  #29 = Utf8               java/lang/Object
+  #30 = Utf8               (I)V
+  #31 = Utf8               m
+{
+  public Constructor();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LConstructor;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=3, args_size=1
+         0: new           #2                  // class D
+         3: dup           
+         4: invokespecial #3                  // Method D."<init>":()V
+         7: astore_1      
+         8: new           #2                  // class D
+        11: dup           
+        12: sipush        3000
+        15: invokespecial #4                  // Method D."<init>":(I)V
+        18: astore_2      
+        19: aload_2       
+        20: invokevirtual #5                  // Method D.m:()V
+        23: return        
+      LineNumberTable:
+        line 4: 0
+        line 5: 8
+        line 6: 19
+        line 7: 23
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      24     0  args   [Ljava/lang/String;
+               8      16     1   myD   LD;
+              19       5     2  myD2   LD;
+}
+Classfile /home/stefan/Projects/jvm-semantics/programs/D.class
+  Last modified May 14, 2014; size 493 bytes
+  MD5 checksum 9b9468ba615eb1cbcd6f1b4fbb043a1d
+  Compiled from "D.java"
+public class D
+  SourceFile: "D.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#21         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #4.#22         //  D.d1:I
+   #3 = Fieldref           #4.#23         //  D.d2:I
+   #4 = Class              #24            //  D
+   #5 = Class              #25            //  java/lang/Object
+   #6 = Utf8               d1
+   #7 = Utf8               I
+   #8 = Utf8               d2
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               LD;
+  #16 = Utf8               (I)V
+  #17 = Utf8               x
+  #18 = Utf8               m
+  #19 = Utf8               SourceFile
+  #20 = Utf8               D.java
+  #21 = NameAndType        #9:#10         //  "<init>":()V
+  #22 = NameAndType        #6:#7          //  d1:I
+  #23 = NameAndType        #8:#7          //  d2:I
+  #24 = Utf8               D
+  #25 = Utf8               java/lang/Object
+{
+  public int d1;
+    Signature: I
+    flags: ACC_PUBLIC
+
+  private int d2;
+    Signature: I
+    flags: ACC_PRIVATE
+
+  public D();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: sipush        1000
+         8: putfield      #2                  // Field d1:I
+        11: aload_0       
+        12: sipush        2000
+        15: putfield      #3                  // Field d2:I
+        18: return        
+      LineNumberTable:
+        line 6: 0
+        line 3: 4
+        line 4: 11
+        line 8: 18
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      19     0  this   LD;
+
+  public D(int);
+    Signature: (I)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: sipush        1000
+         8: putfield      #2                  // Field d1:I
+        11: aload_0       
+        12: sipush        2000
+        15: putfield      #3                  // Field d2:I
+        18: aload_0       
+        19: iload_1       
+        20: putfield      #2                  // Field d1:I
+        23: return        
+      LineNumberTable:
+        line 10: 0
+        line 3: 4
+        line 4: 11
+        line 11: 18
+        line 12: 23
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      24     0  this   LD;
+               0      24     1     x   I
+
+  public void m();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: sipush        -2000
+         4: putfield      #3                  // Field d2:I
+         7: return        
+      LineNumberTable:
+        line 15: 0
+        line 16: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       8     0  this   LD;
+}

@@ -1,0 +1,353 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/ObjectField2.class
+  Last modified May 15, 2014; size 547 bytes
+  MD5 checksum 51fd9a1e6ba3a427fd87ba463744c8a4
+  Compiled from "ObjectField2.java"
+public class ObjectField2
+  SourceFile: "ObjectField2.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #10.#28        //  java/lang/Object."<init>":()V
+   #2 = Class              #29            //  E
+   #3 = Methodref          #2.#28         //  E."<init>":()V
+   #4 = Class              #30            //  D
+   #5 = Methodref          #4.#28         //  D."<init>":()V
+   #6 = Fieldref           #2.#31         //  E.a:LA;
+   #7 = Fieldref           #32.#33        //  A.a1:I
+   #8 = Fieldref           #4.#34         //  D.d1:I
+   #9 = Class              #35            //  ObjectField2
+  #10 = Class              #36            //  java/lang/Object
+  #11 = Utf8               <init>
+  #12 = Utf8               ()V
+  #13 = Utf8               Code
+  #14 = Utf8               LineNumberTable
+  #15 = Utf8               LocalVariableTable
+  #16 = Utf8               this
+  #17 = Utf8               LObjectField2;
+  #18 = Utf8               main
+  #19 = Utf8               ([Ljava/lang/String;)V
+  #20 = Utf8               args
+  #21 = Utf8               [Ljava/lang/String;
+  #22 = Utf8               myE
+  #23 = Utf8               LE;
+  #24 = Utf8               myD
+  #25 = Utf8               LD;
+  #26 = Utf8               SourceFile
+  #27 = Utf8               ObjectField2.java
+  #28 = NameAndType        #11:#12        //  "<init>":()V
+  #29 = Utf8               E
+  #30 = Utf8               D
+  #31 = NameAndType        #37:#38        //  a:LA;
+  #32 = Class              #39            //  A
+  #33 = NameAndType        #40:#41        //  a1:I
+  #34 = NameAndType        #42:#41        //  d1:I
+  #35 = Utf8               ObjectField2
+  #36 = Utf8               java/lang/Object
+  #37 = Utf8               a
+  #38 = Utf8               LA;
+  #39 = Utf8               A
+  #40 = Utf8               a1
+  #41 = Utf8               I
+  #42 = Utf8               d1
+{
+  public ObjectField2();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LObjectField2;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: new           #2                  // class E
+         3: dup           
+         4: invokespecial #3                  // Method E."<init>":()V
+         7: astore_1      
+         8: new           #4                  // class D
+        11: dup           
+        12: invokespecial #5                  // Method D."<init>":()V
+        15: astore_2      
+        16: aload_2       
+        17: aload_1       
+        18: getfield      #6                  // Field E.a:LA;
+        21: getfield      #7                  // Field A.a1:I
+        24: putfield      #8                  // Field D.d1:I
+        27: return        
+      LineNumberTable:
+        line 4: 0
+        line 5: 8
+        line 6: 16
+        line 7: 27
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      28     0  args   [Ljava/lang/String;
+               8      20     1   myE   LE;
+              16      12     2   myD   LD;
+}
+Classfile /home/stefan/Projects/jvm-semantics/programs/E.class
+  Last modified May 15, 2014; size 359 bytes
+  MD5 checksum e85f5580663e0c7f750d801501de1f60
+  Compiled from "E.java"
+public class E
+  SourceFile: "E.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #8.#23         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #7.#24         //  E.e1:I
+   #3 = Fieldref           #7.#25         //  E.e2:I
+   #4 = Class              #26            //  A
+   #5 = Methodref          #4.#23         //  A."<init>":()V
+   #6 = Fieldref           #7.#27         //  E.a:LA;
+   #7 = Class              #28            //  E
+   #8 = Class              #29            //  java/lang/Object
+   #9 = Utf8               a
+  #10 = Utf8               LA;
+  #11 = Utf8               e1
+  #12 = Utf8               I
+  #13 = Utf8               e2
+  #14 = Utf8               <init>
+  #15 = Utf8               ()V
+  #16 = Utf8               Code
+  #17 = Utf8               LineNumberTable
+  #18 = Utf8               LocalVariableTable
+  #19 = Utf8               this
+  #20 = Utf8               LE;
+  #21 = Utf8               SourceFile
+  #22 = Utf8               E.java
+  #23 = NameAndType        #14:#15        //  "<init>":()V
+  #24 = NameAndType        #11:#12        //  e1:I
+  #25 = NameAndType        #13:#12        //  e2:I
+  #26 = Utf8               A
+  #27 = NameAndType        #9:#10         //  a:LA;
+  #28 = Utf8               E
+  #29 = Utf8               java/lang/Object
+{
+  public A a;
+    Signature: LA;
+    flags: ACC_PUBLIC
+
+  public int e1;
+    Signature: I
+    flags: ACC_PUBLIC
+
+  private int e2;
+    Signature: I
+    flags: ACC_PRIVATE
+
+  public E();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: sipush        1000
+         8: putfield      #2                  // Field e1:I
+        11: aload_0       
+        12: sipush        2000
+        15: putfield      #3                  // Field e2:I
+        18: aload_0       
+        19: new           #4                  // class A
+        22: dup           
+        23: invokespecial #5                  // Method A."<init>":()V
+        26: putfield      #6                  // Field a:LA;
+        29: return        
+      LineNumberTable:
+        line 7: 0
+        line 4: 4
+        line 5: 11
+        line 8: 18
+        line 9: 29
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      30     0  this   LE;
+}
+Classfile /home/stefan/Projects/jvm-semantics/programs/A.class
+  Last modified May 14, 2014; size 300 bytes
+  MD5 checksum 365317d31d7cebd5294d09eebbb07135
+  Compiled from "A.java"
+public class A
+  SourceFile: "A.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#18         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #4.#19         //  A.a1:I
+   #3 = Fieldref           #4.#20         //  A.a2:I
+   #4 = Class              #21            //  A
+   #5 = Class              #22            //  java/lang/Object
+   #6 = Utf8               a1
+   #7 = Utf8               I
+   #8 = Utf8               a2
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               LA;
+  #16 = Utf8               SourceFile
+  #17 = Utf8               A.java
+  #18 = NameAndType        #9:#10         //  "<init>":()V
+  #19 = NameAndType        #6:#7          //  a1:I
+  #20 = NameAndType        #8:#7          //  a2:I
+  #21 = Utf8               A
+  #22 = Utf8               java/lang/Object
+{
+  public int a1;
+    Signature: I
+    flags: ACC_PUBLIC
+
+  private int a2;
+    Signature: I
+    flags: ACC_PRIVATE
+
+  public A();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: iconst_1      
+         6: putfield      #2                  // Field a1:I
+         9: aload_0       
+        10: iconst_2      
+        11: putfield      #3                  // Field a2:I
+        14: return        
+      LineNumberTable:
+        line 6: 0
+        line 3: 4
+        line 4: 9
+        line 8: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      15     0  this   LA;
+}
+Classfile /home/stefan/Projects/jvm-semantics/programs/D.class
+  Last modified May 14, 2014; size 493 bytes
+  MD5 checksum 9b9468ba615eb1cbcd6f1b4fbb043a1d
+  Compiled from "D.java"
+public class D
+  SourceFile: "D.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#21         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #4.#22         //  D.d1:I
+   #3 = Fieldref           #4.#23         //  D.d2:I
+   #4 = Class              #24            //  D
+   #5 = Class              #25            //  java/lang/Object
+   #6 = Utf8               d1
+   #7 = Utf8               I
+   #8 = Utf8               d2
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               LD;
+  #16 = Utf8               (I)V
+  #17 = Utf8               x
+  #18 = Utf8               m
+  #19 = Utf8               SourceFile
+  #20 = Utf8               D.java
+  #21 = NameAndType        #9:#10         //  "<init>":()V
+  #22 = NameAndType        #6:#7          //  d1:I
+  #23 = NameAndType        #8:#7          //  d2:I
+  #24 = Utf8               D
+  #25 = Utf8               java/lang/Object
+{
+  public int d1;
+    Signature: I
+    flags: ACC_PUBLIC
+
+  private int d2;
+    Signature: I
+    flags: ACC_PRIVATE
+
+  public D();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: sipush        1000
+         8: putfield      #2                  // Field d1:I
+        11: aload_0       
+        12: sipush        2000
+        15: putfield      #3                  // Field d2:I
+        18: return        
+      LineNumberTable:
+        line 6: 0
+        line 3: 4
+        line 4: 11
+        line 8: 18
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      19     0  this   LD;
+
+  public D(int);
+    Signature: (I)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: sipush        1000
+         8: putfield      #2                  // Field d1:I
+        11: aload_0       
+        12: sipush        2000
+        15: putfield      #3                  // Field d2:I
+        18: aload_0       
+        19: iload_1       
+        20: putfield      #2                  // Field d1:I
+        23: return        
+      LineNumberTable:
+        line 10: 0
+        line 3: 4
+        line 4: 11
+        line 11: 18
+        line 12: 23
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      24     0  this   LD;
+               0      24     1     x   I
+
+  public void m();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: sipush        -2000
+         4: putfield      #3                  // Field d2:I
+         7: return        
+      LineNumberTable:
+        line 15: 0
+        line 16: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       8     0  this   LD;
+}

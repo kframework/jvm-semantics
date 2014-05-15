@@ -1,0 +1,163 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/IntArray2.class
+  Last modified May 15, 2014; size 503 bytes
+  MD5 checksum 5c7a6a7e64b1e13817ff29d8f2dd0cd1
+  Compiled from "IntArray2.java"
+public class IntArray2
+  SourceFile: "IntArray2.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #6.#24         //  java/lang/Object."<init>":()V
+   #2 = Class              #25            //  A
+   #3 = Methodref          #2.#24         //  A."<init>":()V
+   #4 = Fieldref           #2.#26         //  A.a1:I
+   #5 = Class              #27            //  IntArray2
+   #6 = Class              #28            //  java/lang/Object
+   #7 = Utf8               <init>
+   #8 = Utf8               ()V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               LocalVariableTable
+  #12 = Utf8               this
+  #13 = Utf8               LIntArray2;
+  #14 = Utf8               main
+  #15 = Utf8               ([Ljava/lang/String;)V
+  #16 = Utf8               args
+  #17 = Utf8               [Ljava/lang/String;
+  #18 = Utf8               myA
+  #19 = Utf8               LA;
+  #20 = Utf8               a
+  #21 = Utf8               [I
+  #22 = Utf8               SourceFile
+  #23 = Utf8               IntArray2.java
+  #24 = NameAndType        #7:#8          //  "<init>":()V
+  #25 = Utf8               A
+  #26 = NameAndType        #29:#30        //  a1:I
+  #27 = Utf8               IntArray2
+  #28 = Utf8               java/lang/Object
+  #29 = Utf8               a1
+  #30 = Utf8               I
+{
+  public IntArray2();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LIntArray2;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=3, args_size=1
+         0: new           #2                  // class A
+         3: dup           
+         4: invokespecial #3                  // Method A."<init>":()V
+         7: astore_1      
+         8: iconst_3      
+         9: newarray       int
+        11: astore_2      
+        12: aload_2       
+        13: iconst_0      
+        14: sipush        1000
+        17: iastore       
+        18: aload_2       
+        19: iconst_1      
+        20: sipush        2000
+        23: iastore       
+        24: aload_2       
+        25: iconst_2      
+        26: sipush        3000
+        29: iastore       
+        30: aload_1       
+        31: aload_2       
+        32: iconst_1      
+        33: iaload        
+        34: putfield      #4                  // Field A.a1:I
+        37: return        
+      LineNumberTable:
+        line 4: 0
+        line 6: 8
+        line 7: 12
+        line 8: 18
+        line 9: 24
+        line 11: 30
+        line 12: 37
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      38     0  args   [Ljava/lang/String;
+               8      30     1   myA   LA;
+              12      26     2     a   [I
+}
+Classfile /home/stefan/Projects/jvm-semantics/programs/A.class
+  Last modified May 14, 2014; size 300 bytes
+  MD5 checksum 365317d31d7cebd5294d09eebbb07135
+  Compiled from "A.java"
+public class A
+  SourceFile: "A.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#18         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #4.#19         //  A.a1:I
+   #3 = Fieldref           #4.#20         //  A.a2:I
+   #4 = Class              #21            //  A
+   #5 = Class              #22            //  java/lang/Object
+   #6 = Utf8               a1
+   #7 = Utf8               I
+   #8 = Utf8               a2
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               LA;
+  #16 = Utf8               SourceFile
+  #17 = Utf8               A.java
+  #18 = NameAndType        #9:#10         //  "<init>":()V
+  #19 = NameAndType        #6:#7          //  a1:I
+  #20 = NameAndType        #8:#7          //  a2:I
+  #21 = Utf8               A
+  #22 = Utf8               java/lang/Object
+{
+  public int a1;
+    Signature: I
+    flags: ACC_PUBLIC
+
+  private int a2;
+    Signature: I
+    flags: ACC_PRIVATE
+
+  public A();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: iconst_1      
+         6: putfield      #2                  // Field a1:I
+         9: aload_0       
+        10: iconst_2      
+        11: putfield      #3                  // Field a2:I
+        14: return        
+      LineNumberTable:
+        line 6: 0
+        line 3: 4
+        line 4: 9
+        line 8: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      15     0  this   LA;
+}

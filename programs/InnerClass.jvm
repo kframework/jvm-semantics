@@ -1,0 +1,173 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/InnerClass.class
+  Last modified May 14, 2014; size 535 bytes
+  MD5 checksum 8f4c7d1b6676c3115239097ea2a2cfbc
+  Compiled from "InnerClass.java"
+public class InnerClass
+  SourceFile: "InnerClass.java"
+  InnerClasses:
+       private static #8= #2 of #6; //A=class InnerClass$A of class InnerClass
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #7.#25         //  java/lang/Object."<init>":()V
+   #2 = Class              #26            //  InnerClass$A
+   #3 = Methodref          #2.#25         //  InnerClass$A."<init>":()V
+   #4 = Fieldref           #2.#27         //  InnerClass$A.a1:I
+   #5 = Methodref          #2.#28         //  InnerClass$A.setA2:()V
+   #6 = Class              #29            //  InnerClass
+   #7 = Class              #30            //  java/lang/Object
+   #8 = Utf8               A
+   #9 = Utf8               InnerClasses
+  #10 = Utf8               <init>
+  #11 = Utf8               ()V
+  #12 = Utf8               Code
+  #13 = Utf8               LineNumberTable
+  #14 = Utf8               LocalVariableTable
+  #15 = Utf8               this
+  #16 = Utf8               LInnerClass;
+  #17 = Utf8               main
+  #18 = Utf8               ([Ljava/lang/String;)V
+  #19 = Utf8               args
+  #20 = Utf8               [Ljava/lang/String;
+  #21 = Utf8               myA
+  #22 = Utf8               LInnerClass$A;
+  #23 = Utf8               SourceFile
+  #24 = Utf8               InnerClass.java
+  #25 = NameAndType        #10:#11        //  "<init>":()V
+  #26 = Utf8               InnerClass$A
+  #27 = NameAndType        #31:#32        //  a1:I
+  #28 = NameAndType        #33:#11        //  setA2:()V
+  #29 = Utf8               InnerClass
+  #30 = Utf8               java/lang/Object
+  #31 = Utf8               a1
+  #32 = Utf8               I
+  #33 = Utf8               setA2
+{
+  public InnerClass();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+        line 9: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LInnerClass;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: new           #2                  // class InnerClass$A
+         3: dup           
+         4: invokespecial #3                  // Method InnerClass$A."<init>":()V
+         7: astore_1      
+         8: aload_1       
+         9: bipush        111
+        11: putfield      #4                  // Field InnerClass$A.a1:I
+        14: aload_1       
+        15: invokevirtual #5                  // Method InnerClass$A.setA2:()V
+        18: return        
+      LineNumberTable:
+        line 4: 0
+        line 5: 8
+        line 6: 14
+        line 7: 18
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      19     0  args   [Ljava/lang/String;
+               8      11     1   myA   LInnerClass$A;
+}
+Classfile /home/stefan/Projects/jvm-semantics/programs/InnerClass$A.class
+  Last modified May 14, 2014; size 456 bytes
+  MD5 checksum 59b5173d9720de7315461c9412e16fbe
+  Compiled from "InnerClass.java"
+class InnerClass$A
+  SourceFile: "InnerClass.java"
+  InnerClasses:
+       private static #15= #4 of #24; //A=class InnerClass$A of class InnerClass
+  minor version: 0
+  major version: 51
+  flags: ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#21         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #4.#22         //  InnerClass$A.a1:I
+   #3 = Fieldref           #4.#23         //  InnerClass$A.a2:I
+   #4 = Class              #25            //  InnerClass$A
+   #5 = Class              #26            //  java/lang/Object
+   #6 = Utf8               a1
+   #7 = Utf8               I
+   #8 = Utf8               a2
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               A
+  #16 = Utf8               InnerClasses
+  #17 = Utf8               LInnerClass$A;
+  #18 = Utf8               setA2
+  #19 = Utf8               SourceFile
+  #20 = Utf8               InnerClass.java
+  #21 = NameAndType        #9:#10         //  "<init>":()V
+  #22 = NameAndType        #6:#7          //  a1:I
+  #23 = NameAndType        #8:#7          //  a2:I
+  #24 = Class              #27            //  InnerClass
+  #25 = Utf8               InnerClass$A
+  #26 = Utf8               java/lang/Object
+  #27 = Utf8               InnerClass
+{
+  public int a1;
+    Signature: I
+    flags: ACC_PUBLIC
+
+  private int a2;
+    Signature: I
+    flags: ACC_PRIVATE
+
+  public InnerClass$A();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: iconst_0      
+         6: putfield      #2                  // Field a1:I
+         9: aload_0       
+        10: iconst_1      
+        11: putfield      #3                  // Field a2:I
+        14: return        
+      LineNumberTable:
+        line 13: 0
+        line 10: 4
+        line 11: 9
+        line 15: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      15     0  this   LInnerClass$A;
+
+  public void setA2();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: iconst_2      
+         2: putfield      #3                  // Field a2:I
+         5: return        
+      LineNumberTable:
+        line 18: 0
+        line 19: 5
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       6     0  this   LInnerClass$A;
+}

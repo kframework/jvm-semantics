@@ -1,0 +1,177 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/LocalClass.class
+  Last modified May 14, 2014; size 533 bytes
+  MD5 checksum 11aaf447d4fa34e50485d5e1ce7f2a10
+  Compiled from "LocalClass.java"
+public class LocalClass
+  SourceFile: "LocalClass.java"
+  InnerClasses:
+       #8= #2; //A=class LocalClass$1A
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #7.#25         //  java/lang/Object."<init>":()V
+   #2 = Class              #26            //  LocalClass$1A
+   #3 = Methodref          #2.#25         //  LocalClass$1A."<init>":()V
+   #4 = Fieldref           #2.#27         //  LocalClass$1A.a1:I
+   #5 = Methodref          #2.#28         //  LocalClass$1A.setA2:()V
+   #6 = Class              #29            //  LocalClass
+   #7 = Class              #30            //  java/lang/Object
+   #8 = Utf8               A
+   #9 = Utf8               InnerClasses
+  #10 = Utf8               <init>
+  #11 = Utf8               ()V
+  #12 = Utf8               Code
+  #13 = Utf8               LineNumberTable
+  #14 = Utf8               LocalVariableTable
+  #15 = Utf8               this
+  #16 = Utf8               LLocalClass;
+  #17 = Utf8               main
+  #18 = Utf8               ([Ljava/lang/String;)V
+  #19 = Utf8               args
+  #20 = Utf8               [Ljava/lang/String;
+  #21 = Utf8               myA
+  #22 = Utf8               LLocalClass$1A;
+  #23 = Utf8               SourceFile
+  #24 = Utf8               LocalClass.java
+  #25 = NameAndType        #10:#11        //  "<init>":()V
+  #26 = Utf8               LocalClass$1A
+  #27 = NameAndType        #31:#32        //  a1:I
+  #28 = NameAndType        #33:#11        //  setA2:()V
+  #29 = Utf8               LocalClass
+  #30 = Utf8               java/lang/Object
+  #31 = Utf8               a1
+  #32 = Utf8               I
+  #33 = Utf8               setA2
+{
+  public LocalClass();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LLocalClass;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: new           #2                  // class LocalClass$1A
+         3: dup           
+         4: invokespecial #3                  // Method LocalClass$1A."<init>":()V
+         7: astore_1      
+         8: aload_1       
+         9: bipush        111
+        11: putfield      #4                  // Field LocalClass$1A.a1:I
+        14: aload_1       
+        15: invokevirtual #5                  // Method LocalClass$1A.setA2:()V
+        18: return        
+      LineNumberTable:
+        line 17: 0
+        line 18: 8
+        line 19: 14
+        line 20: 18
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      19     0  args   [Ljava/lang/String;
+               8      11     1   myA   LLocalClass$1A;
+}
+Classfile /home/stefan/Projects/jvm-semantics/programs/LocalClass$1A.class
+  Last modified May 14, 2014; size 523 bytes
+  MD5 checksum 75dfcc242f0d014385ab1b4c6f0bb10b
+  Compiled from "LocalClass.java"
+class LocalClass$1A
+  SourceFile: "LocalClass.java"
+  EnclosingMethod: #22.#23                // LocalClass.main
+  InnerClasses:
+       #15= #4; //A=class LocalClass$1A
+  minor version: 0
+  major version: 51
+  flags: ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#24         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #4.#25         //  LocalClass$1A.a1:I
+   #3 = Fieldref           #4.#26         //  LocalClass$1A.a2:I
+   #4 = Class              #27            //  LocalClass$1A
+   #5 = Class              #28            //  java/lang/Object
+   #6 = Utf8               a1
+   #7 = Utf8               I
+   #8 = Utf8               a2
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               A
+  #16 = Utf8               InnerClasses
+  #17 = Utf8               LLocalClass$1A;
+  #18 = Utf8               setA2
+  #19 = Utf8               SourceFile
+  #20 = Utf8               LocalClass.java
+  #21 = Utf8               EnclosingMethod
+  #22 = Class              #29            //  LocalClass
+  #23 = NameAndType        #30:#31        //  main:([Ljava/lang/String;)V
+  #24 = NameAndType        #9:#10         //  "<init>":()V
+  #25 = NameAndType        #6:#7          //  a1:I
+  #26 = NameAndType        #8:#7          //  a2:I
+  #27 = Utf8               LocalClass$1A
+  #28 = Utf8               java/lang/Object
+  #29 = Utf8               LocalClass
+  #30 = Utf8               main
+  #31 = Utf8               ([Ljava/lang/String;)V
+{
+  public int a1;
+    Signature: I
+    flags: ACC_PUBLIC
+
+  private int a2;
+    Signature: I
+    flags: ACC_PRIVATE
+
+  public LocalClass$1A();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: iconst_0      
+         6: putfield      #2                  // Field a1:I
+         9: aload_0       
+        10: iconst_1      
+        11: putfield      #3                  // Field a2:I
+        14: return        
+      LineNumberTable:
+        line 8: 0
+        line 5: 4
+        line 6: 9
+        line 10: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      15     0  this   LLocalClass$1A;
+
+  public void setA2();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: iconst_2      
+         2: putfield      #3                  // Field a2:I
+         5: return        
+      LineNumberTable:
+        line 13: 0
+        line 14: 5
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       6     0  this   LLocalClass$1A;
+}

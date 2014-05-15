@@ -1,0 +1,172 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/Ternary.class
+  Last modified May 14, 2014; size 580 bytes
+  MD5 checksum 89cb93908b5792a18df81d40c75afe56
+  Compiled from "Ternary.java"
+public class Ternary
+  SourceFile: "Ternary.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #6.#29         //  java/lang/Object."<init>":()V
+   #2 = Class              #30            //  A
+   #3 = Methodref          #2.#29         //  A."<init>":()V
+   #4 = Fieldref           #2.#31         //  A.a1:I
+   #5 = Class              #32            //  Ternary
+   #6 = Class              #33            //  java/lang/Object
+   #7 = Utf8               <init>
+   #8 = Utf8               ()V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               LocalVariableTable
+  #12 = Utf8               this
+  #13 = Utf8               LTernary;
+  #14 = Utf8               main
+  #15 = Utf8               ([Ljava/lang/String;)V
+  #16 = Utf8               args
+  #17 = Utf8               [Ljava/lang/String;
+  #18 = Utf8               myA
+  #19 = Utf8               LA;
+  #20 = Utf8               a
+  #21 = Utf8               I
+  #22 = Utf8               b
+  #23 = Utf8               x
+  #24 = Utf8               StackMapTable
+  #25 = Class              #17            //  "[Ljava/lang/String;"
+  #26 = Class              #30            //  A
+  #27 = Utf8               SourceFile
+  #28 = Utf8               Ternary.java
+  #29 = NameAndType        #7:#8          //  "<init>":()V
+  #30 = Utf8               A
+  #31 = NameAndType        #34:#21        //  a1:I
+  #32 = Utf8               Ternary
+  #33 = Utf8               java/lang/Object
+  #34 = Utf8               a1
+{
+  public Ternary();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LTernary;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=5, args_size=1
+         0: new           #2                  // class A
+         3: dup           
+         4: invokespecial #3                  // Method A."<init>":()V
+         7: astore_1      
+         8: bipush        10
+        10: istore_2      
+        11: bipush        20
+        13: istore_3      
+        14: iconst_0      
+        15: istore        4
+        17: aload_1       
+        18: iload         4
+        20: iconst_1      
+        21: if_icmpge     28
+        24: iload_2       
+        25: goto          29
+        28: iload_3       
+        29: putfield      #4                  // Field A.a1:I
+        32: return        
+      LineNumberTable:
+        line 4: 0
+        line 5: 8
+        line 6: 11
+        line 7: 14
+        line 8: 17
+        line 9: 32
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      33     0  args   [Ljava/lang/String;
+               8      25     1   myA   LA;
+              11      22     2     a   I
+              14      19     3     b   I
+              17      16     4     x   I
+      StackMapTable: number_of_entries = 2
+           frame_type = 255 /* full_frame */
+          offset_delta = 28
+          locals = [ class "[Ljava/lang/String;", class A, int, int, int ]
+          stack = [ class A ]
+           frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class "[Ljava/lang/String;", class A, int, int, int ]
+          stack = [ class A, int ]
+
+}
+Classfile /home/stefan/Projects/jvm-semantics/programs/A.class
+  Last modified May 14, 2014; size 300 bytes
+  MD5 checksum 365317d31d7cebd5294d09eebbb07135
+  Compiled from "A.java"
+public class A
+  SourceFile: "A.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#18         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #4.#19         //  A.a1:I
+   #3 = Fieldref           #4.#20         //  A.a2:I
+   #4 = Class              #21            //  A
+   #5 = Class              #22            //  java/lang/Object
+   #6 = Utf8               a1
+   #7 = Utf8               I
+   #8 = Utf8               a2
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               LA;
+  #16 = Utf8               SourceFile
+  #17 = Utf8               A.java
+  #18 = NameAndType        #9:#10         //  "<init>":()V
+  #19 = NameAndType        #6:#7          //  a1:I
+  #20 = NameAndType        #8:#7          //  a2:I
+  #21 = Utf8               A
+  #22 = Utf8               java/lang/Object
+{
+  public int a1;
+    Signature: I
+    flags: ACC_PUBLIC
+
+  private int a2;
+    Signature: I
+    flags: ACC_PRIVATE
+
+  public A();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: iconst_1      
+         6: putfield      #2                  // Field a1:I
+         9: aload_0       
+        10: iconst_2      
+        11: putfield      #3                  // Field a2:I
+        14: return        
+      LineNumberTable:
+        line 6: 0
+        line 3: 4
+        line 4: 9
+        line 8: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      15     0  this   LA;
+}

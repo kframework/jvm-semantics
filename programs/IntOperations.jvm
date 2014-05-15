@@ -1,0 +1,126 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/IntOperations.class
+  Last modified May 14, 2014; size 605 bytes
+  MD5 checksum 16bae13a3cd61358ec8c71f540266cf1
+  Compiled from "IntOperations.java"
+public class IntOperations
+  SourceFile: "IntOperations.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #3.#25         //  java/lang/Object."<init>":()V
+   #2 = Class              #26            //  IntOperations
+   #3 = Class              #27            //  java/lang/Object
+   #4 = Utf8               <init>
+   #5 = Utf8               ()V
+   #6 = Utf8               Code
+   #7 = Utf8               LineNumberTable
+   #8 = Utf8               LocalVariableTable
+   #9 = Utf8               this
+  #10 = Utf8               LIntOperations;
+  #11 = Utf8               main
+  #12 = Utf8               ([Ljava/lang/String;)V
+  #13 = Utf8               args
+  #14 = Utf8               [Ljava/lang/String;
+  #15 = Utf8               i
+  #16 = Utf8               I
+  #17 = Utf8               j
+  #18 = Utf8               k
+  #19 = Utf8               l
+  #20 = Utf8               m
+  #21 = Utf8               n
+  #22 = Utf8               StackMapTable
+  #23 = Utf8               SourceFile
+  #24 = Utf8               IntOperations.java
+  #25 = NameAndType        #4:#5          //  "<init>":()V
+  #26 = Utf8               IntOperations
+  #27 = Utf8               java/lang/Object
+{
+  public IntOperations();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LIntOperations;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=7, args_size=1
+         0: iconst_5      
+         1: istore_1      
+         2: iconst_0      
+         3: istore_2      
+         4: iload_1       
+         5: bipush        10
+         7: if_icmpge     14
+        10: iload_1       
+        11: iconst_2      
+        12: imul          
+        13: istore_2      
+        14: iconst_0      
+        15: istore_1      
+        16: iload_1       
+        17: bipush        8
+        19: if_icmpge     31
+        22: iinc          2, 1
+        25: iinc          1, 2
+        28: goto          16
+        31: iload_1       
+        32: iload_2       
+        33: iadd          
+        34: istore_3      
+        35: bipush        6
+        37: istore        4
+        39: iload         4
+        41: iload_2       
+        42: idiv          
+        43: iconst_3      
+        44: isub          
+        45: istore_2      
+        46: iload         4
+        48: bipush        10
+        50: iand          
+        51: istore        5
+        53: iconst_0      
+        54: istore        6
+        56: return        
+      LineNumberTable:
+        line 4: 0
+        line 5: 2
+        line 6: 4
+        line 7: 10
+        line 8: 14
+        line 9: 22
+        line 8: 25
+        line 10: 31
+        line 11: 35
+        line 12: 39
+        line 13: 46
+        line 14: 53
+        line 15: 56
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      57     0  args   [Ljava/lang/String;
+               2      55     1     i   I
+               4      53     2     j   I
+              35      22     3     k   I
+              39      18     4     l   I
+              53       4     5     m   I
+              56       1     6     n   I
+      StackMapTable: number_of_entries = 3
+           frame_type = 253 /* append */
+             offset_delta = 14
+        locals = [ int, int ]
+           frame_type = 1 /* same */
+           frame_type = 14 /* same */
+
+}

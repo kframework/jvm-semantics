@@ -1,0 +1,78 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/IntArray.class
+  Last modified May 15, 2014; size 424 bytes
+  MD5 checksum 8228d9f9a5bc0fd31aa8a23c0236e63d
+  Compiled from "IntArray.java"
+public class IntArray
+  SourceFile: "IntArray.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #3.#19         //  java/lang/Object."<init>":()V
+   #2 = Class              #20            //  IntArray
+   #3 = Class              #21            //  java/lang/Object
+   #4 = Utf8               <init>
+   #5 = Utf8               ()V
+   #6 = Utf8               Code
+   #7 = Utf8               LineNumberTable
+   #8 = Utf8               LocalVariableTable
+   #9 = Utf8               this
+  #10 = Utf8               LIntArray;
+  #11 = Utf8               main
+  #12 = Utf8               ([Ljava/lang/String;)V
+  #13 = Utf8               args
+  #14 = Utf8               [Ljava/lang/String;
+  #15 = Utf8               a
+  #16 = Utf8               [I
+  #17 = Utf8               SourceFile
+  #18 = Utf8               IntArray.java
+  #19 = NameAndType        #4:#5          //  "<init>":()V
+  #20 = Utf8               IntArray
+  #21 = Utf8               java/lang/Object
+{
+  public IntArray();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LIntArray;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: iconst_3      
+         1: newarray       int
+         3: astore_1      
+         4: aload_1       
+         5: iconst_0      
+         6: sipush        1000
+         9: iastore       
+        10: aload_1       
+        11: iconst_1      
+        12: sipush        2000
+        15: iastore       
+        16: aload_1       
+        17: iconst_2      
+        18: sipush        3000
+        21: iastore       
+        22: return        
+      LineNumberTable:
+        line 4: 0
+        line 5: 4
+        line 6: 10
+        line 7: 16
+        line 8: 22
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      23     0  args   [Ljava/lang/String;
+               4      19     1     a   [I
+}

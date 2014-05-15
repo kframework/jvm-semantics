@@ -1,0 +1,128 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/ByteOperations.class
+  Last modified May 14, 2014; size 577 bytes
+  MD5 checksum a65fe9ecd4cf8d2c504df2bf4e0843e5
+  Compiled from "ByteOperations.java"
+public class ByteOperations
+  SourceFile: "ByteOperations.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #3.#23         //  java/lang/Object."<init>":()V
+   #2 = Class              #24            //  ByteOperations
+   #3 = Class              #25            //  java/lang/Object
+   #4 = Utf8               <init>
+   #5 = Utf8               ()V
+   #6 = Utf8               Code
+   #7 = Utf8               LineNumberTable
+   #8 = Utf8               LocalVariableTable
+   #9 = Utf8               this
+  #10 = Utf8               LByteOperations;
+  #11 = Utf8               main
+  #12 = Utf8               ([Ljava/lang/String;)V
+  #13 = Utf8               args
+  #14 = Utf8               [Ljava/lang/String;
+  #15 = Utf8               i
+  #16 = Utf8               B
+  #17 = Utf8               j
+  #18 = Utf8               k
+  #19 = Utf8               l
+  #20 = Utf8               StackMapTable
+  #21 = Utf8               SourceFile
+  #22 = Utf8               ByteOperations.java
+  #23 = NameAndType        #4:#5          //  "<init>":()V
+  #24 = Utf8               ByteOperations
+  #25 = Utf8               java/lang/Object
+{
+  public ByteOperations();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LByteOperations;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=5, args_size=1
+         0: iconst_5      
+         1: istore_1      
+         2: bipush        20
+         4: istore_2      
+         5: iload_1       
+         6: bipush        10
+         8: if_icmpge     16
+        11: iload_1       
+        12: iconst_2      
+        13: imul          
+        14: i2b           
+        15: istore_2      
+        16: iconst_0      
+        17: istore_1      
+        18: iload_1       
+        19: bipush        8
+        21: if_icmpge     37
+        24: iload_2       
+        25: iconst_1      
+        26: iadd          
+        27: i2b           
+        28: istore_2      
+        29: iload_1       
+        30: iconst_2      
+        31: iadd          
+        32: i2b           
+        33: istore_1      
+        34: goto          18
+        37: iload_1       
+        38: iload_2       
+        39: iadd          
+        40: i2b           
+        41: istore_3      
+        42: bipush        6
+        44: istore        4
+        46: bipush        -56
+        48: istore_2      
+        49: iload_2       
+        50: iload         4
+        52: idiv          
+        53: iconst_3      
+        54: isub          
+        55: i2b           
+        56: istore_2      
+        57: return        
+      LineNumberTable:
+        line 4: 0
+        line 5: 2
+        line 6: 5
+        line 7: 11
+        line 8: 16
+        line 9: 24
+        line 8: 29
+        line 10: 37
+        line 11: 42
+        line 12: 46
+        line 13: 49
+        line 14: 57
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      58     0  args   [Ljava/lang/String;
+               2      56     1     i   B
+               5      53     2     j   B
+              42      16     3     k   B
+              46      12     4     l   B
+      StackMapTable: number_of_entries = 3
+           frame_type = 253 /* append */
+             offset_delta = 16
+        locals = [ int, int ]
+           frame_type = 1 /* same */
+           frame_type = 18 /* same */
+
+}

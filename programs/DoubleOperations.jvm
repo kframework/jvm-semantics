@@ -1,0 +1,130 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/DoubleOperations.class
+  Last modified May 14, 2014; size 660 bytes
+  MD5 checksum 740edadbe0f4b4eeffa40e476f02dfe3
+  Compiled from "DoubleOperations.java"
+public class DoubleOperations
+  SourceFile: "DoubleOperations.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #19.#39        //  java/lang/Object."<init>":()V
+   #2 = Double             5.0d
+   #4 = Double             20.5d
+   #6 = Double             10.0d
+   #8 = Double             2.0d
+  #10 = Double             8.0d
+  #12 = Double             1.3d
+  #14 = Double             6.7d
+  #16 = Double             3.0d
+  #18 = Class              #40            //  DoubleOperations
+  #19 = Class              #41            //  java/lang/Object
+  #20 = Utf8               <init>
+  #21 = Utf8               ()V
+  #22 = Utf8               Code
+  #23 = Utf8               LineNumberTable
+  #24 = Utf8               LocalVariableTable
+  #25 = Utf8               this
+  #26 = Utf8               LDoubleOperations;
+  #27 = Utf8               main
+  #28 = Utf8               ([Ljava/lang/String;)V
+  #29 = Utf8               args
+  #30 = Utf8               [Ljava/lang/String;
+  #31 = Utf8               i
+  #32 = Utf8               D
+  #33 = Utf8               j
+  #34 = Utf8               k
+  #35 = Utf8               l
+  #36 = Utf8               StackMapTable
+  #37 = Utf8               SourceFile
+  #38 = Utf8               DoubleOperations.java
+  #39 = NameAndType        #20:#21        //  "<init>":()V
+  #40 = Utf8               DoubleOperations
+  #41 = Utf8               java/lang/Object
+{
+  public DoubleOperations();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LDoubleOperations;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=9, args_size=1
+         0: ldc2_w        #2                  // double 5.0d
+         3: dstore_1      
+         4: ldc2_w        #4                  // double 20.5d
+         7: dstore_3      
+         8: dload_1       
+         9: ldc2_w        #6                  // double 10.0d
+        12: dcmpg         
+        13: ifge          22
+        16: dload_1       
+        17: ldc2_w        #8                  // double 2.0d
+        20: dmul          
+        21: dstore_3      
+        22: dconst_0      
+        23: dstore_1      
+        24: dload_1       
+        25: ldc2_w        #10                 // double 8.0d
+        28: dcmpg         
+        29: ifge          47
+        32: dload_3       
+        33: ldc2_w        #12                 // double 1.3d
+        36: dadd          
+        37: dstore_3      
+        38: dload_1       
+        39: ldc2_w        #8                  // double 2.0d
+        42: dadd          
+        43: dstore_1      
+        44: goto          24
+        47: dload_1       
+        48: dload_3       
+        49: dadd          
+        50: dstore        5
+        52: ldc2_w        #14                 // double 6.7d
+        55: dstore        7
+        57: dload         7
+        59: dload_3       
+        60: ddiv          
+        61: ldc2_w        #16                 // double 3.0d
+        64: dsub          
+        65: dstore_3      
+        66: return        
+      LineNumberTable:
+        line 4: 0
+        line 5: 4
+        line 6: 8
+        line 7: 16
+        line 8: 22
+        line 9: 32
+        line 8: 38
+        line 10: 47
+        line 11: 52
+        line 12: 57
+        line 13: 66
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      67     0  args   [Ljava/lang/String;
+               4      63     1     i   D
+               8      59     3     j   D
+              52      15     5     k   D
+              57      10     7     l   D
+      StackMapTable: number_of_entries = 3
+           frame_type = 253 /* append */
+             offset_delta = 22
+        locals = [ double, double ]
+           frame_type = 1 /* same */
+           frame_type = 22 /* same */
+
+}

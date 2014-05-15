@@ -1,0 +1,129 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/FloatOperations.class
+  Last modified May 14, 2014; size 608 bytes
+  MD5 checksum 673fba049ff2ee9720b541977c568ad1
+  Compiled from "FloatOperations.java"
+public class FloatOperations
+  SourceFile: "FloatOperations.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #10.#30        //  java/lang/Object."<init>":()V
+   #2 = Float              5.0f
+   #3 = Float              20.5f
+   #4 = Float              10.0f
+   #5 = Float              8.0f
+   #6 = Float              1.3f
+   #7 = Float              6.7f
+   #8 = Float              3.0f
+   #9 = Class              #31            //  FloatOperations
+  #10 = Class              #32            //  java/lang/Object
+  #11 = Utf8               <init>
+  #12 = Utf8               ()V
+  #13 = Utf8               Code
+  #14 = Utf8               LineNumberTable
+  #15 = Utf8               LocalVariableTable
+  #16 = Utf8               this
+  #17 = Utf8               LFloatOperations;
+  #18 = Utf8               main
+  #19 = Utf8               ([Ljava/lang/String;)V
+  #20 = Utf8               args
+  #21 = Utf8               [Ljava/lang/String;
+  #22 = Utf8               i
+  #23 = Utf8               F
+  #24 = Utf8               j
+  #25 = Utf8               k
+  #26 = Utf8               l
+  #27 = Utf8               StackMapTable
+  #28 = Utf8               SourceFile
+  #29 = Utf8               FloatOperations.java
+  #30 = NameAndType        #11:#12        //  "<init>":()V
+  #31 = Utf8               FloatOperations
+  #32 = Utf8               java/lang/Object
+{
+  public FloatOperations();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LFloatOperations;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=5, args_size=1
+         0: ldc           #2                  // float 5.0f
+         2: fstore_1      
+         3: ldc           #3                  // float 20.5f
+         5: fstore_2      
+         6: fload_1       
+         7: ldc           #4                  // float 10.0f
+         9: fcmpg         
+        10: ifge          17
+        13: fload_1       
+        14: fconst_2      
+        15: fmul          
+        16: fstore_2      
+        17: fconst_0      
+        18: fstore_1      
+        19: fload_1       
+        20: ldc           #5                  // float 8.0f
+        22: fcmpg         
+        23: ifge          38
+        26: fload_2       
+        27: ldc           #6                  // float 1.3f
+        29: fadd          
+        30: fstore_2      
+        31: fload_1       
+        32: fconst_2      
+        33: fadd          
+        34: fstore_1      
+        35: goto          19
+        38: fload_1       
+        39: fload_2       
+        40: fadd          
+        41: fstore_3      
+        42: ldc           #7                  // float 6.7f
+        44: fstore        4
+        46: fload         4
+        48: fload_2       
+        49: fdiv          
+        50: ldc           #8                  // float 3.0f
+        52: fsub          
+        53: fstore_2      
+        54: return        
+      LineNumberTable:
+        line 4: 0
+        line 5: 3
+        line 6: 6
+        line 7: 13
+        line 8: 17
+        line 9: 26
+        line 8: 31
+        line 10: 38
+        line 11: 42
+        line 12: 46
+        line 13: 54
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      55     0  args   [Ljava/lang/String;
+               3      52     1     i   F
+               6      49     2     j   F
+              42      13     3     k   F
+              46       9     4     l   F
+      StackMapTable: number_of_entries = 3
+           frame_type = 253 /* append */
+             offset_delta = 17
+        locals = [ float, float ]
+           frame_type = 1 /* same */
+           frame_type = 18 /* same */
+
+}

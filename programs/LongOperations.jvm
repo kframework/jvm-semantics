@@ -1,0 +1,124 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/LongOperations.class
+  Last modified May 14, 2014; size 621 bytes
+  MD5 checksum 6203e57d8b9e1196fb1317d7e68a9b28
+  Compiled from "LongOperations.java"
+public class LongOperations
+  SourceFile: "LongOperations.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #17.#36        //  java/lang/Object."<init>":()V
+   #2 = Long               5l
+   #4 = Long               20l
+   #6 = Long               10l
+   #8 = Long               2l
+  #10 = Long               8l
+  #12 = Long               6l
+  #14 = Long               3l
+  #16 = Class              #37            //  LongOperations
+  #17 = Class              #38            //  java/lang/Object
+  #18 = Utf8               <init>
+  #19 = Utf8               ()V
+  #20 = Utf8               Code
+  #21 = Utf8               LineNumberTable
+  #22 = Utf8               LocalVariableTable
+  #23 = Utf8               this
+  #24 = Utf8               LLongOperations;
+  #25 = Utf8               main
+  #26 = Utf8               ([Ljava/lang/String;)V
+  #27 = Utf8               args
+  #28 = Utf8               [Ljava/lang/String;
+  #29 = Utf8               i
+  #30 = Utf8               J
+  #31 = Utf8               j
+  #32 = Utf8               k
+  #33 = Utf8               StackMapTable
+  #34 = Utf8               SourceFile
+  #35 = Utf8               LongOperations.java
+  #36 = NameAndType        #18:#19        //  "<init>":()V
+  #37 = Utf8               LongOperations
+  #38 = Utf8               java/lang/Object
+{
+  public LongOperations();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LLongOperations;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=7, args_size=1
+         0: ldc2_w        #2                  // long 5l
+         3: lstore_1      
+         4: ldc2_w        #4                  // long 20l
+         7: lstore_3      
+         8: lload_1       
+         9: ldc2_w        #6                  // long 10l
+        12: lcmp          
+        13: ifge          22
+        16: lload_1       
+        17: ldc2_w        #8                  // long 2l
+        20: lmul          
+        21: lstore_3      
+        22: lconst_0      
+        23: lstore_1      
+        24: lload_1       
+        25: ldc2_w        #10                 // long 8l
+        28: lcmp          
+        29: ifge          45
+        32: lload_3       
+        33: lconst_1      
+        34: ladd          
+        35: lstore_3      
+        36: lload_1       
+        37: ldc2_w        #8                  // long 2l
+        40: ladd          
+        41: lstore_1      
+        42: goto          24
+        45: lload_1       
+        46: lload_3       
+        47: ladd          
+        48: lstore        5
+        50: lload_3       
+        51: ldc2_w        #12                 // long 6l
+        54: ldiv          
+        55: ldc2_w        #14                 // long 3l
+        58: lsub          
+        59: lstore_3      
+        60: return        
+      LineNumberTable:
+        line 4: 0
+        line 5: 4
+        line 6: 8
+        line 7: 16
+        line 8: 22
+        line 9: 32
+        line 8: 36
+        line 10: 45
+        line 11: 50
+        line 12: 60
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      61     0  args   [Ljava/lang/String;
+               4      57     1     i   J
+               8      53     3     j   J
+              50      11     5     k   J
+      StackMapTable: number_of_entries = 3
+           frame_type = 253 /* append */
+             offset_delta = 22
+        locals = [ long, long ]
+           frame_type = 1 /* same */
+           frame_type = 20 /* same */
+
+}

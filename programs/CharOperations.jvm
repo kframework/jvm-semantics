@@ -1,0 +1,85 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/CharOperations.class
+  Last modified May 14, 2014; size 507 bytes
+  MD5 checksum 03e86922728397b9ab906ed0ee499fc0
+  Compiled from "CharOperations.java"
+public class CharOperations
+  SourceFile: "CharOperations.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #4.#25         //  java/lang/Object."<init>":()V
+   #2 = Integer            65636
+   #3 = Class              #26            //  CharOperations
+   #4 = Class              #27            //  java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               ()V
+   #7 = Utf8               Code
+   #8 = Utf8               LineNumberTable
+   #9 = Utf8               LocalVariableTable
+  #10 = Utf8               this
+  #11 = Utf8               LCharOperations;
+  #12 = Utf8               main
+  #13 = Utf8               ([Ljava/lang/String;)V
+  #14 = Utf8               args
+  #15 = Utf8               [Ljava/lang/String;
+  #16 = Utf8               a
+  #17 = Utf8               C
+  #18 = Utf8               b
+  #19 = Utf8               c
+  #20 = Utf8               val
+  #21 = Utf8               I
+  #22 = Utf8               d
+  #23 = Utf8               SourceFile
+  #24 = Utf8               CharOperations.java
+  #25 = NameAndType        #5:#6          //  "<init>":()V
+  #26 = Utf8               CharOperations
+  #27 = Utf8               java/lang/Object
+{
+  public CharOperations();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LCharOperations;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=1, locals=6, args_size=1
+         0: bipush        97
+         2: istore_1      
+         3: iconst_2      
+         4: istore_2      
+         5: bipush        99
+         7: istore_3      
+         8: ldc           #2                  // int 65636
+        10: istore        4
+        12: iload         4
+        14: i2c           
+        15: istore        5
+        17: return        
+      LineNumberTable:
+        line 4: 0
+        line 5: 3
+        line 6: 5
+        line 7: 8
+        line 8: 12
+        line 9: 17
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      18     0  args   [Ljava/lang/String;
+               3      15     1     a   C
+               5      13     2     b   C
+               8      10     3     c   C
+              12       6     4   val   I
+              17       1     5     d   C
+}

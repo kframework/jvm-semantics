@@ -1,0 +1,86 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/StaticMethodCall.class
+  Last modified May 14, 2014; size 512 bytes
+  MD5 checksum 15e7bd640d03eb3457bdcbd887e5fdab
+  Compiled from "StaticMethodCall.java"
+public class StaticMethodCall
+  SourceFile: "StaticMethodCall.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #4.#22         //  java/lang/Object."<init>":()V
+   #2 = Methodref          #3.#23         //  StaticMethodCall.m:()I
+   #3 = Class              #24            //  StaticMethodCall
+   #4 = Class              #25            //  java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               ()V
+   #7 = Utf8               Code
+   #8 = Utf8               LineNumberTable
+   #9 = Utf8               LocalVariableTable
+  #10 = Utf8               this
+  #11 = Utf8               LStaticMethodCall;
+  #12 = Utf8               main
+  #13 = Utf8               ([Ljava/lang/String;)V
+  #14 = Utf8               args
+  #15 = Utf8               [Ljava/lang/String;
+  #16 = Utf8               res
+  #17 = Utf8               I
+  #18 = Utf8               m
+  #19 = Utf8               ()I
+  #20 = Utf8               SourceFile
+  #21 = Utf8               StaticMethodCall.java
+  #22 = NameAndType        #5:#6          //  "<init>":()V
+  #23 = NameAndType        #18:#19        //  m:()I
+  #24 = Utf8               StaticMethodCall
+  #25 = Utf8               java/lang/Object
+{
+  public StaticMethodCall();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LStaticMethodCall;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: iconst_5      
+         1: invokestatic  #2                  // Method m:()I
+         4: iadd          
+         5: istore_1      
+         6: return        
+      LineNumberTable:
+        line 4: 0
+        line 5: 6
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       7     0  args   [Ljava/lang/String;
+               6       1     1   res   I
+
+  public static int m();
+    Signature: ()I
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=1, locals=1, args_size=0
+         0: iconst_3      
+         1: istore_0      
+         2: iinc          0, 2
+         5: iload_0       
+         6: ireturn       
+      LineNumberTable:
+        line 8: 0
+        line 9: 2
+        line 10: 5
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               2       5     0     m   I
+}

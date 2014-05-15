@@ -1,0 +1,307 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/Anonymous.class
+  Last modified May 15, 2014; size 568 bytes
+  MD5 checksum d4840d9f7fb6ec52c59d43e72b60f4a1
+  Compiled from "Anonymous.java"
+public class Anonymous
+  SourceFile: "Anonymous.java"
+  InnerClasses:
+       static #2; //class Anonymous$1
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #9.#29         //  java/lang/Object."<init>":()V
+   #2 = Class              #30            //  Anonymous$1
+   #3 = Methodref          #2.#29         //  Anonymous$1."<init>":()V
+   #4 = Class              #31            //  A
+   #5 = Methodref          #4.#29         //  A."<init>":()V
+   #6 = Methodref          #32.#33        //  F.getF1:()I
+   #7 = Fieldref           #4.#34         //  A.a1:I
+   #8 = Class              #35            //  Anonymous
+   #9 = Class              #36            //  java/lang/Object
+  #10 = Utf8               
+  #11 = Utf8               InnerClasses
+  #12 = Utf8               <init>
+  #13 = Utf8               ()V
+  #14 = Utf8               Code
+  #15 = Utf8               LineNumberTable
+  #16 = Utf8               LocalVariableTable
+  #17 = Utf8               this
+  #18 = Utf8               LAnonymous;
+  #19 = Utf8               main
+  #20 = Utf8               ([Ljava/lang/String;)V
+  #21 = Utf8               args
+  #22 = Utf8               [Ljava/lang/String;
+  #23 = Utf8               myF
+  #24 = Utf8               LF;
+  #25 = Utf8               myA
+  #26 = Utf8               LA;
+  #27 = Utf8               SourceFile
+  #28 = Utf8               Anonymous.java
+  #29 = NameAndType        #12:#13        //  "<init>":()V
+  #30 = Utf8               Anonymous$1
+  #31 = Utf8               A
+  #32 = Class              #37            //  F
+  #33 = NameAndType        #38:#39        //  getF1:()I
+  #34 = NameAndType        #40:#41        //  a1:I
+  #35 = Utf8               Anonymous
+  #36 = Utf8               java/lang/Object
+  #37 = Utf8               F
+  #38 = Utf8               getF1
+  #39 = Utf8               ()I
+  #40 = Utf8               a1
+  #41 = Utf8               I
+{
+  public Anonymous();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LAnonymous;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: new           #2                  // class Anonymous$1
+         3: dup           
+         4: invokespecial #3                  // Method Anonymous$1."<init>":()V
+         7: astore_1      
+         8: new           #4                  // class A
+        11: dup           
+        12: invokespecial #5                  // Method A."<init>":()V
+        15: astore_2      
+        16: aload_2       
+        17: aload_1       
+        18: invokevirtual #6                  // Method F.getF1:()I
+        21: putfield      #7                  // Field A.a1:I
+        24: return        
+      LineNumberTable:
+        line 4: 0
+        line 10: 8
+        line 11: 16
+        line 12: 24
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      25     0  args   [Ljava/lang/String;
+               8      17     1   myF   LF;
+              16       9     2   myA   LA;
+}
+Classfile /home/stefan/Projects/jvm-semantics/programs/Anonymous$1.class
+  Last modified May 15, 2014; size 427 bytes
+  MD5 checksum 733561a7e975563b2ef5228a1f6adc66
+  Compiled from "Anonymous.java"
+final class Anonymous$1 extends F
+  SourceFile: "Anonymous.java"
+  EnclosingMethod: #18.#19                // Anonymous.main
+  InnerClasses:
+       static #2; //class Anonymous$1
+  minor version: 0
+  major version: 51
+  flags: ACC_FINAL, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #3.#20         //  F."<init>":()V
+   #2 = Class              #21            //  Anonymous$1
+   #3 = Class              #22            //  F
+   #4 = Utf8               <init>
+   #5 = Utf8               ()V
+   #6 = Utf8               Code
+   #7 = Utf8               LineNumberTable
+   #8 = Utf8               LocalVariableTable
+   #9 = Utf8               this
+  #10 = Utf8               
+  #11 = Utf8               InnerClasses
+  #12 = Utf8               LAnonymous$1;
+  #13 = Utf8               getF1
+  #14 = Utf8               ()I
+  #15 = Utf8               SourceFile
+  #16 = Utf8               Anonymous.java
+  #17 = Utf8               EnclosingMethod
+  #18 = Class              #23            //  Anonymous
+  #19 = NameAndType        #24:#25        //  main:([Ljava/lang/String;)V
+  #20 = NameAndType        #4:#5          //  "<init>":()V
+  #21 = Utf8               Anonymous$1
+  #22 = Utf8               F
+  #23 = Utf8               Anonymous
+  #24 = Utf8               main
+  #25 = Utf8               ([Ljava/lang/String;)V
+{
+  Anonymous$1();
+    Signature: ()V
+    flags: 
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method F."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 4: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LAnonymous$1;
+
+  public int getF1();
+    Signature: ()I
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: iconst_1      
+         1: ireturn       
+      LineNumberTable:
+        line 6: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       2     0  this   LAnonymous$1;
+}
+Classfile /home/stefan/Projects/jvm-semantics/programs/F.class
+  Last modified May 15, 2014; size 375 bytes
+  MD5 checksum 17104e2c830fce2e4d09cd689d450cd2
+  Compiled from "F.java"
+public class F
+  SourceFile: "F.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#20         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #4.#21         //  F.f1:I
+   #3 = Fieldref           #4.#22         //  F.f2:I
+   #4 = Class              #23            //  F
+   #5 = Class              #24            //  java/lang/Object
+   #6 = Utf8               f1
+   #7 = Utf8               I
+   #8 = Utf8               f2
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               LF;
+  #16 = Utf8               getF1
+  #17 = Utf8               ()I
+  #18 = Utf8               SourceFile
+  #19 = Utf8               F.java
+  #20 = NameAndType        #9:#10         //  "<init>":()V
+  #21 = NameAndType        #6:#7          //  f1:I
+  #22 = NameAndType        #8:#7          //  f2:I
+  #23 = Utf8               F
+  #24 = Utf8               java/lang/Object
+{
+  public int f1;
+    Signature: I
+    flags: ACC_PUBLIC
+
+  private int f2;
+    Signature: I
+    flags: ACC_PRIVATE
+
+  public F();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: iconst_0      
+         6: putfield      #2                  // Field f1:I
+         9: aload_0       
+        10: iconst_1      
+        11: putfield      #3                  // Field f2:I
+        14: return        
+      LineNumberTable:
+        line 6: 0
+        line 3: 4
+        line 4: 9
+        line 8: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      15     0  this   LF;
+
+  public int getF1();
+    Signature: ()I
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: getfield      #2                  // Field f1:I
+         4: ireturn       
+      LineNumberTable:
+        line 11: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LF;
+}
+Classfile /home/stefan/Projects/jvm-semantics/programs/A.class
+  Last modified May 15, 2014; size 300 bytes
+  MD5 checksum 365317d31d7cebd5294d09eebbb07135
+  Compiled from "A.java"
+public class A
+  SourceFile: "A.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#18         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #4.#19         //  A.a1:I
+   #3 = Fieldref           #4.#20         //  A.a2:I
+   #4 = Class              #21            //  A
+   #5 = Class              #22            //  java/lang/Object
+   #6 = Utf8               a1
+   #7 = Utf8               I
+   #8 = Utf8               a2
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               LA;
+  #16 = Utf8               SourceFile
+  #17 = Utf8               A.java
+  #18 = NameAndType        #9:#10         //  "<init>":()V
+  #19 = NameAndType        #6:#7          //  a1:I
+  #20 = NameAndType        #8:#7          //  a2:I
+  #21 = Utf8               A
+  #22 = Utf8               java/lang/Object
+{
+  public int a1;
+    Signature: I
+    flags: ACC_PUBLIC
+
+  private int a2;
+    Signature: I
+    flags: ACC_PRIVATE
+
+  public A();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: iconst_1      
+         6: putfield      #2                  // Field a1:I
+         9: aload_0       
+        10: iconst_2      
+        11: putfield      #3                  // Field a2:I
+        14: return        
+      LineNumberTable:
+        line 6: 0
+        line 3: 4
+        line 4: 9
+        line 8: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      15     0  this   LA;
+}
