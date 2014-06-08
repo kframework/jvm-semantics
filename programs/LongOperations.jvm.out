@@ -1,0 +1,268 @@
+<t>
+    <k>
+        .K
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        2
+    </nextRefLoc>
+    <pc>
+        60
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        5
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class LongOperations
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            number_of_entries = 3 frame_type = 253 
+                              offset_delta = 22 locals = [ long, long ] 
+                              frame_type = 1 frame_type = 20
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            4 |-> 0
+                            5 |-> 4
+                            6 |-> 8
+                            7 |-> 16
+                            8 |-> 22
+                            8 |-> 36
+                            9 |-> 32
+                            10 |-> 45
+                            11 |-> 50
+                            12 |-> 60
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> ldc2_w # 2
+                            3 |-> lstore_1
+                            4 |-> ldc2_w # 4
+                            7 |-> lstore_3
+                            8 |-> lload_1
+                            9 |-> ldc2_w # 6
+                            12 |-> lcmp
+                            13 |-> ifge 22
+                            16 |-> lload_1
+                            17 |-> ldc2_w # 8
+                            20 |-> lmul
+                            21 |-> lstore_3
+                            22 |-> lconst_0
+                            23 |-> lstore_1
+                            24 |-> lload_1
+                            25 |-> ldc2_w # 10
+                            28 |-> lcmp
+                            29 |-> ifge 45
+                            32 |-> lload_3
+                            33 |-> lconst_1
+                            34 |-> ladd
+                            35 |-> lstore_3
+                            36 |-> lload_1
+                            37 |-> ldc2_w # 8
+                            40 |-> ladd
+                            41 |-> lstore_1
+                            42 |-> goto 24
+                            45 |-> lload_1
+                            46 |-> lload_3
+                            47 |-> ladd
+                            48 |-> lstore 5
+                            50 |-> lload_3
+                            51 |-> ldc2_w # 12
+                            54 |-> ldiv
+                            55 |-> ldc2_w # 14
+                            58 |-> lsub
+                            59 |-> lstore_3
+                            60 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 4
+                            locals |-> 7
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 61,, args,, [  Ljava/ lang 
+                               / String ;)
+                            1 |-> '`(_,_,_,_`)(4,, 57,, i,, J)
+                            3 |-> '`(_,_,_,_`)(8,, 53,, j,, J)
+                            5 |-> '`(_,_,_,_`)(50,, 11,, k,, J)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public LongOperations ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        LongOperations : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, LLongOperations 
+                              ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                .Bag
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |-> 5
+                    # 4 |-> 20
+                    # 6 |-> 10
+                    # 8 |-> 2
+                    # 10 |-> 8
+                    # 12 |-> 6
+                    # 14 |-> 3
+                    # 16 |-> LongOperations
+                    # 17 |->   java/ lang / Object 
+                    # 18 |-> <init>
+                    # 19 |-> ( ) V
+                    # 20 |-> Code
+                    # 21 |-> LineNumberTable
+                    # 22 |-> LocalVariableTable
+                    # 23 |-> this
+                    # 24 |-> LLongOperations ;
+                    # 25 |-> main
+                    # 26 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 27 |-> args
+                    # 28 |-> [  Ljava/ lang  / String ;
+                    # 29 |-> i
+                    # 30 |-> J
+                    # 31 |-> j
+                    # 32 |-> k
+                    # 33 |-> StackMapTable
+                    # 34 |-> SourceFile
+                    # 35 |->  LongOperations. java 
+                    # 36 |-> <init> : ( ) V
+                    # 37 |-> LongOperations
+                    # 38 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 17 . # 36
+                    # 2 |-> Long . 5l
+                    # 4 |-> Long . 20l
+                    # 6 |-> Long . 10l
+                    # 8 |-> Long . 2l
+                    # 10 |-> Long . 8l
+                    # 12 |-> Long . 6l
+                    # 14 |-> Long . 3l
+                    # 16 |-> Class . # 37
+                    # 17 |-> Class . # 38
+                    # 18 |-> Utf8 . <init>
+                    # 19 |-> Utf8 . ( ) V
+                    # 20 |-> Utf8 . Code
+                    # 21 |-> Utf8 . LineNumberTable
+                    # 22 |-> Utf8 . LocalVariableTable
+                    # 23 |-> Utf8 . this
+                    # 24 |-> Utf8 . LLongOperations ;
+                    # 25 |-> Utf8 . main
+                    # 26 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 27 |-> Utf8 . args
+                    # 28 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 29 |-> Utf8 . i
+                    # 30 |-> Utf8 . J
+                    # 31 |-> Utf8 . j
+                    # 32 |-> Utf8 . k
+                    # 33 |-> Utf8 . StackMapTable
+                    # 34 |-> Utf8 . SourceFile
+                    # 35 |-> Utf8 .  LongOperations. java 
+                    # 36 |-> NameAndType . # 18 : # 19
+                    # 37 |-> Utf8 . LongOperations
+                    # 38 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(LongOperations : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / LongOperations  . class
+                last_modified |-> ( May , 14 , 2014 )
+                md5_checksum |-> 6203e57d8b9e1196fb1317d7e68a9b28
+                compiled_from |-> "LongOperations.java"
+                sourcefile |-> "LongOperations.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( LongOperations , <envStack> ( LongOperations , <env> 
+          .Map </env> ) (   java/ lang / Object  , <env> .Map </env> ) 
+          </envStack> )
+    </heap>
+</t>

@@ -8,6 +8,8 @@ module JVM-SEMANTICS-CLASSES
                                 <classDecl> C </classDecl>
                                 <classInfo> . </classInfo>
                                 <classFlags> . </classFlags>
+                                <staticFields> . </staticFields>
+                                <implMethods> . </implMethods>
                                 <cpool>
                                     <cpoolStmts> . </cpoolStmts>
                                     <cpoolVals> . </cpoolVals>

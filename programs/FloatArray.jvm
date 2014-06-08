@@ -1,0 +1,94 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/FloatArray.class
+  Last modified Jun 2, 2014; size 478 bytes
+  MD5 checksum 7db759c8ffa78c40d623b6fb5e1cf767
+  Compiled from "FloatArray.java"
+public class FloatArray
+  SourceFile: "FloatArray.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #7.#25         //  java/lang/Object."<init>":()V
+   #2 = Float              10.1f
+   #3 = Float              20.2f
+   #4 = Float              30.3f
+   #5 = Fieldref           #6.#26         //  FloatArray.x:F
+   #6 = Class              #27            //  FloatArray
+   #7 = Class              #28            //  java/lang/Object
+   #8 = Utf8               x
+   #9 = Utf8               F
+  #10 = Utf8               <init>
+  #11 = Utf8               ()V
+  #12 = Utf8               Code
+  #13 = Utf8               LineNumberTable
+  #14 = Utf8               LocalVariableTable
+  #15 = Utf8               this
+  #16 = Utf8               LFloatArray;
+  #17 = Utf8               main
+  #18 = Utf8               ([Ljava/lang/String;)V
+  #19 = Utf8               args
+  #20 = Utf8               [Ljava/lang/String;
+  #21 = Utf8               a
+  #22 = Utf8               [F
+  #23 = Utf8               SourceFile
+  #24 = Utf8               FloatArray.java
+  #25 = NameAndType        #10:#11        //  "<init>":()V
+  #26 = NameAndType        #8:#9          //  x:F
+  #27 = Utf8               FloatArray
+  #28 = Utf8               java/lang/Object
+{
+  private static float x;
+    Signature: F
+    flags: ACC_PRIVATE, ACC_STATIC
+
+  public FloatArray();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LFloatArray;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: iconst_3      
+         1: newarray       float
+         3: astore_1      
+         4: aload_1       
+         5: iconst_0      
+         6: ldc           #2                  // float 10.1f
+         8: fastore       
+         9: aload_1       
+        10: iconst_1      
+        11: ldc           #3                  // float 20.2f
+        13: fastore       
+        14: aload_1       
+        15: iconst_2      
+        16: ldc           #4                  // float 30.3f
+        18: fastore       
+        19: aload_1       
+        20: iconst_2      
+        21: faload        
+        22: putstatic     #5                  // Field x:F
+        25: return        
+      LineNumberTable:
+        line 6: 0
+        line 7: 4
+        line 8: 9
+        line 9: 14
+        line 11: 19
+        line 12: 25
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      26     0  args   [Ljava/lang/String;
+               4      22     1     a   [F
+}

@@ -1,5 +1,7 @@
 public class IntOperations {
 
+    public static int r;
+
     public static void main(String [ ] args) {
         int i = 5;
         int j = 0;
@@ -9,8 +11,6 @@ public class IntOperations {
             j += 1;
         int k = i + j;
         int l = 6;
-        j = l / j - 3;
-        int m = l & 10;
-        int n = 223423 << 5234 << 23 << 32;
+        r = l / j - 3;
     }
 }

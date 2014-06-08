@@ -1,0 +1,225 @@
+<t>
+    <k>
+        .K
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        6
+    </nextRefLoc>
+    <pc>
+        22
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        3
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class LongArray
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            4 |-> 0
+                            5 |-> 4
+                            6 |-> 10
+                            7 |-> 16
+                            8 |-> 22
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> iconst_3
+                            1 |-> newarray long
+                            3 |-> astore_1
+                            4 |-> aload_1
+                            5 |-> iconst_0
+                            6 |-> ldc2_w # 2
+                            9 |-> lastore
+                            10 |-> aload_1
+                            11 |-> iconst_1
+                            12 |-> ldc2_w # 4
+                            15 |-> lastore
+                            16 |-> aload_1
+                            17 |-> iconst_2
+                            18 |-> ldc2_w # 6
+                            21 |-> lastore
+                            22 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 4
+                            locals |-> 2
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 23,, args,, [  Ljava/ lang 
+                               / String ;)
+                            1 |-> '`(_,_,_,_`)(4,, 19,, a,, [ J)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public LongArray ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        LongArray : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, LLongArray ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                .Bag
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |-> 100000000
+                    # 4 |-> 200000000
+                    # 6 |-> 300000000
+                    # 8 |-> LongArray
+                    # 9 |->   java/ lang / Object 
+                    # 10 |-> <init>
+                    # 11 |-> ( ) V
+                    # 12 |-> Code
+                    # 13 |-> LineNumberTable
+                    # 14 |-> LocalVariableTable
+                    # 15 |-> this
+                    # 16 |-> LLongArray ;
+                    # 17 |-> main
+                    # 18 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 19 |-> args
+                    # 20 |-> [  Ljava/ lang  / String ;
+                    # 21 |-> a
+                    # 22 |-> [ J
+                    # 23 |-> SourceFile
+                    # 24 |->  LongArray. java 
+                    # 25 |-> <init> : ( ) V
+                    # 26 |-> LongArray
+                    # 27 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 9 . # 25
+                    # 2 |-> Long . 100000000l
+                    # 4 |-> Long . 200000000l
+                    # 6 |-> Long . 300000000l
+                    # 8 |-> Class . # 26
+                    # 9 |-> Class . # 27
+                    # 10 |-> Utf8 . <init>
+                    # 11 |-> Utf8 . ( ) V
+                    # 12 |-> Utf8 . Code
+                    # 13 |-> Utf8 . LineNumberTable
+                    # 14 |-> Utf8 . LocalVariableTable
+                    # 15 |-> Utf8 . this
+                    # 16 |-> Utf8 . LLongArray ;
+                    # 17 |-> Utf8 . main
+                    # 18 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 19 |-> Utf8 . args
+                    # 20 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 21 |-> Utf8 . a
+                    # 22 |-> Utf8 . [ J
+                    # 23 |-> Utf8 . SourceFile
+                    # 24 |-> Utf8 .  LongArray. java 
+                    # 25 |-> NameAndType . # 10 : # 11
+                    # 26 |-> Utf8 . LongArray
+                    # 27 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(LongArray : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / LongArray  . class
+                last_modified |-> ( Jun , 6 , 2014 )
+                md5_checksum |-> 92dc7b384086a5efe24e80adcf5850ed
+                compiled_from |-> "LongArray.java"
+                sourcefile |-> "LongArray.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( LongArray , <envStack> ( LongArray , <env> .Map </env> 
+          ) (   java/ lang / Object  , <env> .Map </env> ) </envStack> )
+        2 |-> array ( long , 3 , 3 )
+        3 |-> 100000000
+        4 |-> 200000000
+        5 |-> 300000000
+    </heap>
+</t>

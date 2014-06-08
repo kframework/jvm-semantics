@@ -1,0 +1,104 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/FloatTypeConversion.class
+  Last modified Jun 6, 2014; size 551 bytes
+  MD5 checksum c0e591001f856a1c4ecf750d0fd7bd9e
+  Compiled from "FloatTypeConversion.java"
+public class FloatTypeConversion
+  SourceFile: "FloatTypeConversion.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #8.#30         //  java/lang/Object."<init>":()V
+   #2 = Float              1797615.8f
+   #3 = Fieldref           #7.#31         //  FloatTypeConversion.a:F
+   #4 = Fieldref           #7.#32         //  FloatTypeConversion.b:I
+   #5 = Fieldref           #7.#33         //  FloatTypeConversion.c:J
+   #6 = Fieldref           #7.#34         //  FloatTypeConversion.d:D
+   #7 = Class              #35            //  FloatTypeConversion
+   #8 = Class              #36            //  java/lang/Object
+   #9 = Utf8               a
+  #10 = Utf8               F
+  #11 = Utf8               b
+  #12 = Utf8               I
+  #13 = Utf8               c
+  #14 = Utf8               J
+  #15 = Utf8               d
+  #16 = Utf8               D
+  #17 = Utf8               <init>
+  #18 = Utf8               ()V
+  #19 = Utf8               Code
+  #20 = Utf8               LineNumberTable
+  #21 = Utf8               LocalVariableTable
+  #22 = Utf8               this
+  #23 = Utf8               LFloatTypeConversion;
+  #24 = Utf8               main
+  #25 = Utf8               ([Ljava/lang/String;)V
+  #26 = Utf8               args
+  #27 = Utf8               [Ljava/lang/String;
+  #28 = Utf8               SourceFile
+  #29 = Utf8               FloatTypeConversion.java
+  #30 = NameAndType        #17:#18        //  "<init>":()V
+  #31 = NameAndType        #9:#10         //  a:F
+  #32 = NameAndType        #11:#12        //  b:I
+  #33 = NameAndType        #13:#14        //  c:J
+  #34 = NameAndType        #15:#16        //  d:D
+  #35 = Utf8               FloatTypeConversion
+  #36 = Utf8               java/lang/Object
+{
+  public static float a;
+    Signature: F
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static int b;
+    Signature: I
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static long c;
+    Signature: J
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static double d;
+    Signature: D
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public FloatTypeConversion();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LFloatTypeConversion;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: ldc           #2                  // float 1797615.8f
+         2: putstatic     #3                  // Field a:F
+         5: getstatic     #3                  // Field a:F
+         8: f2i           
+         9: putstatic     #4                  // Field b:I
+        12: getstatic     #3                  // Field a:F
+        15: f2l           
+        16: putstatic     #5                  // Field c:J
+        19: getstatic     #3                  // Field a:F
+        22: f2d           
+        23: putstatic     #6                  // Field d:D
+        26: return        
+      LineNumberTable:
+        line 9: 0
+        line 10: 5
+        line 11: 12
+        line 12: 19
+        line 13: 26
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      27     0  args   [Ljava/lang/String;
+}

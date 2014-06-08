@@ -1,0 +1,140 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/IntTypeConversion.class
+  Last modified Jun 6, 2014; size 656 bytes
+  MD5 checksum c56bd32f5f4cb81a674463da45bd79e9
+  Compiled from "IntTypeConversion.java"
+public class IntTypeConversion
+  SourceFile: "IntTypeConversion.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #11.#39        //  java/lang/Object."<init>":()V
+   #2 = Integer            100000
+   #3 = Fieldref           #10.#40        //  IntTypeConversion.a:I
+   #4 = Fieldref           #10.#41        //  IntTypeConversion.b:J
+   #5 = Fieldref           #10.#42        //  IntTypeConversion.c:F
+   #6 = Fieldref           #10.#43        //  IntTypeConversion.d:D
+   #7 = Fieldref           #10.#44        //  IntTypeConversion.e:B
+   #8 = Fieldref           #10.#45        //  IntTypeConversion.f:C
+   #9 = Fieldref           #10.#46        //  IntTypeConversion.g:S
+  #10 = Class              #47            //  IntTypeConversion
+  #11 = Class              #48            //  java/lang/Object
+  #12 = Utf8               a
+  #13 = Utf8               I
+  #14 = Utf8               b
+  #15 = Utf8               J
+  #16 = Utf8               c
+  #17 = Utf8               F
+  #18 = Utf8               d
+  #19 = Utf8               D
+  #20 = Utf8               e
+  #21 = Utf8               B
+  #22 = Utf8               f
+  #23 = Utf8               C
+  #24 = Utf8               g
+  #25 = Utf8               S
+  #26 = Utf8               <init>
+  #27 = Utf8               ()V
+  #28 = Utf8               Code
+  #29 = Utf8               LineNumberTable
+  #30 = Utf8               LocalVariableTable
+  #31 = Utf8               this
+  #32 = Utf8               LIntTypeConversion;
+  #33 = Utf8               main
+  #34 = Utf8               ([Ljava/lang/String;)V
+  #35 = Utf8               args
+  #36 = Utf8               [Ljava/lang/String;
+  #37 = Utf8               SourceFile
+  #38 = Utf8               IntTypeConversion.java
+  #39 = NameAndType        #26:#27        //  "<init>":()V
+  #40 = NameAndType        #12:#13        //  a:I
+  #41 = NameAndType        #14:#15        //  b:J
+  #42 = NameAndType        #16:#17        //  c:F
+  #43 = NameAndType        #18:#19        //  d:D
+  #44 = NameAndType        #20:#21        //  e:B
+  #45 = NameAndType        #22:#23        //  f:C
+  #46 = NameAndType        #24:#25        //  g:S
+  #47 = Utf8               IntTypeConversion
+  #48 = Utf8               java/lang/Object
+{
+  public static int a;
+    Signature: I
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static long b;
+    Signature: J
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static float c;
+    Signature: F
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static double d;
+    Signature: D
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static byte e;
+    Signature: B
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static char f;
+    Signature: C
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static short g;
+    Signature: S
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public IntTypeConversion();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LIntTypeConversion;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: ldc           #2                  // int 100000
+         2: putstatic     #3                  // Field a:I
+         5: getstatic     #3                  // Field a:I
+         8: i2l           
+         9: putstatic     #4                  // Field b:J
+        12: getstatic     #3                  // Field a:I
+        15: i2f           
+        16: putstatic     #5                  // Field c:F
+        19: getstatic     #3                  // Field a:I
+        22: i2d           
+        23: putstatic     #6                  // Field d:D
+        26: getstatic     #3                  // Field a:I
+        29: i2b           
+        30: putstatic     #7                  // Field e:B
+        33: getstatic     #3                  // Field a:I
+        36: i2c           
+        37: putstatic     #8                  // Field f:C
+        40: getstatic     #3                  // Field a:I
+        43: i2s           
+        44: putstatic     #9                  // Field g:S
+        47: return        
+      LineNumberTable:
+        line 12: 0
+        line 13: 5
+        line 14: 12
+        line 15: 19
+        line 16: 26
+        line 17: 33
+        line 18: 40
+        line 19: 47
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      48     0  args   [Ljava/lang/String;
+}

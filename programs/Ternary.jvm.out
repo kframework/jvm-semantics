@@ -1,0 +1,405 @@
+<t>
+    <k>
+        .K
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        5
+    </nextRefLoc>
+    <pc>
+        32
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        1
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class A
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public A ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        A : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            3 |-> 4
+                            4 |-> 9
+                            6 |-> 0
+                            8 |-> 14
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> aload_0
+                            5 |-> iconst_1
+                            6 |-> putfield # 2
+                            9 |-> aload_0
+                            10 |-> iconst_2
+                            11 |-> putfield # 3
+                            14 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 15,, this,, LA ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                <field>
+                    <fieldDecl>
+                        private int a2 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public int a1 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |->  A. a1 : I 
+                    # 3 |->  A. a2 : I 
+                    # 4 |-> A
+                    # 5 |->   java/ lang / Object 
+                    # 6 |-> a1
+                    # 7 |-> I
+                    # 8 |-> a2
+                    # 9 |-> <init>
+                    # 10 |-> ( ) V
+                    # 11 |-> Code
+                    # 12 |-> LineNumberTable
+                    # 13 |-> LocalVariableTable
+                    # 14 |-> this
+                    # 15 |-> LA ;
+                    # 16 |-> SourceFile
+                    # 17 |->  A. java 
+                    # 18 |-> <init> : ( ) V
+                    # 19 |->  a1: I 
+                    # 20 |->  a2: I 
+                    # 21 |-> A
+                    # 22 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 5 . # 18
+                    # 2 |-> Fieldref . # 4 . # 19
+                    # 3 |-> Fieldref . # 4 . # 20
+                    # 4 |-> Class . # 21
+                    # 5 |-> Class . # 22
+                    # 6 |-> Utf8 . a1
+                    # 7 |-> Utf8 . I
+                    # 8 |-> Utf8 . a2
+                    # 9 |-> Utf8 . <init>
+                    # 10 |-> Utf8 . ( ) V
+                    # 11 |-> Utf8 . Code
+                    # 12 |-> Utf8 . LineNumberTable
+                    # 13 |-> Utf8 . LocalVariableTable
+                    # 14 |-> Utf8 . this
+                    # 15 |-> Utf8 . LA ;
+                    # 16 |-> Utf8 . SourceFile
+                    # 17 |-> Utf8 .  A. java 
+                    # 18 |-> NameAndType . # 9 : # 10
+                    # 19 |-> NameAndType . # 6 : # 7
+                    # 20 |-> NameAndType . # 8 : # 7
+                    # 21 |-> Utf8 . A
+                    # 22 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_PRIVATE)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(A : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / A  . class
+                last_modified |-> ( May , 14 , 2014 )
+                md5_checksum |-> 365317d31d7cebd5294d09eebbb07135
+                compiled_from |-> "A.java"
+                sourcefile |-> "A.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                a1 |-> undefined
+                a2 |-> undefined
+            </env>
+        </class>
+        <class>
+            <classDecl>
+                public class Ternary
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            number_of_entries = 2 frame_type = 255 
+                              offset_delta = 28 locals = [ 'class_(
+                              "[Ljava/lang/String;"), 'class_(A), int, int, 
+                              int ] stack = [ 'class_(A) ] frame_type = 255 
+                              offset_delta = 0 locals = [ 'class_(
+                              "[Ljava/lang/String;"), 'class_(A), int, int, 
+                              int ] stack = [ 'class_(A), int ]
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            4 |-> 0
+                            5 |-> 8
+                            6 |-> 11
+                            7 |-> 14
+                            8 |-> 17
+                            9 |-> 32
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> new # 2
+                            3 |-> dup
+                            4 |-> invokespecial # 3
+                            7 |-> astore_1
+                            8 |-> bipush 10
+                            10 |-> istore_2
+                            11 |-> bipush 20
+                            13 |-> istore_3
+                            14 |-> iconst_0
+                            15 |-> istore 4
+                            17 |-> aload_1
+                            18 |-> iload 4
+                            20 |-> iconst_1
+                            21 |-> if_icmpge 28
+                            24 |-> iload_2
+                            25 |-> goto 29
+                            28 |-> iload_3
+                            29 |-> putfield # 4
+                            32 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 3
+                            locals |-> 5
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 33,, args,, [  Ljava/ lang 
+                               / String ;)
+                            1 |-> '`(_,_,_,_`)(8,, 25,, myA,, LA ;)
+                            2 |-> '`(_,_,_,_`)(11,, 22,, a,, I)
+                            3 |-> '`(_,_,_,_`)(14,, 19,, b,, I)
+                            4 |-> '`(_,_,_,_`)(17,, 16,, x,, I)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public Ternary ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        Ternary : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, LTernary ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                .Bag
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |-> A
+                    # 3 |->  A. <init> : ( ) V 
+                    # 4 |->  A. a1 : I 
+                    # 5 |-> Ternary
+                    # 6 |->   java/ lang / Object 
+                    # 7 |-> <init>
+                    # 8 |-> ( ) V
+                    # 9 |-> Code
+                    # 10 |-> LineNumberTable
+                    # 11 |-> LocalVariableTable
+                    # 12 |-> this
+                    # 13 |-> LTernary ;
+                    # 14 |-> main
+                    # 15 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 16 |-> args
+                    # 17 |-> [  Ljava/ lang  / String ;
+                    # 18 |-> myA
+                    # 19 |-> LA ;
+                    # 20 |-> a
+                    # 21 |-> I
+                    # 22 |-> b
+                    # 23 |-> x
+                    # 24 |-> StackMapTable
+                    # 25 |-> [  Ljava/ lang  / String ;
+                    # 26 |-> A
+                    # 27 |-> SourceFile
+                    # 28 |->  Ternary. java 
+                    # 29 |-> <init> : ( ) V
+                    # 30 |-> A
+                    # 31 |->  a1: I 
+                    # 32 |-> Ternary
+                    # 33 |->   java/ lang / Object 
+                    # 34 |-> a1
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 6 . # 29
+                    # 2 |-> Class . # 30
+                    # 3 |-> Methodref . # 2 . # 29
+                    # 4 |-> Fieldref . # 2 . # 31
+                    # 5 |-> Class . # 32
+                    # 6 |-> Class . # 33
+                    # 7 |-> Utf8 . <init>
+                    # 8 |-> Utf8 . ( ) V
+                    # 9 |-> Utf8 . Code
+                    # 10 |-> Utf8 . LineNumberTable
+                    # 11 |-> Utf8 . LocalVariableTable
+                    # 12 |-> Utf8 . this
+                    # 13 |-> Utf8 . LTernary ;
+                    # 14 |-> Utf8 . main
+                    # 15 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 16 |-> Utf8 . args
+                    # 17 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 18 |-> Utf8 . myA
+                    # 19 |-> Utf8 . LA ;
+                    # 20 |-> Utf8 . a
+                    # 21 |-> Utf8 . I
+                    # 22 |-> Utf8 . b
+                    # 23 |-> Utf8 . x
+                    # 24 |-> Utf8 . StackMapTable
+                    # 25 |-> Class . # 17
+                    # 26 |-> Class . # 30
+                    # 27 |-> Utf8 . SourceFile
+                    # 28 |-> Utf8 .  Ternary. java 
+                    # 29 |-> NameAndType . # 7 : # 8
+                    # 30 |-> Utf8 . A
+                    # 31 |-> NameAndType . # 34 : # 21
+                    # 32 |-> Utf8 . Ternary
+                    # 33 |-> Utf8 .   java/ lang / Object 
+                    # 34 |-> Utf8 . a1
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(Ternary : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / Ternary  . class
+                last_modified |-> ( May , 14 , 2014 )
+                md5_checksum |-> 89cb93908b5792a18df81d40c75afe56
+                compiled_from |-> "Ternary.java"
+                sourcefile |-> "Ternary.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( Ternary , <envStack> ( Ternary , <env> .Map </env> ) ( 
+            java/ lang / Object  , <env> .Map </env> ) </envStack> )
+        2 |-> object ( A , <envStack> ( A , <env> a1 |-> 3 a2 |-> 4 </env> ) (
+             java/ lang / Object  , <env> .Map </env> ) </envStack> )
+        3 |-> 10
+        4 |-> 2
+    </heap>
+</t>

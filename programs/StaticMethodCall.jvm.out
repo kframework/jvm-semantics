@@ -1,0 +1,248 @@
+<t>
+    <k>
+        .K
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        2
+    </nextRefLoc>
+    <pc>
+        6
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        1
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class StaticMethodCall
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static int m ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        m : ( ) I
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            8 |-> 0
+                            9 |-> 2
+                            10 |-> 5
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> iconst_3
+                            1 |-> istore_0
+                            2 |-> iinc 0 , 2
+                            5 |-> iload_0
+                            6 |-> ireturn
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 0
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(2,, 5,, m,, I)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            4 |-> 0
+                            5 |-> 6
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> iconst_5
+                            1 |-> invokestatic # 2
+                            4 |-> iadd
+                            5 |-> istore_1
+                            6 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 2
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 7,, args,, [  Ljava/ lang  
+                              / String ;)
+                            1 |-> '`(_,_,_,_`)(6,, 1,, res,, I)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public StaticMethodCall ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        StaticMethodCall : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, 
+                              LStaticMethodCall ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                .Bag
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |->  StaticMethodCall. m : ( ) I 
+                    # 3 |-> StaticMethodCall
+                    # 4 |->   java/ lang / Object 
+                    # 5 |-> <init>
+                    # 6 |-> ( ) V
+                    # 7 |-> Code
+                    # 8 |-> LineNumberTable
+                    # 9 |-> LocalVariableTable
+                    # 10 |-> this
+                    # 11 |-> LStaticMethodCall ;
+                    # 12 |-> main
+                    # 13 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 14 |-> args
+                    # 15 |-> [  Ljava/ lang  / String ;
+                    # 16 |-> res
+                    # 17 |-> I
+                    # 18 |-> m
+                    # 19 |-> ( ) I
+                    # 20 |-> SourceFile
+                    # 21 |->  StaticMethodCall. java 
+                    # 22 |-> <init> : ( ) V
+                    # 23 |-> m : ( ) I
+                    # 24 |-> StaticMethodCall
+                    # 25 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 4 . # 22
+                    # 2 |-> Methodref . # 3 . # 23
+                    # 3 |-> Class . # 24
+                    # 4 |-> Class . # 25
+                    # 5 |-> Utf8 . <init>
+                    # 6 |-> Utf8 . ( ) V
+                    # 7 |-> Utf8 . Code
+                    # 8 |-> Utf8 . LineNumberTable
+                    # 9 |-> Utf8 . LocalVariableTable
+                    # 10 |-> Utf8 . this
+                    # 11 |-> Utf8 . LStaticMethodCall ;
+                    # 12 |-> Utf8 . main
+                    # 13 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 14 |-> Utf8 . args
+                    # 15 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 16 |-> Utf8 . res
+                    # 17 |-> Utf8 . I
+                    # 18 |-> Utf8 . m
+                    # 19 |-> Utf8 . ( ) I
+                    # 20 |-> Utf8 . SourceFile
+                    # 21 |-> Utf8 .  StaticMethodCall. java 
+                    # 22 |-> NameAndType . # 5 : # 6
+                    # 23 |-> NameAndType . # 18 : # 19
+                    # 24 |-> Utf8 . StaticMethodCall
+                    # 25 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(StaticMethodCall : ( ) V)
+                SetItem(m : ( ) I)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / StaticMethodCall  . class
+                last_modified |-> ( May , 14 , 2014 )
+                md5_checksum |-> 15e7bd640d03eb3457bdcbd887e5fdab
+                compiled_from |-> "StaticMethodCall.java"
+                sourcefile |-> "StaticMethodCall.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( StaticMethodCall , <envStack> ( StaticMethodCall , 
+          <env> .Map </env> ) (   java/ lang / Object  , <env> .Map </env> ) 
+          </envStack> )
+    </heap>
+</t>

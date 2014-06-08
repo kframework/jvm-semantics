@@ -107,6 +107,41 @@ module JVM-SEMANTICS-INSTRUCTIONS-OBJECT-CREATION-AND-MANIPULATION
           <heap> ... I1 |-> _ => I1 |-> I2 ... </heap>
 
 
+    //-------putstatic-------
+        
+    rule <pc> I:Int => I +Int 3 </pc>
+         <operandStack> ... ListItem(I1:CValue) => . </operandStack>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameMethod> C5:CValue : C6:CValue </frameMethod>
+         <methodNameType> C5 : C6 </methodNameType>
+         <frameStack> ... F |-> (I , C , C5 , C6) => F |-> (I +Int 3 , C , C5 , C6) ... </frameStack>
+         <crntFrame> F:Int </crntFrame>
+         <cpoolVals> ... C1 |-> C2:CValue . (C3:CValue : C4:CValue) ... </cpoolVals>
+         <methodStmts> ... I |-> putstatic C1:CIndex ... </methodStmts>
+         <k> runInstruction => updateStatic(C2 , C3 , I1) ~> runInstruction ... </k>
+
+    rule <pc> I:Int => I +Int 3 </pc>
+         <operandStack> ... ListItem(I1:Float) => . </operandStack>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameMethod> C5:CValue : C6:CValue </frameMethod>
+         <methodNameType> C5 : C6 </methodNameType>
+         <frameStack> ... F |-> (I , C , C5 , C6) => F |-> (I +Int 3 , C , C5 , C6) ... </frameStack>
+         <crntFrame> F:Int </crntFrame>
+         <cpoolVals> ... C1 |-> C2:CValue . (C3:CValue : C4:CValue) ... </cpoolVals>
+         <methodStmts> ... I |-> putstatic C1:CIndex ... </methodStmts>
+         <k> runInstruction => updateStatic(C2 , C3 , I1) ~> runInstruction ... </k>
+
+    rule <k> updateStatic(C1:CValue , C2:CValue , C3:CValue) => . ... </k>
+         <classDecl> C:ClassModType C1 </classDecl>
+         <staticFields> ... C2 |-> _ => C2 |-> C3 ... </staticFields>
+
+    rule <k> updateStatic(C1:CValue , C2:CValue , C3:Float) => . ... </k>
+         <classDecl> C:ClassModType C1 </classDecl>
+         <staticFields> ... C2 |-> _ => C2 |-> C3 ... </staticFields>
+
+
     //-------getfield-------
         
     rule <pc> I:Int => I +Int 3 </pc>
@@ -124,7 +159,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-OBJECT-CREATION-AND-MANIPULATION
          <k> runInstruction => retrieveField(I3) ~> runInstruction ... </k>
 
     rule <k> retrieveField(I1:Int) => . ... </k>
-          <heap> ... I1 |-> I2:CValue ... </heap>
+         <heap> ... I1 |-> I2:CValue ... </heap>
          <operandStack> ... . => ListItem(I2) </operandStack>
          <classDecl> C:ClassDecl </classDecl>
          <frameClass> C </frameClass>
@@ -133,6 +168,49 @@ module JVM-SEMANTICS-INSTRUCTIONS-OBJECT-CREATION-AND-MANIPULATION
          <frameStack> ... F |-> (I , C , C5 , C6) ... </frameStack>
          <crntFrame> F:Int </crntFrame>
 
+    rule <k> retrieveField(I1:Int) => . ... </k>
+         <heap> ... I1 |-> I2:Float ... </heap>
+         <operandStack> ... . => ListItem(I2) </operandStack>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameMethod> C5:CValue : C6:CValue </frameMethod>
+         <methodNameType> C5 : C6 </methodNameType>
+         <frameStack> ... F |-> (I , C , C5 , C6) ... </frameStack>
+         <crntFrame> F:Int </crntFrame>
+
+
+    //-------getstatic-------
+        
+    rule <pc> I:Int => I +Int 3 </pc>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameMethod> C5:CValue : C6:CValue </frameMethod>
+         <methodNameType> C5 : C6 </methodNameType>
+         <frameStack> ... F |-> (I , C , C5 , C6) => F |-> (I +Int 3 , C , C5 , C6) ... </frameStack>
+         <crntFrame> F:Int </crntFrame>
+         <cpoolVals> ... C1 |-> C2:CValue . (C3:CValue : C4:CValue) ... </cpoolVals>
+         <methodStmts> ... I |-> getstatic C1:CIndex ... </methodStmts>
+         <k> runInstruction => retrieveStatic(C2 , C3) ~> runInstruction ... </k>
+
+    rule <k> retrieveStatic(C2:CValue , C3:CValue) => . ... </k>
+         <classDecl> C1:ClassModType C2 </classDecl>
+         <staticFields> ... C3 |-> I1:CValue ... </staticFields>
+         <operandStack> ... . => ListItem(I1) </operandStack>
+         <frameClass> C:ClassDecl </frameClass>
+         <frameMethod> C5:CValue : C6:CValue </frameMethod>
+         <methodNameType> C5 : C6 </methodNameType>
+         <frameStack> ... F |-> (I , C , C5 , C6) => F |-> (I , C , C5 , C6) ... </frameStack>
+         <crntFrame> F:Int </crntFrame>
+                 
+    rule <k> retrieveStatic(C2:CValue , C3:CValue) => . ... </k>
+         <classDecl> C1:ClassModType C2 </classDecl>
+         <staticFields> ... C3 |-> I1:Float ... </staticFields>
+         <operandStack> ... . => ListItem(I1) </operandStack>
+         <frameClass> C:ClassDecl </frameClass>
+         <frameMethod> C5:CValue : C6:CValue </frameMethod>
+         <methodNameType> C5 : C6 </methodNameType>
+         <frameStack> ... F |-> (I , C , C5 , C6) => F |-> (I , C , C5 , C6) ... </frameStack>
+         <crntFrame> F:Int </crntFrame>
 
     //-------iaload-------
     
@@ -144,40 +222,263 @@ module JVM-SEMANTICS-INSTRUCTIONS-OBJECT-CREATION-AND-MANIPULATION
          <frameClass> C </frameClass>     
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... I5 |-> (I2:Id , I3:CValue , I4:Int) => I5 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <k> runInstruction => retrieveField (L +Int 1 +Int L1) ~> runInstruction ... </k>
          <methodStmts> ... I |-> iaload ... </methodStmts>
+
+
+    //-------laload-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>     
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
+         <k> runInstruction => retrieveField (L +Int 1 +Int L1) ~> runInstruction ... </k>
+         <methodStmts> ... I |-> laload ... </methodStmts>
+
+
+    //-------baload-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>     
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
+         <k> runInstruction => retrieveField (L +Int 1 +Int L1) ~> runInstruction ... </k>
+         <methodStmts> ... I |-> baload ... </methodStmts>
+
+
+    //-------caload-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>     
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
+         <k> runInstruction => retrieveField (L +Int 1 +Int L1) ~> runInstruction ... </k>
+         <methodStmts> ... I |-> caload ... </methodStmts>
+
+
+    //-------saload-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>     
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
+         <k> runInstruction => retrieveField (L +Int 1 +Int L1) ~> runInstruction ... </k>
+         <methodStmts> ... I |-> saload ... </methodStmts>
+
+    
+    //-------faload-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>     
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
+         <k> runInstruction => retrieveField (L +Int 1 +Int L1) ~> runInstruction ... </k>
+         <methodStmts> ... I |-> faload ... </methodStmts>
+
+    
+    //-------daload-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>     
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
+         <k> runInstruction => retrieveField (L +Int 1 +Int L1) ~> runInstruction ... </k>
+         <methodStmts> ... I |-> daload ... </methodStmts>
+
+    
+    //-------aaload-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>     
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
+         <k> runInstruction => retrieveField (L +Int 1 +Int L1) ~> runInstruction ... </k>
+         <methodStmts> ... I |-> aaload ... </methodStmts>
 
 
     //-------iastore-------
     
     rule <pc> I:Int => I +Int 1 </pc>
-         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) ListItem(L2:Int) => . </operandStack>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) ListItem(L2:CValue) => . </operandStack>
          <frameMethod> C1:CValue : C2:CValue </frameMethod>
          <methodNameType> C1 : C2 </methodNameType>
          <classDecl> C:ClassDecl </classDecl>
          <frameClass> C </frameClass>     
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         //<testing> _ => L +Int 1 +Int L1 </testing>
-         <localVarArr> ... I5 |-> (I2:Id , I3:CValue , I4:Int) => I5 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <k> runInstruction => updateField(L +Int 1 +Int L1 , L2) ~> runInstruction ... </k>
          <methodStmts> ... I |-> iastore ... </methodStmts>
+
+
+    //-------lastore-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) ListItem(L2:CValue) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>     
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
+         <k> runInstruction => updateField(L +Int 1 +Int L1 , L2) ~> runInstruction ... </k>
+         <methodStmts> ... I |-> lastore ... </methodStmts>
+
+
+    //-------bastore-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) ListItem(L2:CValue) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>     
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
+         <k> runInstruction => updateField(L +Int 1 +Int L1 , L2) ~> runInstruction ... </k>
+         <methodStmts> ... I |-> bastore ... </methodStmts>
+
+
+    //-------castore-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) ListItem(L2:CValue) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>     
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
+         <k> runInstruction => updateField(L +Int 1 +Int L1 , L2) ~> runInstruction ... </k>
+         <methodStmts> ... I |-> castore ... </methodStmts>
+
+
+    //-------sastore-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) ListItem(L2:CValue) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>     
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
+         <k> runInstruction => updateField(L +Int 1 +Int L1 , L2) ~> runInstruction ... </k>
+         <methodStmts> ... I |-> sastore ... </methodStmts>
+
+
+    //-------fastore-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) ListItem(L2:Float) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>     
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
+         <k> runInstruction => updateField(L +Int 1 +Int L1 , L2) ~> runInstruction ... </k>
+         <methodStmts> ... I |-> fastore ... </methodStmts>
+
+
+    //-------dastore-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) ListItem(L2:Float) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>     
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
+         <k> runInstruction => updateField(L +Int 1 +Int L1 , L2) ~> runInstruction ... </k>
+         <methodStmts> ... I |-> dastore ... </methodStmts>
 
 
     //-------aastore-------
     
     rule <pc> I:Int => I +Int 1 </pc>
-         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) ListItem(L2:Int) => . </operandStack>
+         <operandStack> ... ListItem(L:Int) ListItem(L1:Int) ListItem(L2:CValue) => . </operandStack>
          <frameMethod> C1:CValue : C2:CValue </frameMethod>
          <methodNameType> C1 : C2 </methodNameType>
          <classDecl> C:ClassDecl </classDecl>
          <frameClass> C </frameClass>     
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         //<testing> _ => L +Int 1 +Int L1 </testing>
-         <localVarArr> ... I5 |-> (I2:Id , I3:CValue , I4:Int) => I5 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <k> runInstruction => updateField(L +Int 1 +Int L1 , L2) ~> runInstruction ... </k>
          <methodStmts> ... I |-> aastore ... </methodStmts>
+
+    rule <k> updateField(I1:Int , I2:Float) => . ... </k>
+         <heap> ... I1 |-> _ => I1 |-> I2 ... </heap>
+
+    
+    //-------arraylength-------
+        
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(I1:Int) => ListItem(I3) </operandStack>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameMethod> C5:CValue : C6:CValue </frameMethod>
+         <methodNameType> C5 : C6 </methodNameType>
+         <frameStack> ... F |-> (I , C , C5 , C6) => F |-> (I +Int 1 , C , C5 , C6) ... </frameStack>
+         <crntFrame> F:Int </crntFrame>
+         <methodStmts> ... I |-> arraylength ... </methodStmts>
+         <heap> ... I1 |-> array(C7:Primitives , I2:Int , I3:Int) ... </heap>
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(I1:Int) => ListItem(I3) </operandStack>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameMethod> C5:CValue : C6:CValue </frameMethod>
+         <methodNameType> C5 : C6 </methodNameType>
+         <frameStack> ... F |-> (I , C , C5 , C6) => F |-> (I +Int 1 , C , C5 , C6) ... </frameStack>
+         <crntFrame> F:Int </crntFrame>
+         <methodStmts> ... I |-> arraylength ... </methodStmts>
+         <heap> ... I1 |-> array(C7:CValue , I2:Int , I3:Int) ... </heap>
 
 endmodule

@@ -1,0 +1,122 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/BitwiseOperations.class
+  Last modified Jun 7, 2014; size 624 bytes
+  MD5 checksum 3daaa42e740138f22e0aacad629f2fd9
+  Compiled from "BitwiseOperations.java"
+public class BitwiseOperations
+  SourceFile: "BitwiseOperations.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #16.#38        //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #15.#39        //  BitwiseOperations.a:I
+   #3 = Fieldref           #15.#40        //  BitwiseOperations.b:I
+   #4 = Integer            1073741816
+   #5 = Fieldref           #15.#41        //  BitwiseOperations.c:I
+   #6 = Long               256l
+   #8 = Fieldref           #15.#42        //  BitwiseOperations.d:J
+   #9 = Long               64l
+  #11 = Fieldref           #15.#43        //  BitwiseOperations.e:J
+  #12 = Long               4294967295l
+  #14 = Fieldref           #15.#44        //  BitwiseOperations.f:J
+  #15 = Class              #45            //  BitwiseOperations
+  #16 = Class              #46            //  java/lang/Object
+  #17 = Utf8               a
+  #18 = Utf8               I
+  #19 = Utf8               b
+  #20 = Utf8               c
+  #21 = Utf8               d
+  #22 = Utf8               J
+  #23 = Utf8               e
+  #24 = Utf8               f
+  #25 = Utf8               <init>
+  #26 = Utf8               ()V
+  #27 = Utf8               Code
+  #28 = Utf8               LineNumberTable
+  #29 = Utf8               LocalVariableTable
+  #30 = Utf8               this
+  #31 = Utf8               LBitwiseOperations;
+  #32 = Utf8               main
+  #33 = Utf8               ([Ljava/lang/String;)V
+  #34 = Utf8               args
+  #35 = Utf8               [Ljava/lang/String;
+  #36 = Utf8               SourceFile
+  #37 = Utf8               BitwiseOperations.java
+  #38 = NameAndType        #25:#26        //  "<init>":()V
+  #39 = NameAndType        #17:#18        //  a:I
+  #40 = NameAndType        #19:#18        //  b:I
+  #41 = NameAndType        #20:#18        //  c:I
+  #42 = NameAndType        #21:#22        //  d:J
+  #43 = NameAndType        #23:#22        //  e:J
+  #44 = NameAndType        #24:#22        //  f:J
+  #45 = Utf8               BitwiseOperations
+  #46 = Utf8               java/lang/Object
+{
+  public static int a;
+    Signature: I
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static int b;
+    Signature: I
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static int c;
+    Signature: I
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static long d;
+    Signature: J
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static long e;
+    Signature: J
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static long f;
+    Signature: J
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public BitwiseOperations();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LBitwiseOperations;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: sipush        128
+         3: putstatic     #2                  // Field a:I
+         6: bipush        8
+         8: putstatic     #3                  // Field b:I
+        11: ldc           #4                  // int 1073741816
+        13: putstatic     #5                  // Field c:I
+        16: ldc2_w        #6                  // long 256l
+        19: putstatic     #8                  // Field d:J
+        22: ldc2_w        #9                  // long 64l
+        25: putstatic     #11                 // Field e:J
+        28: ldc2_w        #12                 // long 4294967295l
+        31: putstatic     #14                 // Field f:J
+        34: return        
+      LineNumberTable:
+        line 11: 0
+        line 12: 6
+        line 13: 11
+        line 14: 16
+        line 15: 22
+        line 16: 28
+        line 17: 34
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      35     0  args   [Ljava/lang/String;
+}

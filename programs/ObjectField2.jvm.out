@@ -1,0 +1,831 @@
+<t>
+    <k>
+        .K
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        12
+    </nextRefLoc>
+    <pc>
+        27
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        1
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class A
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public A ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        A : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            3 |-> 4
+                            4 |-> 9
+                            6 |-> 0
+                            8 |-> 14
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> aload_0
+                            5 |-> iconst_1
+                            6 |-> putfield # 2
+                            9 |-> aload_0
+                            10 |-> iconst_2
+                            11 |-> putfield # 3
+                            14 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 15,, this,, LA ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                <field>
+                    <fieldDecl>
+                        private int a2 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public int a1 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |->  A. a1 : I 
+                    # 3 |->  A. a2 : I 
+                    # 4 |-> A
+                    # 5 |->   java/ lang / Object 
+                    # 6 |-> a1
+                    # 7 |-> I
+                    # 8 |-> a2
+                    # 9 |-> <init>
+                    # 10 |-> ( ) V
+                    # 11 |-> Code
+                    # 12 |-> LineNumberTable
+                    # 13 |-> LocalVariableTable
+                    # 14 |-> this
+                    # 15 |-> LA ;
+                    # 16 |-> SourceFile
+                    # 17 |->  A. java 
+                    # 18 |-> <init> : ( ) V
+                    # 19 |->  a1: I 
+                    # 20 |->  a2: I 
+                    # 21 |-> A
+                    # 22 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 5 . # 18
+                    # 2 |-> Fieldref . # 4 . # 19
+                    # 3 |-> Fieldref . # 4 . # 20
+                    # 4 |-> Class . # 21
+                    # 5 |-> Class . # 22
+                    # 6 |-> Utf8 . a1
+                    # 7 |-> Utf8 . I
+                    # 8 |-> Utf8 . a2
+                    # 9 |-> Utf8 . <init>
+                    # 10 |-> Utf8 . ( ) V
+                    # 11 |-> Utf8 . Code
+                    # 12 |-> Utf8 . LineNumberTable
+                    # 13 |-> Utf8 . LocalVariableTable
+                    # 14 |-> Utf8 . this
+                    # 15 |-> Utf8 . LA ;
+                    # 16 |-> Utf8 . SourceFile
+                    # 17 |-> Utf8 .  A. java 
+                    # 18 |-> NameAndType . # 9 : # 10
+                    # 19 |-> NameAndType . # 6 : # 7
+                    # 20 |-> NameAndType . # 8 : # 7
+                    # 21 |-> Utf8 . A
+                    # 22 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_PRIVATE)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(A : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / A  . class
+                last_modified |-> ( May , 14 , 2014 )
+                md5_checksum |-> 365317d31d7cebd5294d09eebbb07135
+                compiled_from |-> "A.java"
+                sourcefile |-> "A.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                a1 |-> undefined
+                a2 |-> undefined
+            </env>
+        </class>
+        <class>
+            <classDecl>
+                public class D
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public void m ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        m : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            15 |-> 0
+                            16 |-> 7
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> sipush -2000
+                            4 |-> putfield # 3
+                            7 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 8,, this,, LD ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public D ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        D : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            3 |-> 4
+                            4 |-> 11
+                            6 |-> 0
+                            8 |-> 18
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> aload_0
+                            5 |-> sipush 1000
+                            8 |-> putfield # 2
+                            11 |-> aload_0
+                            12 |-> sipush 2000
+                            15 |-> putfield # 3
+                            18 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 19,, this,, LD ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public D ( int ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        D : ( I ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            3 |-> 4
+                            4 |-> 11
+                            10 |-> 0
+                            11 |-> 18
+                            12 |-> 23
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> aload_0
+                            5 |-> sipush 1000
+                            8 |-> putfield # 2
+                            11 |-> aload_0
+                            12 |-> sipush 2000
+                            15 |-> putfield # 3
+                            18 |-> aload_0
+                            19 |-> iload_1
+                            20 |-> putfield # 2
+                            23 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 2
+                            args_size |-> 2
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 24,, this,, LD ;)
+                            1 |-> '`(_,_,_,_`)(0,, 24,, x,, I)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                <field>
+                    <fieldDecl>
+                        private int d2 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public int d1 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |->  D. d1 : I 
+                    # 3 |->  D. d2 : I 
+                    # 4 |-> D
+                    # 5 |->   java/ lang / Object 
+                    # 6 |-> d1
+                    # 7 |-> I
+                    # 8 |-> d2
+                    # 9 |-> <init>
+                    # 10 |-> ( ) V
+                    # 11 |-> Code
+                    # 12 |-> LineNumberTable
+                    # 13 |-> LocalVariableTable
+                    # 14 |-> this
+                    # 15 |-> LD ;
+                    # 16 |-> ( I ) V
+                    # 17 |-> x
+                    # 18 |-> m
+                    # 19 |-> SourceFile
+                    # 20 |->  D. java 
+                    # 21 |-> <init> : ( ) V
+                    # 22 |->  d1: I 
+                    # 23 |->  d2: I 
+                    # 24 |-> D
+                    # 25 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 5 . # 21
+                    # 2 |-> Fieldref . # 4 . # 22
+                    # 3 |-> Fieldref . # 4 . # 23
+                    # 4 |-> Class . # 24
+                    # 5 |-> Class . # 25
+                    # 6 |-> Utf8 . d1
+                    # 7 |-> Utf8 . I
+                    # 8 |-> Utf8 . d2
+                    # 9 |-> Utf8 . <init>
+                    # 10 |-> Utf8 . ( ) V
+                    # 11 |-> Utf8 . Code
+                    # 12 |-> Utf8 . LineNumberTable
+                    # 13 |-> Utf8 . LocalVariableTable
+                    # 14 |-> Utf8 . this
+                    # 15 |-> Utf8 . LD ;
+                    # 16 |-> Utf8 . ( I ) V
+                    # 17 |-> Utf8 . x
+                    # 18 |-> Utf8 . m
+                    # 19 |-> Utf8 . SourceFile
+                    # 20 |-> Utf8 .  D. java 
+                    # 21 |-> NameAndType . # 9 : # 10
+                    # 22 |-> NameAndType . # 6 : # 7
+                    # 23 |-> NameAndType . # 8 : # 7
+                    # 24 |-> Utf8 . D
+                    # 25 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_PRIVATE)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(D : ( ) V)
+                SetItem(D : ( I ) V)
+                SetItem(m : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / D  . class
+                last_modified |-> ( May , 14 , 2014 )
+                md5_checksum |-> 9b9468ba615eb1cbcd6f1b4fbb043a1d
+                compiled_from |-> "D.java"
+                sourcefile |-> "D.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                d1 |-> undefined
+                d2 |-> undefined
+            </env>
+        </class>
+        <class>
+            <classDecl>
+                public class E
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public E ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        E : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            4 |-> 4
+                            5 |-> 11
+                            7 |-> 0
+                            8 |-> 18
+                            9 |-> 29
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> aload_0
+                            5 |-> sipush 1000
+                            8 |-> putfield # 2
+                            11 |-> aload_0
+                            12 |-> sipush 2000
+                            15 |-> putfield # 3
+                            18 |-> aload_0
+                            19 |-> new # 4
+                            22 |-> dup
+                            23 |-> invokespecial # 5
+                            26 |-> putfield # 6
+                            29 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 3
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 30,, this,, LE ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                <field>
+                    <fieldDecl>
+                        private int e2 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public int e1 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public A a ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |->  E. e1 : I 
+                    # 3 |->  E. e2 : I 
+                    # 4 |-> A
+                    # 5 |->  A. <init> : ( ) V 
+                    # 6 |->  E. a : LA ; 
+                    # 7 |-> E
+                    # 8 |->   java/ lang / Object 
+                    # 9 |-> a
+                    # 10 |-> LA ;
+                    # 11 |-> e1
+                    # 12 |-> I
+                    # 13 |-> e2
+                    # 14 |-> <init>
+                    # 15 |-> ( ) V
+                    # 16 |-> Code
+                    # 17 |-> LineNumberTable
+                    # 18 |-> LocalVariableTable
+                    # 19 |-> this
+                    # 20 |-> LE ;
+                    # 21 |-> SourceFile
+                    # 22 |->  E. java 
+                    # 23 |-> <init> : ( ) V
+                    # 24 |->  e1: I 
+                    # 25 |->  e2: I 
+                    # 26 |-> A
+                    # 27 |-> a : LA ;
+                    # 28 |-> E
+                    # 29 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 8 . # 23
+                    # 2 |-> Fieldref . # 7 . # 24
+                    # 3 |-> Fieldref . # 7 . # 25
+                    # 4 |-> Class . # 26
+                    # 5 |-> Methodref . # 4 . # 23
+                    # 6 |-> Fieldref . # 7 . # 27
+                    # 7 |-> Class . # 28
+                    # 8 |-> Class . # 29
+                    # 9 |-> Utf8 . a
+                    # 10 |-> Utf8 . LA ;
+                    # 11 |-> Utf8 . e1
+                    # 12 |-> Utf8 . I
+                    # 13 |-> Utf8 . e2
+                    # 14 |-> Utf8 . <init>
+                    # 15 |-> Utf8 . ( ) V
+                    # 16 |-> Utf8 . Code
+                    # 17 |-> Utf8 . LineNumberTable
+                    # 18 |-> Utf8 . LocalVariableTable
+                    # 19 |-> Utf8 . this
+                    # 20 |-> Utf8 . LE ;
+                    # 21 |-> Utf8 . SourceFile
+                    # 22 |-> Utf8 .  E. java 
+                    # 23 |-> NameAndType . # 14 : # 15
+                    # 24 |-> NameAndType . # 11 : # 12
+                    # 25 |-> NameAndType . # 13 : # 12
+                    # 26 |-> Utf8 . A
+                    # 27 |-> NameAndType . # 9 : # 10
+                    # 28 |-> Utf8 . E
+                    # 29 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_PRIVATE)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(E : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / E  . class
+                last_modified |-> ( May , 15 , 2014 )
+                md5_checksum |-> e85f5580663e0c7f750d801501de1f60
+                compiled_from |-> "E.java"
+                sourcefile |-> "E.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                a |-> undefined
+                e1 |-> undefined
+                e2 |-> undefined
+            </env>
+        </class>
+        <class>
+            <classDecl>
+                public class ObjectField2
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            4 |-> 0
+                            5 |-> 8
+                            6 |-> 16
+                            7 |-> 27
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> new # 2
+                            3 |-> dup
+                            4 |-> invokespecial # 3
+                            7 |-> astore_1
+                            8 |-> new # 4
+                            11 |-> dup
+                            12 |-> invokespecial # 5
+                            15 |-> astore_2
+                            16 |-> aload_2
+                            17 |-> aload_1
+                            18 |-> getfield # 6
+                            21 |-> getfield # 7
+                            24 |-> putfield # 8
+                            27 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 3
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 28,, args,, [  Ljava/ lang 
+                               / String ;)
+                            1 |-> '`(_,_,_,_`)(8,, 20,, myE,, LE ;)
+                            2 |-> '`(_,_,_,_`)(16,, 12,, myD,, LD ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public ObjectField2 ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        ObjectField2 : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, LObjectField2 ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                .Bag
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |-> E
+                    # 3 |->  E. <init> : ( ) V 
+                    # 4 |-> D
+                    # 5 |->  D. <init> : ( ) V 
+                    # 6 |->  E. a : LA ; 
+                    # 7 |->  A. a1 : I 
+                    # 8 |->  D. d1 : I 
+                    # 9 |-> ObjectField2
+                    # 10 |->   java/ lang / Object 
+                    # 11 |-> <init>
+                    # 12 |-> ( ) V
+                    # 13 |-> Code
+                    # 14 |-> LineNumberTable
+                    # 15 |-> LocalVariableTable
+                    # 16 |-> this
+                    # 17 |-> LObjectField2 ;
+                    # 18 |-> main
+                    # 19 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 20 |-> args
+                    # 21 |-> [  Ljava/ lang  / String ;
+                    # 22 |-> myE
+                    # 23 |-> LE ;
+                    # 24 |-> myD
+                    # 25 |-> LD ;
+                    # 26 |-> SourceFile
+                    # 27 |->  ObjectField2. java 
+                    # 28 |-> <init> : ( ) V
+                    # 29 |-> E
+                    # 30 |-> D
+                    # 31 |-> a : LA ;
+                    # 32 |-> A
+                    # 33 |->  a1: I 
+                    # 34 |->  d1: I 
+                    # 35 |-> ObjectField2
+                    # 36 |->   java/ lang / Object 
+                    # 37 |-> a
+                    # 38 |-> LA ;
+                    # 39 |-> A
+                    # 40 |-> a1
+                    # 41 |-> I
+                    # 42 |-> d1
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 10 . # 28
+                    # 2 |-> Class . # 29
+                    # 3 |-> Methodref . # 2 . # 28
+                    # 4 |-> Class . # 30
+                    # 5 |-> Methodref . # 4 . # 28
+                    # 6 |-> Fieldref . # 2 . # 31
+                    # 7 |-> Fieldref . # 32 . # 33
+                    # 8 |-> Fieldref . # 4 . # 34
+                    # 9 |-> Class . # 35
+                    # 10 |-> Class . # 36
+                    # 11 |-> Utf8 . <init>
+                    # 12 |-> Utf8 . ( ) V
+                    # 13 |-> Utf8 . Code
+                    # 14 |-> Utf8 . LineNumberTable
+                    # 15 |-> Utf8 . LocalVariableTable
+                    # 16 |-> Utf8 . this
+                    # 17 |-> Utf8 . LObjectField2 ;
+                    # 18 |-> Utf8 . main
+                    # 19 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 20 |-> Utf8 . args
+                    # 21 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 22 |-> Utf8 . myE
+                    # 23 |-> Utf8 . LE ;
+                    # 24 |-> Utf8 . myD
+                    # 25 |-> Utf8 . LD ;
+                    # 26 |-> Utf8 . SourceFile
+                    # 27 |-> Utf8 .  ObjectField2. java 
+                    # 28 |-> NameAndType . # 11 : # 12
+                    # 29 |-> Utf8 . E
+                    # 30 |-> Utf8 . D
+                    # 31 |-> NameAndType . # 37 : # 38
+                    # 32 |-> Class . # 39
+                    # 33 |-> NameAndType . # 40 : # 41
+                    # 34 |-> NameAndType . # 42 : # 41
+                    # 35 |-> Utf8 . ObjectField2
+                    # 36 |-> Utf8 .   java/ lang / Object 
+                    # 37 |-> Utf8 . a
+                    # 38 |-> Utf8 . LA ;
+                    # 39 |-> Utf8 . A
+                    # 40 |-> Utf8 . a1
+                    # 41 |-> Utf8 . I
+                    # 42 |-> Utf8 . d1
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(ObjectField2 : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / ObjectField2  . class
+                last_modified |-> ( May , 15 , 2014 )
+                md5_checksum |-> 51fd9a1e6ba3a427fd87ba463744c8a4
+                compiled_from |-> "ObjectField2.java"
+                sourcefile |-> "ObjectField2.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( ObjectField2 , <envStack> ( ObjectField2 , <env> .Map 
+          </env> ) (   java/ lang / Object  , <env> .Map </env> ) </envStack> 
+          )
+        2 |-> object ( E , <envStack> ( E , <env> a |-> 3 e1 |-> 4 e2 |-> 5 
+          </env> ) (   java/ lang / Object  , <env> .Map </env> ) </envStack> 
+          )
+        3 |-> 6
+        4 |-> 1000
+        5 |-> 2000
+        6 |-> object ( A , <envStack> ( A , <env> a1 |-> 7 a2 |-> 8 </env> ) (
+             java/ lang / Object  , <env> .Map </env> ) </envStack> )
+        7 |-> 1
+        8 |-> 2
+        9 |-> object ( D , <envStack> ( D , <env> d1 |-> 10 d2 |-> 11 </env> )
+           (   java/ lang / Object  , <env> .Map </env> ) </envStack> )
+        10 |-> 1
+        11 |-> 2000
+    </heap>
+</t>

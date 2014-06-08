@@ -1,0 +1,250 @@
+<t>
+    <k>
+        .K
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        6
+    </nextRefLoc>
+    <pc>
+        28
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        3
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class DoubleArray
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            6 |-> 0
+                            7 |-> 4
+                            8 |-> 10
+                            9 |-> 16
+                            11 |-> 22
+                            12 |-> 28
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> iconst_3
+                            1 |-> newarray double
+                            3 |-> astore_1
+                            4 |-> aload_1
+                            5 |-> iconst_0
+                            6 |-> ldc2_w # 2
+                            9 |-> dastore
+                            10 |-> aload_1
+                            11 |-> iconst_1
+                            12 |-> ldc2_w # 4
+                            15 |-> dastore
+                            16 |-> aload_1
+                            17 |-> iconst_2
+                            18 |-> ldc2_w # 6
+                            21 |-> dastore
+                            22 |-> aload_1
+                            23 |-> iconst_2
+                            24 |-> daload
+                            25 |-> putstatic # 8
+                            28 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 4
+                            locals |-> 2
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 29,, args,, [  Ljava/ lang 
+                               / String ;)
+                            1 |-> '`(_,_,_,_`)(4,, 25,, a,, [ D)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public DoubleArray ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        DoubleArray : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, LDoubleArray ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                <field>
+                    <fieldDecl>
+                        private static double x ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |-> 1.01e+1
+                    # 4 |-> 2.0199999999999999e+1
+                    # 6 |-> 3.0300000000000001e+1
+                    # 8 |->  DoubleArray. x : D 
+                    # 9 |-> DoubleArray
+                    # 10 |->   java/ lang / Object 
+                    # 11 |-> x
+                    # 12 |-> D
+                    # 13 |-> <init>
+                    # 14 |-> ( ) V
+                    # 15 |-> Code
+                    # 16 |-> LineNumberTable
+                    # 17 |-> LocalVariableTable
+                    # 18 |-> this
+                    # 19 |-> LDoubleArray ;
+                    # 20 |-> main
+                    # 21 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 22 |-> args
+                    # 23 |-> [  Ljava/ lang  / String ;
+                    # 24 |-> a
+                    # 25 |-> [ D
+                    # 26 |-> SourceFile
+                    # 27 |->  DoubleArray. java 
+                    # 28 |-> <init> : ( ) V
+                    # 29 |->  x: D 
+                    # 30 |-> DoubleArray
+                    # 31 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 10 . # 28
+                    # 2 |-> Double . 10.1d
+                    # 4 |-> Double . 20.2d
+                    # 6 |-> Double . 30.3d
+                    # 8 |-> Fieldref . # 9 . # 29
+                    # 9 |-> Class . # 30
+                    # 10 |-> Class . # 31
+                    # 11 |-> Utf8 . x
+                    # 12 |-> Utf8 . D
+                    # 13 |-> Utf8 . <init>
+                    # 14 |-> Utf8 . ( ) V
+                    # 15 |-> Utf8 . Code
+                    # 16 |-> Utf8 . LineNumberTable
+                    # 17 |-> Utf8 . LocalVariableTable
+                    # 18 |-> Utf8 . this
+                    # 19 |-> Utf8 . LDoubleArray ;
+                    # 20 |-> Utf8 . main
+                    # 21 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 22 |-> Utf8 . args
+                    # 23 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 24 |-> Utf8 . a
+                    # 25 |-> Utf8 . [ D
+                    # 26 |-> Utf8 . SourceFile
+                    # 27 |-> Utf8 .  DoubleArray. java 
+                    # 28 |-> NameAndType . # 13 : # 14
+                    # 29 |-> NameAndType . # 11 : # 12
+                    # 30 |-> Utf8 . DoubleArray
+                    # 31 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_PRIVATE)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(DoubleArray : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / DoubleArray  . class
+                last_modified |-> ( Jun , 6 , 2014 )
+                md5_checksum |-> 0213487856472e80e0a001866c642758
+                compiled_from |-> "DoubleArray.java"
+                sourcefile |-> "DoubleArray.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                x |-> 3.0300000000000001e+1
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( DoubleArray , <envStack> ( DoubleArray , <env> .Map 
+          </env> ) (   java/ lang / Object  , <env> .Map </env> ) </envStack> 
+          )
+        2 |-> array ( double , 3 , 3 )
+        3 |-> 1.01e+1
+        4 |-> 2.0199999999999999e+1
+        5 |-> 3.0300000000000001e+1
+    </heap>
+</t>

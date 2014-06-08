@@ -65,7 +65,7 @@ module JVM-SYNTAX
                     | "iload_3" | "imul" | "ineg" | "ior" | "irem" | "ireturn" | "ishl" | "ishr" 
                     | "istore" | "istore_0" | "istore_1" | "istore_2" | "istore_3" | "isub" | "iushr" 
                     | "ixor" | "sipush" | "idiv"
-                    | "iconst_0" | "iconst_1" | "iconst_2" | "iconst_3" | "iconst_4" | "iconst_5"                
+                    | "iconst_0" | "iconst_1" | "iconst_2" | "iconst_3" | "iconst_4" | "iconst_5" | "iconst_m1"               
                     | "ifeq" | "ifge" | "ifgt" | "ifle" | "iflt" | "ifne"            
                     | "l2d" | "l2f" | "l2i" | "ladd" | "laload" | "land" | "lastore" | "lcmp" | "lconst_0" 
                     | "lconst_1" | "ldc" | "ldc_w" | "ldc2_w" | "ldiv" | "lload" | "lload_0" | "lload_1" 
@@ -76,7 +76,7 @@ module JVM-SYNTAX
                     | "instanceof" | "lookupswitch" | "new" | "nop" | "pop" | "pop2" | "putfield"
                     | "putstatic" | "return" | "swap" | "tableswitch" | "wide"
                     | "invokedynamic" | "invokeinterface" | "invokespecial" | "invokestatic" | "invokevirtual"                     
-                    | "saload" | "sastore"            
+                    | "saload" | "sastore" | "areturn"      
                     | "aload" | "aload_0" | "aload_1" | "aload_2" | "aload_3" | "astore" | "astore_0" | "astore_1"
                     | "astore_2" | "astore_3" | "if_acmpne" | "if_acmpeq" | "ifnonnull" | "ifnull" | "monitorenter"    
                     | "monitorexit"    
@@ -102,6 +102,10 @@ module JVM-SYNTAX
                         | "abstract" "class"                
                         | Modifier "final" "class"
                         | "final" "class"
+                        | Modifier "interface"
+                        | "interface"
+                        | Modifier "abstract" "interface"
+                        | "abstract" "interface"
 
     syntax ClassExtImpl ::= "extends" CValue
                             | "implements" CValue
@@ -128,9 +132,17 @@ module JVM-SYNTAX
 
     syntax FieldDeclaration ::= FieldModifierType FieldId ";"
 
-    syntax FieldModifierType ::= Modifier Type
+    syntax FieldModifierType ::= StaticFieldModifier
+                                | NonStaticFieldModifier
+
+    syntax StaticFieldModifier ::= Modifier "static" Type
+                                | Modifier "static" "final" Type
+                                | "static" Type
+
+    syntax NonStaticFieldModifier ::= Modifier Type
                                 | Modifier "final" Type
-                                | Modifier "static" Type
+                                | "final" Type
+                                | Type
 
     syntax FType ::= Id | Int | String
     
@@ -144,6 +156,7 @@ module JVM-SYNTAX
                         | FieldFlags "," FieldFlags        [left]
                     
     syntax FieldFlagsAccess ::= "flags" ":" FieldFlags
+                            | "flags" ":"
     
     syntax FConstValAtt ::= Type FType
     
@@ -163,28 +176,34 @@ module JVM-SYNTAX
     
     syntax Modifier ::= "private" | "public" | "protected"
 
-    syntax Primitives ::= "int" | "boolean" | "short" | "void" | "byte"  | "char" | "float"
+    syntax Primitives ::= "int" | "boolean" | "short" | "void" | "byte"  | "char" | "float" | "double" | "long"
     
     syntax Type ::= Type "," Type        [left]
                     | Primitives | Id
     
     syntax MethodArg ::= "(" ")" | "(" CValue "[" "]" ")" | "(java.lang.String[])"
                         | "(" Id ")" | "(" Type ")"
-    
-    
-    syntax MethodDeclaration ::= Modifier Type CValue MethodArg ";"
-                                | Modifier "static" Type Id MethodArg ";"
-                                | MainMethod
-                                | Constructor
-                                | TId MethodArg ";"
-                                
-    syntax Constructor ::= Modifier CValue MethodArg ";"
-                                
-    syntax MainMethod ::= "public" "static" "void" "main" "(java.lang.String[])" ";"
+
+    syntax MethodModType ::= Modifier Type
+                            | Modifier "static" Type
+                            | Modifier "abstract" Type
+                            | Modifier "final" Type
+                            | Modifier "static" "final" Type
+                            | "static" "final" Type
+                            | "static" Type
+                            | "abstract" Type
+                            | "final" Type
+                            | Type
+                            | Modifier
+
+    syntax MethodDeclaration ::= TId MethodArg ";"
+                                | "static" "{" "}" ";"
+                                | MethodModType CValue MethodArg ";"
     
     syntax MethodInfo ::= MethodSignature MethodFlagsAccess
                     
-    syntax Method ::= MethodDeclaration MethodInfo "Code" ":" MethodProperties 
+    syntax Method ::= MethodDeclaration MethodInfo
+                    | MethodDeclaration MethodInfo "Code" ":" MethodProperties 
                         Instructions "LineNumberTable" ":" LinesNumberTable
                     | MethodDeclaration MethodInfo "Code" ":" MethodProperties 
                         Instructions "LineNumberTable" ":" LinesNumberTable "LocalVariableTable" ":" LocalVariableTable
@@ -291,7 +310,7 @@ module JVM-SYNTAX
 
     syntax TFloat ::= FloatToken
 
-    syntax FloatToken ::= Token{[0-9]+[\.][0-9]+[f]}
+    syntax FloatToken ::= Token{[0-9]+[\.][0-9]+[E]*[0-9]*[f]}
 
     syntax TLong ::= LongToken
 
@@ -311,10 +330,12 @@ module JVM-SYNTAX
                     | TFloat
                     | TLong
                     | TDouble
-                    | CValue "." CValue     
+                    | CValue "." CValue   
                     | CValue ":" CValue                    
                     | CIndex
                     | "<init>"
+                    | "<clinit>"
+                    | "static"
                     | "(" ")" CIds
                     | "(" CIds ")" CIds
                     | "Code" | "ConstantValue" | "StackMapTable" | "Exceptions" | "InnerClasses"
@@ -344,7 +365,7 @@ module JVM-SYNTAX
             | "sourcefile" | "minor_version" | "major_version" | "inner_class" | "enclosing_method"
             | (Int, ClassDecl, CValue, CValue)
             | (Int, Int, Int, Id, CValue)
-            | (Id, CValue, Int)
+            | (Int , Id, CValue, CValue)
             | (Int, Int, Id, CValue)
             | (Id , Int , Int)
             | CType "." CValue
@@ -356,21 +377,27 @@ module JVM-SYNTAX
             | "newObject" "(" CValue "," Int ")"
             | "addLocation" "(" Int ")"
             | "updateField" "(" Int "," CValue ")"
+            | "updateField" "(" Int "," Float ")"
             | "updateField" "(" Int "," Int "," CValue ")"
-            | "searchClassSpecial" "(" CValue "," CValue "," CValue "," Int "," ClassDecl "," CValue "," CValue ")"
-            | "addFrame" "(" ClassDecl "," CValue "," CValue "," Int "," ClassDecl "," CValue "," CValue ")"
-            | "getReferences" "(" ClassDecl "," CValue "," CValue "," Int "," ClassDecl "," CValue "," CValue ")"
-            | "getReference" "(" ClassDecl "," CValue "," CValue "," Int "," ClassDecl "," CValue "," CValue "," Int ")"
-            | "setReference" "(" ClassDecl "," CValue "," CValue "," Int "," ClassDecl "," CValue "," CValue "," Int ")"
-            | "searchClassVirtual" "(" CValue "," CValue "," CValue "," Int "," ClassDecl "," CValue "," CValue ")"
+            | "searchClassSpecial" "(" CValue "," CValue "," CValue "," ClassDecl "," CValue "," CValue ")"
+            | "addFrame" "(" ClassDecl "," CValue "," CValue "," ClassDecl "," CValue "," CValue ")"
+            | "getReference" "(" ClassDecl "," CValue "," CValue "," Int "," ClassDecl "," CValue "," CValue ")"
+            | "setReference" "(" ClassDecl "," CValue "," CValue "," Int "," ClassDecl "," CValue "," CValue "," CValue ")"
+            | "searchClass" "(" CValue "," CValue "," CValue "," ClassDecl "," CValue "," CValue ")"
+            | "lookup" "(" CValue "," CValue "," CValue "," ClassDecl "," CValue "," CValue ")"
+            | "prepareLookup" "(" CValue "," CValue "," CValue "," ClassDecl "," CValue "," CValue ")"
+            | "prepareLookup" "(" CValue "," CValue "," CValue "," ClassDecl "," CValue "," CValue "," Int ")"
             | "arg" "(" Int ")"
-            | "retrieveField" "(" Int ")"
-            | "classLoad" | "mainConstructor" | "setupExecution" | "setMainReference"
+            | "retrieveField" "(" Int ")" | "returnValue" "(" CValue ")" | "returnValue" "(" Float ")"
+            | "classLoad" | "mainConstructor" | "setupExecution" | "setMainReference" | "preparation" | "prepare" "(" ClassDecl ")"
+            | "updateStatic" "(" CValue "," CValue "," CValue ")"
+            | "updateStatic" "(" CValue "," CValue "," Float ")"
+            | "retrieveStatic" "(" CValue "," CValue ")"
             | "newArrayElement" "(" Int ")"
             | "runInstruction"
             | "createLocations"
             | "trimTail" "(" String "," Int ")"        [function]
-            | "trimFront" "(" String "," Int ")"    [function]
+            | "trimFront" "(" String "," Int ")"       [function]
             | "getTail" "(" String "," Int ")"        [function]
 
     syntax ListItem ::= (CValue , BagItem)

@@ -4,6 +4,8 @@ module JVM-SEMANTICS-METHODS
     imports JVM-SEMANTICS-COMMON
 
     rule (M1:Methods M2:Methods) => M1 ~> M2        [structural]
+
+    rule (M1:MethodDeclaration M2:MethodInfo) => M1 ~> M2       [structural]
     
     rule (M1:MethodDeclaration M2:MethodInfo Code : M4:MethodProperties I:Instructions 
             LineNumberTable : L:LinesNumberTable) => M1 ~> M2 ~> M4 ~> I ~> L        [structural]
@@ -15,81 +17,9 @@ module JVM-SEMANTICS-METHODS
     rule (M1:MethodDeclaration M2:MethodInfo Code : M4:MethodProperties I:Instructions LineNumberTable : 
             L:LinesNumberTable LocalVariableTable : L2:LocalVariableTable StackMapTable : S:StackMapTable) => 
             M1 ~> M2 ~> M4 ~> I ~> L ~> L2 ~> S    [structural]
-        
-    rule <k> (M1:Modifier T:Type I:CValue M2:MethodArg ;) => . ... </k>
-        <methods> ... (. => <method>
-                                <methodDecl> M1 T I M2 ; </methodDecl>
-                                <methodNameType> I </methodNameType>
-                                <methodFlags> . </methodFlags>
-                                <code>
-                                    <metaInfo> . </metaInfo>
-                                    <methodStmts> . </methodStmts>
-                                    <lineNoTbl> . </lineNoTbl>
-                                    <localVarTbl> . </localVarTbl>
-                                    <stackMapTbl> . </stackMapTbl>
-                                </code>
-                            </method>) 
-                ... </methods>    
-        <crntClass> C1:ClassDecl </crntClass>
-        <classDecl> C1 </classDecl>
-        <crntMethod> _ => M1 T I M2 ; </crntMethod>    
-
-    rule <k> (I:TId M2:MethodArg ;) => . ... </k>
-        <methods> ... (. => <method>
-                                <methodDecl> I M2 ; </methodDecl>
-                                <methodNameType> I </methodNameType>
-                                <methodFlags> . </methodFlags>
-                                <code>
-                                    <metaInfo> . </metaInfo>
-                                    <methodStmts> . </methodStmts>
-                                    <lineNoTbl> . </lineNoTbl>
-                                    <localVarTbl> . </localVarTbl>
-                                    <stackMapTbl> . </stackMapTbl>
-                                </code>
-                            </method>) 
-                ... </methods>    
-        <crntClass> C1:ClassDecl </crntClass>
-        <classDecl> C1 </classDecl>
-        <crntMethod> _ => I M2 ; </crntMethod>    
-        
-    rule <k> (M1:Modifier static T:Type I:Id M2:MethodArg ;) => . ... </k>
-        <methods> ... (. => <method>
-                                <methodDecl> M1 static T I M2 ; </methodDecl>
-                                <methodNameType> I </methodNameType>
-                                <methodFlags> . </methodFlags>
-                                <code>
-                                    <metaInfo> . </metaInfo>
-                                    <methodStmts> . </methodStmts>
-                                    <lineNoTbl> . </lineNoTbl>
-                                    <localVarTbl> . </localVarTbl>
-                                    <stackMapTbl> . </stackMapTbl>
-                                </code>
-                            </method>) 
-                ... </methods>    
-        <crntClass> C1:ClassDecl </crntClass>
-        <classDecl> C1 </classDecl>
-        <crntMethod> _ => M1 static T I M2 ; </crntMethod>    
-        
-    rule <k> M:MainMethod => . ... </k>
-        <methods> ... (. => <method>
-                                <methodDecl> M </methodDecl>
-                                <methodNameType> main </methodNameType>
-                                <methodFlags> . </methodFlags>
-                                <code>
-                                    <metaInfo> . </metaInfo>
-                                    <methodStmts> . </methodStmts>
-                                    <lineNoTbl> . </lineNoTbl>
-                                    <localVarTbl> . </localVarTbl>
-                                    <stackMapTbl> . </stackMapTbl>
-                                </code>
-                            </method>) 
-                ... </methods>    
-        <crntClass> C1:ClassDecl </crntClass>
-        <classDecl> C1 </classDecl>
-        <crntMethod> _ => M </crntMethod>
 
 
-    rule <k> (M1:Modifier I:CValue M2:MethodArg ;) => . ... </k>
+    rule <k> (M1:MethodModType I:CValue M2:MethodArg ;) => . ... </k>
         <methods> ... (. => <method>
                                 <methodDecl> M1 I M2 ; </methodDecl>
                                 <methodNameType> I </methodNameType>
@@ -106,6 +36,43 @@ module JVM-SEMANTICS-METHODS
         <crntClass> C1:ClassDecl </crntClass>
         <classDecl> C1 </classDecl>
         <crntMethod> _ => M1 I M2 ; </crntMethod>
+
+    rule <k> I:TId M2:MethodArg ; => . ... </k>
+        <methods> ... (. => <method>
+                                <methodDecl> I M2 ; </methodDecl>
+                                <methodNameType> I </methodNameType>
+                                <methodFlags> . </methodFlags>
+                                <code>
+                                    <metaInfo> . </metaInfo>
+                                    <methodStmts> . </methodStmts>
+                                    <lineNoTbl> . </lineNoTbl>
+                                    <localVarTbl> . </localVarTbl>
+                                    <stackMapTbl> . </stackMapTbl>
+                                </code>
+                            </method>) 
+                ... </methods>    
+        <crntClass> C1:ClassDecl </crntClass>
+        <classDecl> C1 </classDecl>
+        <crntMethod> _ => I M2 ; </crntMethod>    
+
+    rule <k> static {}; => . ... </k>
+        <methods> ... (. => <method>
+                                <methodDecl> static {}; </methodDecl>
+                                <methodNameType> static </methodNameType>
+                                <methodFlags> . </methodFlags>
+                                <code>
+                                    <metaInfo> . </metaInfo>
+                                    <methodStmts> . </methodStmts>
+                                    <lineNoTbl> . </lineNoTbl>
+                                    <localVarTbl> . </localVarTbl>
+                                    <stackMapTbl> . </stackMapTbl>
+                                </code>
+                            </method>) 
+                ... </methods>    
+        <crntClass> C1:ClassDecl </crntClass>
+        <classDecl> C1 </classDecl>
+        <preparation> ... . => prepare(C1) ... </preparation>
+        <crntMethod> _ => static {}; </crntMethod>
     
     rule <k> Signature : C:CValue flags : M:MethodFlags => M ... </k>
          <crntClass> C1:ClassDecl </crntClass>
@@ -113,6 +80,7 @@ module JVM-SEMANTICS-METHODS
          <methodDecl> M2 </methodDecl>
          <classDecl> C1 </classDecl>
          <methodNameType> N:CValue => N : C </methodNameType>
+         <implMethods> ... . => SetItem(N : C) ... </implMethods>
 
     rule <k> Signature : C:CValue flags : => . ... </k>
          <crntClass> C1:ClassDecl </crntClass>
@@ -120,6 +88,7 @@ module JVM-SEMANTICS-METHODS
          <methodDecl> M2 </methodDecl>
          <classDecl> C1 </classDecl>
          <methodNameType> N:CValue => N : C </methodNameType>
+         <implMethods> ... . => SetItem(N : C) ... </implMethods>
     
     rule M1:MethodFlag , M2:MethodFlags => M1 ~> M2        [structural]
     

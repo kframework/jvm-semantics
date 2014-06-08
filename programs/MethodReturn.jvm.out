@@ -1,0 +1,696 @@
+<t>
+    <k>
+        .K
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        5
+    </nextRefLoc>
+    <pc>
+        50
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        1
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class A
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public A ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        A : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            3 |-> 4
+                            4 |-> 9
+                            6 |-> 0
+                            8 |-> 14
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> aload_0
+                            5 |-> iconst_1
+                            6 |-> putfield # 2
+                            9 |-> aload_0
+                            10 |-> iconst_2
+                            11 |-> putfield # 3
+                            14 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 15,, this,, LA ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                <field>
+                    <fieldDecl>
+                        private int a2 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public int a1 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |->  A. a1 : I 
+                    # 3 |->  A. a2 : I 
+                    # 4 |-> A
+                    # 5 |->   java/ lang / Object 
+                    # 6 |-> a1
+                    # 7 |-> I
+                    # 8 |-> a2
+                    # 9 |-> <init>
+                    # 10 |-> ( ) V
+                    # 11 |-> Code
+                    # 12 |-> LineNumberTable
+                    # 13 |-> LocalVariableTable
+                    # 14 |-> this
+                    # 15 |-> LA ;
+                    # 16 |-> SourceFile
+                    # 17 |->  A. java 
+                    # 18 |-> <init> : ( ) V
+                    # 19 |->  a1: I 
+                    # 20 |->  a2: I 
+                    # 21 |-> A
+                    # 22 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 5 . # 18
+                    # 2 |-> Fieldref . # 4 . # 19
+                    # 3 |-> Fieldref . # 4 . # 20
+                    # 4 |-> Class . # 21
+                    # 5 |-> Class . # 22
+                    # 6 |-> Utf8 . a1
+                    # 7 |-> Utf8 . I
+                    # 8 |-> Utf8 . a2
+                    # 9 |-> Utf8 . <init>
+                    # 10 |-> Utf8 . ( ) V
+                    # 11 |-> Utf8 . Code
+                    # 12 |-> Utf8 . LineNumberTable
+                    # 13 |-> Utf8 . LocalVariableTable
+                    # 14 |-> Utf8 . this
+                    # 15 |-> Utf8 . LA ;
+                    # 16 |-> Utf8 . SourceFile
+                    # 17 |-> Utf8 .  A. java 
+                    # 18 |-> NameAndType . # 9 : # 10
+                    # 19 |-> NameAndType . # 6 : # 7
+                    # 20 |-> NameAndType . # 8 : # 7
+                    # 21 |-> Utf8 . A
+                    # 22 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_PRIVATE)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(A : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / A  . class
+                last_modified |-> ( May , 15 , 2014 )
+                md5_checksum |-> 365317d31d7cebd5294d09eebbb07135
+                compiled_from |-> "A.java"
+                sourcefile |-> "A.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                a1 |-> undefined
+                a2 |-> undefined
+            </env>
+        </class>
+        <class>
+            <classDecl>
+                public class MethodReturn
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static int intAdd ( int , int ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        intAdd : ( II ) I
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            18 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> iload_0
+                            1 |-> iload_1
+                            2 |-> iadd
+                            3 |-> ireturn
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 2
+                            args_size |-> 2
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 4,, a,, I)
+                            1 |-> '`(_,_,_,_`)(0,, 4,, b,, I)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            10 |-> 0
+                            11 |-> 10
+                            12 |-> 22
+                            13 |-> 32
+                            14 |-> 44
+                            15 |-> 50
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> bipush 7
+                            2 |-> bipush 8
+                            4 |-> invokestatic # 2
+                            7 |-> putstatic # 3
+                            10 |-> ldc2_w # 4
+                            13 |-> ldc2_w # 6
+                            16 |-> invokestatic # 8
+                            19 |-> putstatic # 9
+                            22 |-> ldc # 10
+                            24 |-> ldc # 11
+                            26 |-> invokestatic # 12
+                            29 |-> putstatic # 13
+                            32 |-> ldc2_w # 14
+                            35 |-> ldc2_w # 16
+                            38 |-> invokestatic # 18
+                            41 |-> putstatic # 19
+                            44 |-> invokestatic # 20
+                            47 |-> putstatic # 21
+                            50 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 4
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 51,, args,, [  Ljava/ lang 
+                               / String ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public static float floatMul ( float , float ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        floatMul : ( FF ) F
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            26 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> fload_0
+                            1 |-> fload_1
+                            2 |-> fmul
+                            3 |-> freturn
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 2
+                            args_size |-> 2
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 4,, a,, F)
+                            1 |-> '`(_,_,_,_`)(0,, 4,, b,, F)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public static double doubleDiv ( double , double ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        doubleDiv : ( DD ) D
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            30 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> dload_0
+                            1 |-> dload_2
+                            2 |-> ddiv
+                            3 |-> dreturn
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 4
+                            locals |-> 4
+                            args_size |-> 2
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 4,, a,, D)
+                            2 |-> '`(_,_,_,_`)(0,, 4,, b,, D)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public static long longSub ( long , long ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        longSub : ( JJ ) J
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            22 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> lload_0
+                            1 |-> lload_2
+                            2 |-> lsub
+                            3 |-> lreturn
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 4
+                            locals |-> 4
+                            args_size |-> 2
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 4,, a,, J)
+                            2 |-> '`(_,_,_,_`)(0,, 4,, b,, J)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public static A newA ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        newA : ( ) LA ;
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            34 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> new # 22
+                            3 |-> dup
+                            4 |-> invokespecial # 23
+                            7 |-> areturn
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 0
+                            args_size |-> 0
+                        </metaInfo>
+                        <localVarTbl>
+                            .Map
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public MethodReturn ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        MethodReturn : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, LMethodReturn ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                <field>
+                    <fieldDecl>
+                        public static int a ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static float c ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static double d ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static long b ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static A objA ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |->  MethodReturn. intAdd : ( II ) I 
+                    # 3 |->  MethodReturn. a : I 
+                    # 4 |-> 5
+                    # 6 |-> 7
+                    # 8 |->  MethodReturn. longSub : ( JJ ) J 
+                    # 9 |->  MethodReturn. b : J 
+                    # 10 |-> 2.2999999999999998
+                    # 11 |-> 5.2000000000000002
+                    # 12 |->  MethodReturn. floatMul : ( FF ) F 
+                    # 13 |->  MethodReturn. c : F 
+                    # 14 |-> 9.3000000000000007
+                    # 16 |-> 3.1000000000000001
+                    # 18 |->  MethodReturn. doubleDiv : ( DD ) D 
+                    # 19 |->  MethodReturn. d : D 
+                    # 20 |->  MethodReturn. newA : ( ) LA ; 
+                    # 21 |->  MethodReturn. objA : LA ; 
+                    # 22 |-> A
+                    # 23 |->  A. <init> : ( ) V 
+                    # 24 |-> MethodReturn
+                    # 25 |->   java/ lang / Object 
+                    # 26 |-> a
+                    # 27 |-> I
+                    # 28 |-> b
+                    # 29 |-> J
+                    # 30 |-> c
+                    # 31 |-> F
+                    # 32 |-> d
+                    # 33 |-> D
+                    # 34 |-> objA
+                    # 35 |-> LA ;
+                    # 36 |-> <init>
+                    # 37 |-> ( ) V
+                    # 38 |-> Code
+                    # 39 |-> LineNumberTable
+                    # 40 |-> LocalVariableTable
+                    # 41 |-> this
+                    # 42 |-> LMethodReturn ;
+                    # 43 |-> main
+                    # 44 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 45 |-> args
+                    # 46 |-> [  Ljava/ lang  / String ;
+                    # 47 |-> intAdd
+                    # 48 |-> ( II ) I
+                    # 49 |-> longSub
+                    # 50 |-> ( JJ ) J
+                    # 51 |-> floatMul
+                    # 52 |-> ( FF ) F
+                    # 53 |-> doubleDiv
+                    # 54 |-> ( DD ) D
+                    # 55 |-> newA
+                    # 56 |-> ( ) LA ;
+                    # 57 |-> SourceFile
+                    # 58 |->  MethodReturn. java 
+                    # 59 |-> <init> : ( ) V
+                    # 60 |-> intAdd : ( II ) I
+                    # 61 |->  a: I 
+                    # 62 |-> longSub : ( JJ ) J
+                    # 63 |->  b: J 
+                    # 64 |-> floatMul : ( FF ) F
+                    # 65 |->  c: F 
+                    # 66 |-> doubleDiv : ( DD ) D
+                    # 67 |->  d: D 
+                    # 68 |-> newA : ( ) LA ;
+                    # 69 |-> objA : LA ;
+                    # 70 |-> A
+                    # 71 |-> MethodReturn
+                    # 72 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 25 . # 59
+                    # 2 |-> Methodref . # 24 . # 60
+                    # 3 |-> Fieldref . # 24 . # 61
+                    # 4 |-> Long . 5l
+                    # 6 |-> Long . 7l
+                    # 8 |-> Methodref . # 24 . # 62
+                    # 9 |-> Fieldref . # 24 . # 63
+                    # 10 |-> Float . 2.3f
+                    # 11 |-> Float . 5.2f
+                    # 12 |-> Methodref . # 24 . # 64
+                    # 13 |-> Fieldref . # 24 . # 65
+                    # 14 |-> Double . 9.3d
+                    # 16 |-> Double . 3.1d
+                    # 18 |-> Methodref . # 24 . # 66
+                    # 19 |-> Fieldref . # 24 . # 67
+                    # 20 |-> Methodref . # 24 . # 68
+                    # 21 |-> Fieldref . # 24 . # 69
+                    # 22 |-> Class . # 70
+                    # 23 |-> Methodref . # 22 . # 59
+                    # 24 |-> Class . # 71
+                    # 25 |-> Class . # 72
+                    # 26 |-> Utf8 . a
+                    # 27 |-> Utf8 . I
+                    # 28 |-> Utf8 . b
+                    # 29 |-> Utf8 . J
+                    # 30 |-> Utf8 . c
+                    # 31 |-> Utf8 . F
+                    # 32 |-> Utf8 . d
+                    # 33 |-> Utf8 . D
+                    # 34 |-> Utf8 . objA
+                    # 35 |-> Utf8 . LA ;
+                    # 36 |-> Utf8 . <init>
+                    # 37 |-> Utf8 . ( ) V
+                    # 38 |-> Utf8 . Code
+                    # 39 |-> Utf8 . LineNumberTable
+                    # 40 |-> Utf8 . LocalVariableTable
+                    # 41 |-> Utf8 . this
+                    # 42 |-> Utf8 . LMethodReturn ;
+                    # 43 |-> Utf8 . main
+                    # 44 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 45 |-> Utf8 . args
+                    # 46 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 47 |-> Utf8 . intAdd
+                    # 48 |-> Utf8 . ( II ) I
+                    # 49 |-> Utf8 . longSub
+                    # 50 |-> Utf8 . ( JJ ) J
+                    # 51 |-> Utf8 . floatMul
+                    # 52 |-> Utf8 . ( FF ) F
+                    # 53 |-> Utf8 . doubleDiv
+                    # 54 |-> Utf8 . ( DD ) D
+                    # 55 |-> Utf8 . newA
+                    # 56 |-> Utf8 . ( ) LA ;
+                    # 57 |-> Utf8 . SourceFile
+                    # 58 |-> Utf8 .  MethodReturn. java 
+                    # 59 |-> NameAndType . # 36 : # 37
+                    # 60 |-> NameAndType . # 47 : # 48
+                    # 61 |-> NameAndType . # 26 : # 27
+                    # 62 |-> NameAndType . # 49 : # 50
+                    # 63 |-> NameAndType . # 28 : # 29
+                    # 64 |-> NameAndType . # 51 : # 52
+                    # 65 |-> NameAndType . # 30 : # 31
+                    # 66 |-> NameAndType . # 53 : # 54
+                    # 67 |-> NameAndType . # 32 : # 33
+                    # 68 |-> NameAndType . # 55 : # 56
+                    # 69 |-> NameAndType . # 34 : # 35
+                    # 70 |-> Utf8 . A
+                    # 71 |-> Utf8 . MethodReturn
+                    # 72 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(MethodReturn : ( ) V)
+                SetItem(doubleDiv : ( DD ) D)
+                SetItem(floatMul : ( FF ) F)
+                SetItem(intAdd : ( II ) I)
+                SetItem(longSub : ( JJ ) J)
+                SetItem(newA : ( ) LA ;)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / MethodReturn  . class
+                last_modified |-> ( Jun , 7 , 2014 )
+                md5_checksum |-> 21f52405d2dfec2cb685e77322615203
+                compiled_from |-> "MethodReturn.java"
+                sourcefile |-> "MethodReturn.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                a |-> 15
+                b |-> -2
+                c |-> 1.1959999999999999e+1
+                d |-> 3.0
+                objA |-> 2
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( MethodReturn , <envStack> ( MethodReturn , <env> .Map 
+          </env> ) (   java/ lang / Object  , <env> .Map </env> ) </envStack> 
+          )
+        2 |-> object ( A , <envStack> ( A , <env> a1 |-> 3 a2 |-> 4 </env> ) (
+             java/ lang / Object  , <env> .Map </env> ) </envStack> )
+        3 |-> 1
+        4 |-> 2
+    </heap>
+</t>

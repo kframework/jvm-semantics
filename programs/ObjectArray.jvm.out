@@ -1,0 +1,423 @@
+<t>
+    <k>
+        .K
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        14
+    </nextRefLoc>
+    <pc>
+        42
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        1
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class A
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public A ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        A : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            3 |-> 4
+                            4 |-> 9
+                            6 |-> 0
+                            8 |-> 14
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> aload_0
+                            5 |-> iconst_1
+                            6 |-> putfield # 2
+                            9 |-> aload_0
+                            10 |-> iconst_2
+                            11 |-> putfield # 3
+                            14 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 15,, this,, LA ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                <field>
+                    <fieldDecl>
+                        private int a2 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public int a1 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |->  A. a1 : I 
+                    # 3 |->  A. a2 : I 
+                    # 4 |-> A
+                    # 5 |->   java/ lang / Object 
+                    # 6 |-> a1
+                    # 7 |-> I
+                    # 8 |-> a2
+                    # 9 |-> <init>
+                    # 10 |-> ( ) V
+                    # 11 |-> Code
+                    # 12 |-> LineNumberTable
+                    # 13 |-> LocalVariableTable
+                    # 14 |-> this
+                    # 15 |-> LA ;
+                    # 16 |-> SourceFile
+                    # 17 |->  A. java 
+                    # 18 |-> <init> : ( ) V
+                    # 19 |->  a1: I 
+                    # 20 |->  a2: I 
+                    # 21 |-> A
+                    # 22 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 5 . # 18
+                    # 2 |-> Fieldref . # 4 . # 19
+                    # 3 |-> Fieldref . # 4 . # 20
+                    # 4 |-> Class . # 21
+                    # 5 |-> Class . # 22
+                    # 6 |-> Utf8 . a1
+                    # 7 |-> Utf8 . I
+                    # 8 |-> Utf8 . a2
+                    # 9 |-> Utf8 . <init>
+                    # 10 |-> Utf8 . ( ) V
+                    # 11 |-> Utf8 . Code
+                    # 12 |-> Utf8 . LineNumberTable
+                    # 13 |-> Utf8 . LocalVariableTable
+                    # 14 |-> Utf8 . this
+                    # 15 |-> Utf8 . LA ;
+                    # 16 |-> Utf8 . SourceFile
+                    # 17 |-> Utf8 .  A. java 
+                    # 18 |-> NameAndType . # 9 : # 10
+                    # 19 |-> NameAndType . # 6 : # 7
+                    # 20 |-> NameAndType . # 8 : # 7
+                    # 21 |-> Utf8 . A
+                    # 22 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_PRIVATE)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(A : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / A  . class
+                last_modified |-> ( May , 15 , 2014 )
+                md5_checksum |-> 365317d31d7cebd5294d09eebbb07135
+                compiled_from |-> "A.java"
+                sourcefile |-> "A.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                a1 |-> undefined
+                a2 |-> undefined
+            </env>
+        </class>
+        <class>
+            <classDecl>
+                public class ObjectArray
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            6 |-> 0
+                            8 |-> 8
+                            9 |-> 13
+                            10 |-> 23
+                            12 |-> 33
+                            13 |-> 42
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> new # 2
+                            3 |-> dup
+                            4 |-> invokespecial # 3
+                            7 |-> astore_1
+                            8 |-> iconst_2
+                            9 |-> anewarray # 2
+                            12 |-> astore_2
+                            13 |-> aload_2
+                            14 |-> iconst_0
+                            15 |-> new # 2
+                            18 |-> dup
+                            19 |-> invokespecial # 3
+                            22 |-> aastore
+                            23 |-> aload_2
+                            24 |-> iconst_1
+                            25 |-> new # 2
+                            28 |-> dup
+                            29 |-> invokespecial # 3
+                            32 |-> aastore
+                            33 |-> aload_2
+                            34 |-> iconst_0
+                            35 |-> aaload
+                            36 |-> getfield # 4
+                            39 |-> putstatic # 5
+                            42 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 4
+                            locals |-> 3
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 43,, args,, [  Ljava/ lang 
+                               / String ;)
+                            1 |-> '`(_,_,_,_`)(8,, 35,, myA,, LA ;)
+                            2 |-> '`(_,_,_,_`)(13,, 30,, a,, [ LA ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public ObjectArray ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        ObjectArray : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, LObjectArray ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                <field>
+                    <fieldDecl>
+                        public static int x ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |-> A
+                    # 3 |->  A. <init> : ( ) V 
+                    # 4 |->  A. a1 : I 
+                    # 5 |->  ObjectArray. x : I 
+                    # 6 |-> ObjectArray
+                    # 7 |->   java/ lang / Object 
+                    # 8 |-> x
+                    # 9 |-> I
+                    # 10 |-> <init>
+                    # 11 |-> ( ) V
+                    # 12 |-> Code
+                    # 13 |-> LineNumberTable
+                    # 14 |-> LocalVariableTable
+                    # 15 |-> this
+                    # 16 |-> LObjectArray ;
+                    # 17 |-> main
+                    # 18 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 19 |-> args
+                    # 20 |-> [  Ljava/ lang  / String ;
+                    # 21 |-> myA
+                    # 22 |-> LA ;
+                    # 23 |-> a
+                    # 24 |-> [ LA ;
+                    # 25 |-> SourceFile
+                    # 26 |->  ObjectArray. java 
+                    # 27 |-> <init> : ( ) V
+                    # 28 |-> A
+                    # 29 |->  a1: I 
+                    # 30 |->  x: I 
+                    # 31 |-> ObjectArray
+                    # 32 |->   java/ lang / Object 
+                    # 33 |-> a1
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 7 . # 27
+                    # 2 |-> Class . # 28
+                    # 3 |-> Methodref . # 2 . # 27
+                    # 4 |-> Fieldref . # 2 . # 29
+                    # 5 |-> Fieldref . # 6 . # 30
+                    # 6 |-> Class . # 31
+                    # 7 |-> Class . # 32
+                    # 8 |-> Utf8 . x
+                    # 9 |-> Utf8 . I
+                    # 10 |-> Utf8 . <init>
+                    # 11 |-> Utf8 . ( ) V
+                    # 12 |-> Utf8 . Code
+                    # 13 |-> Utf8 . LineNumberTable
+                    # 14 |-> Utf8 . LocalVariableTable
+                    # 15 |-> Utf8 . this
+                    # 16 |-> Utf8 . LObjectArray ;
+                    # 17 |-> Utf8 . main
+                    # 18 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 19 |-> Utf8 . args
+                    # 20 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 21 |-> Utf8 . myA
+                    # 22 |-> Utf8 . LA ;
+                    # 23 |-> Utf8 . a
+                    # 24 |-> Utf8 . [ LA ;
+                    # 25 |-> Utf8 . SourceFile
+                    # 26 |-> Utf8 .  ObjectArray. java 
+                    # 27 |-> NameAndType . # 10 : # 11
+                    # 28 |-> Utf8 . A
+                    # 29 |-> NameAndType . # 33 : # 9
+                    # 30 |-> NameAndType . # 8 : # 9
+                    # 31 |-> Utf8 . ObjectArray
+                    # 32 |-> Utf8 .   java/ lang / Object 
+                    # 33 |-> Utf8 . a1
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(ObjectArray : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / ObjectArray  . class
+                last_modified |-> ( Jun , 6 , 2014 )
+                md5_checksum |-> cfaa365466756d6c09f01e491fa42093
+                compiled_from |-> "ObjectArray.java"
+                sourcefile |-> "ObjectArray.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                x |-> 1
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( ObjectArray , <envStack> ( ObjectArray , <env> .Map 
+          </env> ) (   java/ lang / Object  , <env> .Map </env> ) </envStack> 
+          )
+        2 |-> object ( A , <envStack> ( A , <env> a1 |-> 3 a2 |-> 4 </env> ) (
+             java/ lang / Object  , <env> .Map </env> ) </envStack> )
+        3 |-> 1
+        4 |-> 2
+        5 |-> 'array(A,, 6,, 2)
+        6 |-> 8
+        7 |-> 11
+        8 |-> object ( A , <envStack> ( A , <env> a1 |-> 9 a2 |-> 10 </env> ) 
+          (   java/ lang / Object  , <env> .Map </env> ) </envStack> )
+        9 |-> 1
+        10 |-> 2
+        11 |-> object ( A , <envStack> ( A , <env> a1 |-> 12 a2 |-> 13 </env> 
+          ) (   java/ lang / Object  , <env> .Map </env> ) </envStack> )
+        12 |-> 1
+        13 |-> 2
+    </heap>
+</t>

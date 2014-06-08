@@ -1,0 +1,288 @@
+<t>
+    <k>
+        .K
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        2
+    </nextRefLoc>
+    <pc>
+        26
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        2
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class FloatTypeConversion
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            9 |-> 0
+                            10 |-> 5
+                            11 |-> 12
+                            12 |-> 19
+                            13 |-> 26
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> ldc # 2
+                            2 |-> putstatic # 3
+                            5 |-> getstatic # 3
+                            8 |-> f2i
+                            9 |-> putstatic # 4
+                            12 |-> getstatic # 3
+                            15 |-> f2l
+                            16 |-> putstatic # 5
+                            19 |-> getstatic # 3
+                            22 |-> f2d
+                            23 |-> putstatic # 6
+                            26 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 27,, args,, [  Ljava/ lang 
+                               / String ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public FloatTypeConversion ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        FloatTypeConversion : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, 
+                              LFloatTypeConversion ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                <field>
+                    <fieldDecl>
+                        public static int b ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static float a ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static double d ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static long c ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |-> 1.7976158e+6
+                    # 3 |->  FloatTypeConversion. a : F 
+                    # 4 |->  FloatTypeConversion. b : I 
+                    # 5 |->  FloatTypeConversion. c : J 
+                    # 6 |->  FloatTypeConversion. d : D 
+                    # 7 |-> FloatTypeConversion
+                    # 8 |->   java/ lang / Object 
+                    # 9 |-> a
+                    # 10 |-> F
+                    # 11 |-> b
+                    # 12 |-> I
+                    # 13 |-> c
+                    # 14 |-> J
+                    # 15 |-> d
+                    # 16 |-> D
+                    # 17 |-> <init>
+                    # 18 |-> ( ) V
+                    # 19 |-> Code
+                    # 20 |-> LineNumberTable
+                    # 21 |-> LocalVariableTable
+                    # 22 |-> this
+                    # 23 |-> LFloatTypeConversion ;
+                    # 24 |-> main
+                    # 25 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 26 |-> args
+                    # 27 |-> [  Ljava/ lang  / String ;
+                    # 28 |-> SourceFile
+                    # 29 |->  FloatTypeConversion. java 
+                    # 30 |-> <init> : ( ) V
+                    # 31 |->  a: F 
+                    # 32 |->  b: I 
+                    # 33 |->  c: J 
+                    # 34 |->  d: D 
+                    # 35 |-> FloatTypeConversion
+                    # 36 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 8 . # 30
+                    # 2 |-> Float . 1797615.8f
+                    # 3 |-> Fieldref . # 7 . # 31
+                    # 4 |-> Fieldref . # 7 . # 32
+                    # 5 |-> Fieldref . # 7 . # 33
+                    # 6 |-> Fieldref . # 7 . # 34
+                    # 7 |-> Class . # 35
+                    # 8 |-> Class . # 36
+                    # 9 |-> Utf8 . a
+                    # 10 |-> Utf8 . F
+                    # 11 |-> Utf8 . b
+                    # 12 |-> Utf8 . I
+                    # 13 |-> Utf8 . c
+                    # 14 |-> Utf8 . J
+                    # 15 |-> Utf8 . d
+                    # 16 |-> Utf8 . D
+                    # 17 |-> Utf8 . <init>
+                    # 18 |-> Utf8 . ( ) V
+                    # 19 |-> Utf8 . Code
+                    # 20 |-> Utf8 . LineNumberTable
+                    # 21 |-> Utf8 . LocalVariableTable
+                    # 22 |-> Utf8 . this
+                    # 23 |-> Utf8 . LFloatTypeConversion ;
+                    # 24 |-> Utf8 . main
+                    # 25 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 26 |-> Utf8 . args
+                    # 27 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 28 |-> Utf8 . SourceFile
+                    # 29 |-> Utf8 .  FloatTypeConversion. java 
+                    # 30 |-> NameAndType . # 17 : # 18
+                    # 31 |-> NameAndType . # 9 : # 10
+                    # 32 |-> NameAndType . # 11 : # 12
+                    # 33 |-> NameAndType . # 13 : # 14
+                    # 34 |-> NameAndType . # 15 : # 16
+                    # 35 |-> Utf8 . FloatTypeConversion
+                    # 36 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(FloatTypeConversion : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / FloatTypeConversion  . class
+                last_modified |-> ( Jun , 6 , 2014 )
+                md5_checksum |-> c0e591001f856a1c4ecf750d0fd7bd9e
+                compiled_from |-> "FloatTypeConversion.java"
+                sourcefile |-> "FloatTypeConversion.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                a |-> 1.7976158e+6
+                b |-> 1797615
+                c |-> 1797615
+                d |-> 1.7976158e+6
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( FloatTypeConversion , <envStack> ( FloatTypeConversion 
+          , <env> .Map </env> ) (   java/ lang / Object  , <env> .Map </env> )
+           </envStack> )
+    </heap>
+</t>

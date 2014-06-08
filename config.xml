@@ -1,0 +1,9 @@
+<tests>
+    <test
+        definition="jvm.k"
+        programs="programs/"
+        results="programs"
+        extension="jvm"
+        >
+    </test>
+</tests>

@@ -40,7 +40,8 @@ module JVM-SEMANTICS-INSTRUCTIONS-METHOD-INVOCATION-AND-RETURN
          <frameClass> C </frameClass>
          <frameMethod> C5:CValue : C6:CValue </frameMethod>
          <methodNameType> C5 : C6 </methodNameType>
-         <k> runInstruction => addFrame (C , C3 , C4) ~> runInstruction ... </k>
+         <metaInfo> ... args_size |-> I1:Int ... </metaInfo>
+         <k> runInstruction => searchClass (C2 , C3 , C4, C , C5 , C6) ~> runInstruction ... </k>
          <frameStack> ... F |-> (I , C , C5 , C6) => F |-> (I +Int 3 , C , C5 , C6) ... </frameStack>
          <crntFrame> F:Int </crntFrame>
          <cpoolVals> ... C1 |-> C2:CValue . (C3:CValue : C4:CValue) ... </cpoolVals>
@@ -52,13 +53,89 @@ module JVM-SEMANTICS-INSTRUCTIONS-METHOD-INVOCATION-AND-RETURN
     rule <pc> I:Int </pc>
          <methodNameType> C1 : C2 </methodNameType>
          <classDecl> C:ClassDecl </classDecl>
-         <k> runInstruction => ireturn L1 ... </k>
+         <k> runInstruction => returnValue(L1) ... </k>
          <frameStack> ... F |-> (I , C , C1 , C2) => . ... </frameStack>
          <crntFrame> F:Int => F -Int 1 </crntFrame>
          <methodStmts> ... I |-> ireturn ... </methodStmts>
          (<frame>
             <localVarArr> _ </localVarArr>
-            <operandStack> ... ListItem(L1:Operand) </operandStack>
+            <operandStack> ... ListItem(L1:CValue) </operandStack>
+            <refs>
+                <frameClass> C </frameClass>
+                <frameMethod> C1:CValue : C2:CValue </frameMethod>
+            </refs>
+         </frame> => .)
+
+
+    //-------lreturn-------
+    
+    rule <pc> I:Int </pc>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <k> runInstruction => returnValue(L1) ... </k>
+         <frameStack> ... F |-> (I , C , C1 , C2) => . ... </frameStack>
+         <crntFrame> F:Int => F -Int 1 </crntFrame>
+         <methodStmts> ... I |-> lreturn ... </methodStmts>
+         (<frame>
+            <localVarArr> _ </localVarArr>
+            <operandStack> ... ListItem(L1:CValue) </operandStack>
+            <refs>
+                <frameClass> C </frameClass>
+                <frameMethod> C1:CValue : C2:CValue </frameMethod>
+            </refs>
+         </frame> => .)
+
+
+    //-------freturn-------
+    
+    rule <pc> I:Int </pc>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <k> runInstruction => returnValue(L1) ... </k>
+         <frameStack> ... F |-> (I , C , C1 , C2) => . ... </frameStack>
+         <crntFrame> F:Int => F -Int 1 </crntFrame>
+         <methodStmts> ... I |-> freturn ... </methodStmts>
+         (<frame>
+            <localVarArr> _ </localVarArr>
+            <operandStack> ... ListItem(L1:Float) </operandStack>
+            <refs>
+                <frameClass> C </frameClass>
+                <frameMethod> C1:CValue : C2:CValue </frameMethod>
+            </refs>
+         </frame> => .)
+
+
+    //-------dreturn-------
+    
+    rule <pc> I:Int </pc>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <k> runInstruction => returnValue(L1) ... </k>
+         <frameStack> ... F |-> (I , C , C1 , C2) => . ... </frameStack>
+         <crntFrame> F:Int => F -Int 1 </crntFrame>
+         <methodStmts> ... I |-> dreturn ... </methodStmts>
+         (<frame>
+            <localVarArr> _ </localVarArr>
+            <operandStack> ... ListItem(L1:Float) </operandStack>
+            <refs>
+                <frameClass> C </frameClass>
+                <frameMethod> C1:CValue : C2:CValue </frameMethod>
+            </refs>
+         </frame> => .)
+
+
+    //-------areturn-------
+    
+    rule <pc> I:Int </pc>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <k> runInstruction => returnValue(L1) ... </k>
+         <frameStack> ... F |-> (I , C , C1 , C2) => . ... </frameStack>
+         <crntFrame> F:Int => F -Int 1 </crntFrame>
+         <methodStmts> ... I |-> areturn ... </methodStmts>
+         (<frame>
+            <localVarArr> _ </localVarArr>
+            <operandStack> ... ListItem(L1:CValue) </operandStack>
             <refs>
                 <frameClass> C </frameClass>
                 <frameMethod> C1:CValue : C2:CValue </frameMethod>
@@ -66,7 +143,15 @@ module JVM-SEMANTICS-INSTRUCTIONS-METHOD-INVOCATION-AND-RETURN
          </frame> => .)
     
          
-    rule <k> ireturn I:Int => runInstruction ... </k>
+    rule <k> returnValue(I:CValue) => runInstruction ... </k>
+         <operandStack> ... . => ListItem(I) </operandStack>
+         <frameMethod> C2:CValue : C3:CValue </frameMethod>
+         <frameClass> C </frameClass>
+         <frameStack> ... F |-> (I2:Int , C:ClassDecl , C2:CValue , C3:CValue) ... </frameStack>
+         <crntFrame> F:Int </crntFrame>
+         <pc> _ => I2 </pc>
+
+    rule <k> returnValue(I:Float) => runInstruction ... </k>
          <operandStack> ... . => ListItem(I) </operandStack>
          <frameMethod> C2:CValue : C3:CValue </frameMethod>
          <frameClass> C </frameClass>
@@ -82,7 +167,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-METHOD-INVOCATION-AND-RETURN
          <frameClass> C </frameClass>
          <frameMethod> C5:CValue : C6:CValue </frameMethod>
          <methodNameType> C5 : C6 </methodNameType>
-         <k> runInstruction => searchClassSpecial (C2 , C3 , C4 , 0 , C , C5 , C6) ~> runInstruction ... </k>
+         <k> runInstruction => searchClassSpecial (C2 , C3 , C4 , C , C5 , C6) ~> runInstruction ... </k>
          <frameStack> ... F |-> (I , C , C5 , C6) => F |-> (I +Int 3 , C , C5 , C6) ... </frameStack>
          <crntFrame> F:Int </crntFrame>
          <cpoolVals> ... C1 |-> C2:CValue . (C3:CValue : C4:CValue) ... </cpoolVals>
@@ -134,18 +219,43 @@ module JVM-SEMANTICS-INSTRUCTIONS-METHOD-INVOCATION-AND-RETURN
 
 
     //-------invokevirtual-------
-        
+
     rule <pc> I:Int => -1 </pc>
+         <operandStack> O:List </operandStack>
          <classDecl> C:ClassDecl </classDecl>
-         //<operandStack> ... ListItem(I1) => . </operandStack>
-         <metaInfo> ... args_size |-> I1:Int ... </metaInfo>
          <frameClass> C </frameClass>
          <frameMethod> C5:CValue : C6:CValue </frameMethod>
          <methodNameType> C5 : C6 </methodNameType>
-         <k> runInstruction => searchClassVirtual (C2 , C3 , C4, I1 , C , C5 , C6) ~> runInstruction ... </k>
+         <k> runInstruction => prepareLookup (C2 , C3 , C4 , C , C5 , C6) ... </k> //C2 instead of C8
          <frameStack> ... F |-> (I , C , C5 , C6) => F |-> (I +Int 3 , C , C5 , C6) ... </frameStack>
          <crntFrame> F:Int </crntFrame>
          <cpoolVals> ... C1 |-> C2:CValue . (C3:CValue : C4:CValue) ... </cpoolVals>
+         //<heap> ... R |-> object(C8:CValue , <envStack> _ </envStack>) ... </heap>
+         <tempOperandStack> _ => O </tempOperandStack>
          <methodStmts> ... I |-> invokevirtual C1:CIndex ... </methodStmts>
+
+
+    rule <k> prepareLookup (C2:CValue , C3:CValue , C4:CValue , C:ClassDecl , C5:CValue , C6:CValue) 
+                => prepareLookup (C2 , C3 , C4 , C , C5 , C6 , I1) ... </k>
+         <classDecl> M:ClassModType C2 </classDecl>
+         <methodNameType> C3 : C4 </methodNameType>
+         <metaInfo> ... args_size |-> I1:Int ... </metaInfo>
+
+    rule <k> prepareLookup (C2:CValue , C3:CValue , C4:CValue , C:ClassDecl , C5:CValue , C6:CValue) 
+                => prepareLookup (C2 , C3 , C4 , C , C5 , C6 , I1) ... </k>
+         <classDecl> M1:ClassModType C2 M2:ClassExtImpl </classDecl>
+         <methodNameType> C3 : C4 </methodNameType>
+         <metaInfo> ... args_size |-> I1:Int ... </metaInfo>
+
+    rule <k> prepareLookup (C2:CValue , C3:CValue , C4:CValue, C:ClassDecl , C5:CValue , C6:CValue , I1:Int)
+                => prepareLookup (C2 , C3 , C4 , C , C5 , C6 , I1 -Int 1) ... </k>
+         <tempOperandStack> ... ListItem(V:CValue) => . </tempOperandStack>
+         when I1 >Int 1 
+
+    rule <k> prepareLookup (C2:CValue , C3:CValue , C4:CValue, C:ClassDecl , C5:CValue , C6:CValue , I1:Int)
+                => lookup (C8 , C3 , C4 , C , C5 , C6) ~> runInstruction ... </k>
+         <tempOperandStack> ... ListItem(V:CValue) => . </tempOperandStack>
+         <heap> ... V |-> object(C8:CValue , <envStack> _ </envStack>) ... </heap>
+         when I1 ==Int 1 
 
 endmodule

@@ -1,0 +1,104 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/DoubleTypeConversion.class
+  Last modified Jun 6, 2014; size 559 bytes
+  MD5 checksum 682db9e9dacd62d5f22fa9ff69795749
+  Compiled from "DoubleTypeConversion.java"
+public class DoubleTypeConversion
+  SourceFile: "DoubleTypeConversion.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #9.#31         //  java/lang/Object."<init>":()V
+   #2 = Double             340282.4d
+   #4 = Fieldref           #8.#32         //  DoubleTypeConversion.a:D
+   #5 = Fieldref           #8.#33         //  DoubleTypeConversion.b:I
+   #6 = Fieldref           #8.#34         //  DoubleTypeConversion.c:J
+   #7 = Fieldref           #8.#35         //  DoubleTypeConversion.d:F
+   #8 = Class              #36            //  DoubleTypeConversion
+   #9 = Class              #37            //  java/lang/Object
+  #10 = Utf8               a
+  #11 = Utf8               D
+  #12 = Utf8               b
+  #13 = Utf8               I
+  #14 = Utf8               c
+  #15 = Utf8               J
+  #16 = Utf8               d
+  #17 = Utf8               F
+  #18 = Utf8               <init>
+  #19 = Utf8               ()V
+  #20 = Utf8               Code
+  #21 = Utf8               LineNumberTable
+  #22 = Utf8               LocalVariableTable
+  #23 = Utf8               this
+  #24 = Utf8               LDoubleTypeConversion;
+  #25 = Utf8               main
+  #26 = Utf8               ([Ljava/lang/String;)V
+  #27 = Utf8               args
+  #28 = Utf8               [Ljava/lang/String;
+  #29 = Utf8               SourceFile
+  #30 = Utf8               DoubleTypeConversion.java
+  #31 = NameAndType        #18:#19        //  "<init>":()V
+  #32 = NameAndType        #10:#11        //  a:D
+  #33 = NameAndType        #12:#13        //  b:I
+  #34 = NameAndType        #14:#15        //  c:J
+  #35 = NameAndType        #16:#17        //  d:F
+  #36 = Utf8               DoubleTypeConversion
+  #37 = Utf8               java/lang/Object
+{
+  public static double a;
+    Signature: D
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static int b;
+    Signature: I
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static long c;
+    Signature: J
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static float d;
+    Signature: F
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public DoubleTypeConversion();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LDoubleTypeConversion;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: ldc2_w        #2                  // double 340282.4d
+         3: putstatic     #4                  // Field a:D
+         6: getstatic     #4                  // Field a:D
+         9: d2i           
+        10: putstatic     #5                  // Field b:I
+        13: getstatic     #4                  // Field a:D
+        16: d2l           
+        17: putstatic     #6                  // Field c:J
+        20: getstatic     #4                  // Field a:D
+        23: d2f           
+        24: putstatic     #7                  // Field d:F
+        27: return        
+      LineNumberTable:
+        line 9: 0
+        line 10: 6
+        line 11: 13
+        line 12: 20
+        line 13: 27
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      28     0  args   [Ljava/lang/String;
+}

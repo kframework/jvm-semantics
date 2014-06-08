@@ -92,11 +92,95 @@ module JVM-SEMANTICS-INSTRUCTIONS-TYPE-CONVERSION
     */
 
 
+    //-------i2l-------
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) => ListItem(L1) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> i2l ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+
+
+    //-------i2f-------
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) => ListItem(Int2Float(L1)) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> i2f ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+
+
+    //-------i2d-------
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) => ListItem(Int2Float(L1)) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> i2d ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+
+
+    //-------l2f-------
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) => ListItem(Int2Float(L1)) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> l2f ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+
+
+    //-------l2d-------
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) => ListItem(Int2Float(L1)) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> l2d ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+
+
+    //-------f2d-------
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => ListItem(L1) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> f2d ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+
+
     //-------i2b-------
 
     rule <pc> I:Int => I +Int 1 </pc>
          <k> runInstruction ... </k>
-         <operandStack> ... ListItem(L1:Int) => ListItem(L1 -Int 256) </operandStack>
+         <operandStack> ... ListItem(L1:Int) => ListItem(L1 -Int (256 *Int (L1 /Int 256))) </operandStack>
          <frameMethod> C1:CValue : C2:CValue </frameMethod>
          <methodNameType> C1 : C2 </methodNameType>
          <classDecl> C:ClassDecl </classDecl>
@@ -108,7 +192,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-TYPE-CONVERSION
 
     rule <pc> I:Int => I +Int 1 </pc>
          <k> runInstruction ... </k>
-         <operandStack> ... ListItem(L1:Int) => ListItem(L1 +Int 256) </operandStack>
+         <operandStack> ... ListItem(L1:Int) => ListItem(L1 +Int (256 *Int (L1 /Int 256))) </operandStack>
          <frameMethod> C1:CValue : C2:CValue </frameMethod>
          <methodNameType> C1 : C2 </methodNameType>
          <classDecl> C:ClassDecl </classDecl>
@@ -135,7 +219,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-TYPE-CONVERSION
 
     rule <pc> I:Int => I +Int 1 </pc>
          <k> runInstruction ... </k>
-         <operandStack> ... ListItem(L1:Int) => ListItem(L1 -Int 65536) </operandStack>
+         <operandStack> ... ListItem(L1:Int) => ListItem(L1 -Int (65536 *Int (L1 /Int 65536))) </operandStack>
          <frameMethod> C1:CValue : C2:CValue </frameMethod>
          <methodNameType> C1 : C2 </methodNameType>
          <classDecl> C:ClassDecl </classDecl>
@@ -147,7 +231,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-TYPE-CONVERSION
 
     rule <pc> I:Int => I +Int 1 </pc>
          <k> runInstruction ... </k>
-         <operandStack> ... ListItem(L1:Int) => ListItem(L1 +Int 65536) </operandStack>
+         <operandStack> ... ListItem(L1:Int) => ListItem(L1 +Int (65536 *Int (L1 /Int 65536))) </operandStack>
          <frameMethod> C1:CValue : C2:CValue </frameMethod>
          <methodNameType> C1 : C2 </methodNameType>
          <classDecl> C:ClassDecl </classDecl>
@@ -174,7 +258,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-TYPE-CONVERSION
 
     rule <pc> I:Int => I +Int 1 </pc>
          <k> runInstruction ... </k>
-         <operandStack> ... ListItem(L1:Int) => ListItem(L1 -Int 32767) </operandStack>
+         <operandStack> ... ListItem(L1:Int) => ListItem(L1 -Int (32767 *Int (L1 /Int 32767))) </operandStack>
          <frameMethod> C1:CValue : C2:CValue </frameMethod>
          <methodNameType> C1 : C2 </methodNameType>
          <classDecl> C:ClassDecl </classDecl>
@@ -186,7 +270,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-TYPE-CONVERSION
 
     rule <pc> I:Int => I +Int 1 </pc>
          <k> runInstruction ... </k>
-         <operandStack> ... ListItem(L1:Int) => ListItem(L1 +Int 32767) </operandStack>
+         <operandStack> ... ListItem(L1:Int) => ListItem(L1 +Int (32767 *Int (L1 /Int 32767))) </operandStack>
          <frameMethod> C1:CValue : C2:CValue </frameMethod>
          <methodNameType> C1 : C2 </methodNameType>
          <classDecl> C:ClassDecl </classDecl>
@@ -207,5 +291,247 @@ module JVM-SEMANTICS-INSTRUCTIONS-TYPE-CONVERSION
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
          when L1 >=Int -32767 andBool L1 <=Int 32767
+
+
+    //-------l2i-------
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) => ListItem(L1 -Int (2147483647 *Int (L1 /Int 2147483647))) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> l2i ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when L1 >Int 2147483647
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) => ListItem(L1 +Int (2147483647 *Int (L1 /Int 2147483647))) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> l2i ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when L1 <Int -2147483647  
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> l2i ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when L1 >=Int -2147483647 andBool L1 <=Int 2147483647
+
+
+    //-------f2i-------
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => 
+                ListItem(Float2Int(L1) -Int (2147483647 *Int (Float2Int(L1) /Int 2147483647))) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> f2i ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when Float2Int(L1) >Int 2147483647
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => 
+                ListItem(Float2Int(L1) +Int (2147483647 *Int (Float2Int(L1) /Int 2147483647))) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> f2i ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when Float2Int(L1) <Int -2147483647  
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => ListItem(Float2Int(L1)) ... </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> f2i ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when Float2Int(L1) >=Int -2147483647 andBool Float2Int(L1) <=Int 2147483647
+
+
+    //-------f2l-------
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => 
+                ListItem(Float2Int(L1) -Int (9223372036854775807 *Int (Float2Int(L1) /Int 9223372036854775807))) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> f2l ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when Float2Int(L1) >Int 9223372036854775807
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => 
+                ListItem(Float2Int(L1) +Int (9223372036854775807 *Int (Float2Int(L1) /Int 9223372036854775807))) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> f2l ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when Float2Int(L1) <Int -9223372036854775807  
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => ListItem(Float2Int(L1)) ... </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> f2l ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when Float2Int(L1) >=Int -9223372036854775807 andBool Float2Int(L1) <=Int 9223372036854775807
+
+
+    //-------d2i-------
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => 
+                ListItem(Float2Int(L1) -Int (2147483647 *Int (Float2Int(L1) /Int 2147483647))) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> d2i ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when Float2Int(L1) >Int 2147483647
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => 
+                ListItem(Float2Int(L1) +Int (2147483647 *Int (Float2Int(L1) /Int 2147483647))) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> d2i ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when Float2Int(L1) <Int -2147483647  
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => ListItem(Float2Int(L1)) ... </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> d2i ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when Float2Int(L1) >=Int -2147483647 andBool Float2Int(L1) <=Int 2147483647
+
+
+    //-------d2l-------
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => 
+                ListItem(Float2Int(L1) -Int (9223372036854775807 *Int (Float2Int(L1) /Int 9223372036854775807))) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> d2l ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when Float2Int(L1) >Int 9223372036854775807
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => 
+                ListItem(Float2Int(L1) +Int (9223372036854775807 *Int (Float2Int(L1) /Int 9223372036854775807))) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> d2l ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when Float2Int(L1) <Int -9223372036854775807  
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => ListItem(Float2Int(L1)) ... </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> d2l ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when Float2Int(L1) >=Int -9223372036854775807 andBool Float2Int(L1) <=Int 9223372036854775807
+
+
+    //-------d2f-------
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => ListItem(L1 -Float (3.4028235E38 *Float (L1 /Float 3.4028235E38))) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> d2f ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when L1 >Float 3.4028235E38
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) => ListItem(L1 +Float (3.4028235E38 *Float (L1 /Float 3.4028235E38))) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> d2f ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when L1 <Float 1.4E-45     
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Float) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <methodStmts> ... I |-> d2f ... </methodStmts>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         when L1 >=Float 1.4E-45 andBool L1 <=Float 3.4028235E38
 
 endmodule

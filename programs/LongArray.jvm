@@ -1,0 +1,81 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/LongArray.class
+  Last modified Jun 6, 2014; size 454 bytes
+  MD5 checksum 92dc7b384086a5efe24e80adcf5850ed
+  Compiled from "LongArray.java"
+public class LongArray
+  SourceFile: "LongArray.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #9.#25         //  java/lang/Object."<init>":()V
+   #2 = Long               100000000l
+   #4 = Long               200000000l
+   #6 = Long               300000000l
+   #8 = Class              #26            //  LongArray
+   #9 = Class              #27            //  java/lang/Object
+  #10 = Utf8               <init>
+  #11 = Utf8               ()V
+  #12 = Utf8               Code
+  #13 = Utf8               LineNumberTable
+  #14 = Utf8               LocalVariableTable
+  #15 = Utf8               this
+  #16 = Utf8               LLongArray;
+  #17 = Utf8               main
+  #18 = Utf8               ([Ljava/lang/String;)V
+  #19 = Utf8               args
+  #20 = Utf8               [Ljava/lang/String;
+  #21 = Utf8               a
+  #22 = Utf8               [J
+  #23 = Utf8               SourceFile
+  #24 = Utf8               LongArray.java
+  #25 = NameAndType        #10:#11        //  "<init>":()V
+  #26 = Utf8               LongArray
+  #27 = Utf8               java/lang/Object
+{
+  public LongArray();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LLongArray;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=2, args_size=1
+         0: iconst_3      
+         1: newarray       long
+         3: astore_1      
+         4: aload_1       
+         5: iconst_0      
+         6: ldc2_w        #2                  // long 100000000l
+         9: lastore       
+        10: aload_1       
+        11: iconst_1      
+        12: ldc2_w        #4                  // long 200000000l
+        15: lastore       
+        16: aload_1       
+        17: iconst_2      
+        18: ldc2_w        #6                  // long 300000000l
+        21: lastore       
+        22: return        
+      LineNumberTable:
+        line 4: 0
+        line 5: 4
+        line 6: 10
+        line 7: 16
+        line 8: 22
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      23     0  args   [Ljava/lang/String;
+               4      19     1     a   [J
+}

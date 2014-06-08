@@ -1,0 +1,219 @@
+<t>
+    <k>
+        .K
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        6
+    </nextRefLoc>
+    <pc>
+        19
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        3
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class CharArray
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            4 |-> 0
+                            5 |-> 4
+                            6 |-> 9
+                            7 |-> 14
+                            8 |-> 19
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> iconst_3
+                            1 |-> newarray char
+                            3 |-> astore_1
+                            4 |-> aload_1
+                            5 |-> iconst_0
+                            6 |-> bipush 97
+                            8 |-> castore
+                            9 |-> aload_1
+                            10 |-> iconst_1
+                            11 |-> bipush 98
+                            13 |-> castore
+                            14 |-> aload_1
+                            15 |-> iconst_2
+                            16 |-> bipush 99
+                            18 |-> castore
+                            19 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 3
+                            locals |-> 2
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 20,, args,, [  Ljava/ lang 
+                               / String ;)
+                            1 |-> '`(_,_,_,_`)(4,, 16,, a,, [ C)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public CharArray ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        CharArray : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, LCharArray ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                .Bag
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |-> CharArray
+                    # 3 |->   java/ lang / Object 
+                    # 4 |-> <init>
+                    # 5 |-> ( ) V
+                    # 6 |-> Code
+                    # 7 |-> LineNumberTable
+                    # 8 |-> LocalVariableTable
+                    # 9 |-> this
+                    # 10 |-> LCharArray ;
+                    # 11 |-> main
+                    # 12 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 13 |-> args
+                    # 14 |-> [  Ljava/ lang  / String ;
+                    # 15 |-> a
+                    # 16 |-> [ C
+                    # 17 |-> SourceFile
+                    # 18 |->  CharArray. java 
+                    # 19 |-> <init> : ( ) V
+                    # 20 |-> CharArray
+                    # 21 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 3 . # 19
+                    # 2 |-> Class . # 20
+                    # 3 |-> Class . # 21
+                    # 4 |-> Utf8 . <init>
+                    # 5 |-> Utf8 . ( ) V
+                    # 6 |-> Utf8 . Code
+                    # 7 |-> Utf8 . LineNumberTable
+                    # 8 |-> Utf8 . LocalVariableTable
+                    # 9 |-> Utf8 . this
+                    # 10 |-> Utf8 . LCharArray ;
+                    # 11 |-> Utf8 . main
+                    # 12 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 13 |-> Utf8 . args
+                    # 14 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 15 |-> Utf8 . a
+                    # 16 |-> Utf8 . [ C
+                    # 17 |-> Utf8 . SourceFile
+                    # 18 |-> Utf8 .  CharArray. java 
+                    # 19 |-> NameAndType . # 4 : # 5
+                    # 20 |-> Utf8 . CharArray
+                    # 21 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(CharArray : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / CharArray  . class
+                last_modified |-> ( Jun , 6 , 2014 )
+                md5_checksum |-> ba7d0168bb3cc1e70d46ee9d3e42c4e6
+                compiled_from |-> "CharArray.java"
+                sourcefile |-> "CharArray.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( CharArray , <envStack> ( CharArray , <env> .Map </env> 
+          ) (   java/ lang / Object  , <env> .Map </env> ) </envStack> )
+        2 |-> array ( char , 3 , 3 )
+        3 |-> 97
+        4 |-> 98
+        5 |-> 99
+    </heap>
+</t>

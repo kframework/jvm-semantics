@@ -1,0 +1,288 @@
+<t>
+    <k>
+        .K
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        2
+    </nextRefLoc>
+    <pc>
+        27
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        2
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class LongTypeConversion
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            9 |-> 0
+                            10 |-> 6
+                            11 |-> 13
+                            12 |-> 20
+                            13 |-> 27
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> ldc2_w # 2
+                            3 |-> putstatic # 4
+                            6 |-> getstatic # 4
+                            9 |-> l2i
+                            10 |-> putstatic # 5
+                            13 |-> getstatic # 4
+                            16 |-> l2d
+                            17 |-> putstatic # 6
+                            20 |-> getstatic # 4
+                            23 |-> l2f
+                            24 |-> putstatic # 7
+                            27 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 28,, args,, [  Ljava/ lang 
+                               / String ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public LongTypeConversion ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        LongTypeConversion : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, 
+                              LLongTypeConversion ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                <field>
+                    <fieldDecl>
+                        public static int b ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static float d ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static double c ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static long a ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |-> 3147483647
+                    # 4 |->  LongTypeConversion. a : J 
+                    # 5 |->  LongTypeConversion. b : I 
+                    # 6 |->  LongTypeConversion. c : D 
+                    # 7 |->  LongTypeConversion. d : F 
+                    # 8 |-> LongTypeConversion
+                    # 9 |->   java/ lang / Object 
+                    # 10 |-> a
+                    # 11 |-> J
+                    # 12 |-> b
+                    # 13 |-> I
+                    # 14 |-> c
+                    # 15 |-> D
+                    # 16 |-> d
+                    # 17 |-> F
+                    # 18 |-> <init>
+                    # 19 |-> ( ) V
+                    # 20 |-> Code
+                    # 21 |-> LineNumberTable
+                    # 22 |-> LocalVariableTable
+                    # 23 |-> this
+                    # 24 |-> LLongTypeConversion ;
+                    # 25 |-> main
+                    # 26 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 27 |-> args
+                    # 28 |-> [  Ljava/ lang  / String ;
+                    # 29 |-> SourceFile
+                    # 30 |->  LongTypeConversion. java 
+                    # 31 |-> <init> : ( ) V
+                    # 32 |->  a: J 
+                    # 33 |->  b: I 
+                    # 34 |->  c: D 
+                    # 35 |->  d: F 
+                    # 36 |-> LongTypeConversion
+                    # 37 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 9 . # 31
+                    # 2 |-> Long . 3147483647l
+                    # 4 |-> Fieldref . # 8 . # 32
+                    # 5 |-> Fieldref . # 8 . # 33
+                    # 6 |-> Fieldref . # 8 . # 34
+                    # 7 |-> Fieldref . # 8 . # 35
+                    # 8 |-> Class . # 36
+                    # 9 |-> Class . # 37
+                    # 10 |-> Utf8 . a
+                    # 11 |-> Utf8 . J
+                    # 12 |-> Utf8 . b
+                    # 13 |-> Utf8 . I
+                    # 14 |-> Utf8 . c
+                    # 15 |-> Utf8 . D
+                    # 16 |-> Utf8 . d
+                    # 17 |-> Utf8 . F
+                    # 18 |-> Utf8 . <init>
+                    # 19 |-> Utf8 . ( ) V
+                    # 20 |-> Utf8 . Code
+                    # 21 |-> Utf8 . LineNumberTable
+                    # 22 |-> Utf8 . LocalVariableTable
+                    # 23 |-> Utf8 . this
+                    # 24 |-> Utf8 . LLongTypeConversion ;
+                    # 25 |-> Utf8 . main
+                    # 26 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 27 |-> Utf8 . args
+                    # 28 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 29 |-> Utf8 . SourceFile
+                    # 30 |-> Utf8 .  LongTypeConversion. java 
+                    # 31 |-> NameAndType . # 18 : # 19
+                    # 32 |-> NameAndType . # 10 : # 11
+                    # 33 |-> NameAndType . # 12 : # 13
+                    # 34 |-> NameAndType . # 14 : # 15
+                    # 35 |-> NameAndType . # 16 : # 17
+                    # 36 |-> Utf8 . LongTypeConversion
+                    # 37 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(LongTypeConversion : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / LongTypeConversion  . class
+                last_modified |-> ( Jun , 6 , 2014 )
+                md5_checksum |-> 74bf8d9f2b7a9534a86c9683976c869b
+                compiled_from |-> "LongTypeConversion.java"
+                sourcefile |-> "LongTypeConversion.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                a |-> 3147483647
+                b |-> 1000000000
+                c |-> 3.147483647e+9
+                d |-> 3.147483647e+9
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( LongTypeConversion , <envStack> ( LongTypeConversion , 
+          <env> .Map </env> ) (   java/ lang / Object  , <env> .Map </env> ) 
+          </envStack> )
+    </heap>
+</t>

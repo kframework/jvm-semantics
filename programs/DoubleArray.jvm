@@ -1,0 +1,94 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/DoubleArray.class
+  Last modified Jun 6, 2014; size 496 bytes
+  MD5 checksum 0213487856472e80e0a001866c642758
+  Compiled from "DoubleArray.java"
+public class DoubleArray
+  SourceFile: "DoubleArray.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #10.#28        //  java/lang/Object."<init>":()V
+   #2 = Double             10.1d
+   #4 = Double             20.2d
+   #6 = Double             30.3d
+   #8 = Fieldref           #9.#29         //  DoubleArray.x:D
+   #9 = Class              #30            //  DoubleArray
+  #10 = Class              #31            //  java/lang/Object
+  #11 = Utf8               x
+  #12 = Utf8               D
+  #13 = Utf8               <init>
+  #14 = Utf8               ()V
+  #15 = Utf8               Code
+  #16 = Utf8               LineNumberTable
+  #17 = Utf8               LocalVariableTable
+  #18 = Utf8               this
+  #19 = Utf8               LDoubleArray;
+  #20 = Utf8               main
+  #21 = Utf8               ([Ljava/lang/String;)V
+  #22 = Utf8               args
+  #23 = Utf8               [Ljava/lang/String;
+  #24 = Utf8               a
+  #25 = Utf8               [D
+  #26 = Utf8               SourceFile
+  #27 = Utf8               DoubleArray.java
+  #28 = NameAndType        #13:#14        //  "<init>":()V
+  #29 = NameAndType        #11:#12        //  x:D
+  #30 = Utf8               DoubleArray
+  #31 = Utf8               java/lang/Object
+{
+  private static double x;
+    Signature: D
+    flags: ACC_PRIVATE, ACC_STATIC
+
+  public DoubleArray();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LDoubleArray;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=2, args_size=1
+         0: iconst_3      
+         1: newarray       double
+         3: astore_1      
+         4: aload_1       
+         5: iconst_0      
+         6: ldc2_w        #2                  // double 10.1d
+         9: dastore       
+        10: aload_1       
+        11: iconst_1      
+        12: ldc2_w        #4                  // double 20.2d
+        15: dastore       
+        16: aload_1       
+        17: iconst_2      
+        18: ldc2_w        #6                  // double 30.3d
+        21: dastore       
+        22: aload_1       
+        23: iconst_2      
+        24: daload        
+        25: putstatic     #8                  // Field x:D
+        28: return        
+      LineNumberTable:
+        line 6: 0
+        line 7: 4
+        line 8: 10
+        line 9: 16
+        line 11: 22
+        line 12: 28
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      29     0  args   [Ljava/lang/String;
+               4      25     1     a   [D
+}

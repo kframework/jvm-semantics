@@ -44,7 +44,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 0 |-> (I4:Id , I5:CValue , I6:Int) ... </localVarArr>
+         <localVarArr> ... 0 |-> (I7:Int , I4:Id , I5:CValue , I6:Int) ... </localVarArr>
          <methodStmts> ... I |-> iload_0 ... </methodStmts>
     
     rule <pc> I:Int => I +Int 1 </pc>
@@ -56,7 +56,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 1 |-> (I4:Id , I5:CValue , I6:Int) ... </localVarArr>
+         <localVarArr> ... 1 |-> (I7:Int , I4:Id , I5:CValue , I6:Int) ... </localVarArr>
          <methodStmts> ... I |-> iload_1 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -68,7 +68,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 2 |-> (I4:Id , I5:CValue , I6:Int) ... </localVarArr>
+         <localVarArr> ... 2 |-> (I7:Int , I4:Id , I5:CValue , I6:Int) ... </localVarArr>
          <methodStmts> ... I |-> iload_2 ... </methodStmts>
 
     rule <pc> I:Int => I +Int 1 </pc>
@@ -80,7 +80,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 3 |-> (I4:Id , I5:CValue , I6:Int) ... </localVarArr>
+         <localVarArr> ... 3 |-> (I7:Int , I4:Id , I5:CValue , I6:Int) ... </localVarArr>
          <methodStmts> ... I |-> iload_3 ... </methodStmts>
          
 
@@ -95,7 +95,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 2 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... I2 |-> (I4:Id , I5:CValue , I6:Int) ... </localVarArr>
+         <localVarArr> ... I2 |-> (I7:Int , I4:Id , I5:CValue , I6:Int) ... </localVarArr>
          <methodStmts> ... I |-> iload I2:Int ... </methodStmts>
     
 
@@ -110,7 +110,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 0 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... 0 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> lload_0 ... </methodStmts>
     
     rule <pc> I:Int => I +Int 1 </pc>
@@ -122,7 +122,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 1 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... 1 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> lload_1 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -134,7 +134,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 2 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... 2 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> lload_2 ... </methodStmts>
 
     rule <pc> I:Int => I +Int 1 </pc>
@@ -146,12 +146,12 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 3 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... 3 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> lload_3 ... </methodStmts>
          
 
     //-------lload-------
-    /*
+    
     rule <pc> I:Int => I +Int 2 </pc>
          <k> runInstruction ... </k>
          <operandStack> ... . => ListItem(I6) </operandStack>
@@ -161,10 +161,9 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 2 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... I2 |-> (I4:Id , I5:CValue , I6:Int) ... </localVarArr>
-         <methodStmts> ... I |-> lload I2:Int l... </methodStmts>
-    */
-
+         <localVarArr> ... I2 |-> (I7:Int , I4:Id , I5:CValue , I6:Int) ... </localVarArr>
+         <methodStmts> ... I |-> lload I2:Int ... </methodStmts>
+    
 
     //-------fload_<n>-------
     
@@ -177,7 +176,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 0 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... 0 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> fload_0 ... </methodStmts>
     
     rule <pc> I:Int => I +Int 1 </pc>
@@ -189,7 +188,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 1 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... 1 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> fload_1 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -201,7 +200,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 2 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... 2 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> fload_2 ... </methodStmts>
 
     rule <pc> I:Int => I +Int 1 </pc>
@@ -213,7 +212,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 3 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... 3 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> fload_3 ... </methodStmts>
          
 
@@ -228,7 +227,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 2 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... I2 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... I2 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> fload I2:Int ... </methodStmts>
          
 
@@ -243,7 +242,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 0 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... 0 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> dload_0 ... </methodStmts>
     
     rule <pc> I:Int => I +Int 1 </pc>
@@ -255,7 +254,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 1 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... 1 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> dload_1 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -267,7 +266,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 2 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... 2 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> dload_2 ... </methodStmts>
 
     rule <pc> I:Int => I +Int 1 </pc>
@@ -279,7 +278,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 3 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... 3 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> dload_3 ... </methodStmts>
          
 
@@ -294,7 +293,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 2 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... I2 |-> (I4:Id , I5:CValue , I6) ... </localVarArr>
+         <localVarArr> ... I2 |-> (I7:Int , I4:Id , I5:CValue , I6) ... </localVarArr>
          <methodStmts> ... I |-> dload I2:Int ... </methodStmts>
 
 
@@ -309,7 +308,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 0 |-> (I4:Id , I5:CValue , I6:Int) ... </localVarArr>
+         <localVarArr> ... 0 |-> (I7:Int , I4:Id , I5:CValue , I6:Int) ... </localVarArr>
          <methodStmts> ... I |-> aload_0 ... </methodStmts>
     
     rule <pc> I:Int => I +Int 1 </pc>
@@ -321,7 +320,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 1 |-> (I4:Id , I5:CValue , I6:Int) ... </localVarArr>
+         <localVarArr> ... 1 |-> (I7:Int , I4:Id , I5:CValue , I6:Int) ... </localVarArr>
          <methodStmts> ... I |-> aload_1 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -333,7 +332,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 2 |-> (I4:Id , I5:CValue , I6:Int) ... </localVarArr>
+         <localVarArr> ... 2 |-> (I7:Int , I4:Id , I5:CValue , I6:Int) ... </localVarArr>
          <methodStmts> ... I |-> aload_2 ... </methodStmts>
 
     rule <pc> I:Int => I +Int 1 </pc>
@@ -345,7 +344,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 3 |-> (I4:Id , I5:CValue , I6:Int) ... </localVarArr>
+         <localVarArr> ... 3 |-> (I7:Int , I4:Id , I5:CValue , I6:Int) ... </localVarArr>
          <methodStmts> ... I |-> aload_3 ... </methodStmts>
         
  
@@ -360,8 +359,8 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 2 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... I2 |-> (I4:Id , I5:CValue , I6:Int) ... </localVarArr>
-         <methodStmts> ... I |-> iload I2:Int ... </methodStmts>
+         <localVarArr> ... I2 |-> (I7:Int , I4:Id , I5:CValue , I6:Int) ... </localVarArr>
+         <methodStmts> ... I |-> aload I2:Int ... </methodStmts>
 
 
     //-------istore_<n>-------
@@ -375,7 +374,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>     
-         <localVarArr> ... 0 |-> (I2:Id , I3:CValue , I4:Int) => 0 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 0 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => 0 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> istore_0 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -387,7 +386,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 1 |-> (I2:Id , I3:CValue , I4:Int) => 1 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 1 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => 1 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> istore_1 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -399,7 +398,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 2 |-> (I2:Id , I3:CValue , I4:Int) => 2 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 2 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => 2 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> istore_2 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -411,7 +410,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 3 |-> (I2:Id , I3:CValue , I4:Int) => 3 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 3 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => 3 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> istore_3 ... </methodStmts>
          
 
@@ -426,7 +425,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>     
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 2 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... I5 |-> (I2:Id , I3:CValue , I4:Int) => I5 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> istore I5:Int... </methodStmts>
 
 
@@ -441,7 +440,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>     
-         <localVarArr> ... 0 |-> (I2:Id , I3:CValue , _) => 0 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 0 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => 0 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> lstore_0 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -453,7 +452,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 1 |-> (I2:Id , I3:CValue , _) => 1 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 1 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => 1 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> lstore_1 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -465,7 +464,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 2 |-> (I2:Id , I3:CValue , _) => 2 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 2 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => 2 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> lstore_2 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -477,7 +476,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 3 |-> (I2:Id , I3:CValue , _) => 3 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 3 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => 3 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> lstore_3 ... </methodStmts>
 
          
@@ -492,7 +491,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>     
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 2 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... I5 |-> (I2:Id , I3:CValue , _) => I5 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> lstore I5:Int ... </methodStmts>
 
 
@@ -507,7 +506,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>     
-         <localVarArr> ... 0 |-> (I2:Id , I3:CValue , _) => 0 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 0 |-> (I7:Int , I2:Id , I3:CValue , _) => 0 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> fstore_0 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -519,7 +518,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 1 |-> (I2:Id , I3:CValue , _) => 1 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 1 |-> (I7:Int , I2:Id , I3:CValue , _) => 1 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> fstore_1 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -531,7 +530,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 2 |-> (I2:Id , I3:CValue , _) => 2 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 2 |-> (I7:Int , I2:Id , I3:CValue , _) => 2 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> fstore_2 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -543,7 +542,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 3 |-> (I2:Id , I3:CValue , _) => 3 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 3 |-> (I7:Int , I2:Id , I3:CValue , _) => 3 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> fstore_3 ... </methodStmts>
     
      
@@ -558,7 +557,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>     
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 2 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... I5 |-> (I2:Id , I3:CValue , _) => I5 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , _) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> fstore I5:Int ... </methodStmts>
          
 
@@ -573,7 +572,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>     
-         <localVarArr> ... 0 |-> (I2:Id , I3:CValue , _) => 0 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 0 |-> (I7:Int , I2:Id , I3:CValue , _) => 0 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> dstore_0 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -585,7 +584,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 1 |-> (I2:Id , I3:CValue , _) => 1 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 1 |-> (I7:Int , I2:Id , I3:CValue , _) => 1 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> dstore_1 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -597,7 +596,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 2 |-> (I2:Id , I3:CValue , _) => 2 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 2 |-> (I7:Int , I2:Id , I3:CValue , _) => 2 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> dstore_2 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -609,7 +608,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 3 |-> (I2:Id , I3:CValue , _) => 3 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 3 |-> (I7:Int , I2:Id , I3:CValue , _) => 3 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> dstore_3 ... </methodStmts>
          
 
@@ -624,7 +623,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>     
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 2 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... I5 |-> (I2:Id , I3:CValue , _) => I5 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , _) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> dstore I5:Int ... </methodStmts>
 
 
@@ -639,7 +638,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>     
-         <localVarArr> ... 0 |-> (I2:Id , I3:CValue , I4:Int) => 0 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 0 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => 0 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> astore_0 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -651,7 +650,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 1 |-> (I2:Id , I3:CValue , I4:Int) => 1 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 1 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => 1 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> astore_1 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -663,7 +662,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 2 |-> (I2:Id , I3:CValue , I4:Int) => 2 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 2 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => 2 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> astore_2 ... </methodStmts>
          
     rule <pc> I:Int => I +Int 1 </pc>
@@ -675,7 +674,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>    
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... 3 |-> (I2:Id , I3:CValue , I4:Int) => 3 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... 3 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => 3 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> astore_3 ... </methodStmts>
         
  
@@ -690,7 +689,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <frameClass> C </frameClass>     
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 2 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... I5 |-> (I2:Id , I3:CValue , I4:Int) => I5 |-> (I2 , I3 , L) ... </localVarArr>
+         <localVarArr> ... I5 |-> (I7:Int , I2:Id , I3:CValue , I4:Int) => I5 |-> (I7 , I2 , I3 , L) ... </localVarArr>
          <methodStmts> ... I |-> astore I5:Int ... </methodStmts>
     
 
@@ -803,7 +802,32 @@ module JVM-SEMANTICS-INSTRUCTIONS-LOAD-AND-STORE
          <methodStmts> ... I |-> ldc2_w C1:CIndex ... </methodStmts>
 
 
-    //-------iconst_<n>-------    
+    //-------aconst_null-------   
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... . => ListItem(-1000) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> aconst_null ... </methodStmts> 
+
+
+    //-------iconst_<n>-------   
+
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... . => ListItem(-1) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> iconst_m1 ... </methodStmts> 
          
     rule <pc> I:Int => I +Int 1 </pc>
          <k> runInstruction ... </k>

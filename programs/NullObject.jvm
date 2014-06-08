@@ -1,0 +1,176 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/A.class
+  Last modified May 15, 2014; size 300 bytes
+  MD5 checksum 365317d31d7cebd5294d09eebbb07135
+  Compiled from "A.java"
+public class A
+  SourceFile: "A.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#18         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #4.#19         //  A.a1:I
+   #3 = Fieldref           #4.#20         //  A.a2:I
+   #4 = Class              #21            //  A
+   #5 = Class              #22            //  java/lang/Object
+   #6 = Utf8               a1
+   #7 = Utf8               I
+   #8 = Utf8               a2
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               LA;
+  #16 = Utf8               SourceFile
+  #17 = Utf8               A.java
+  #18 = NameAndType        #9:#10         //  "<init>":()V
+  #19 = NameAndType        #6:#7          //  a1:I
+  #20 = NameAndType        #8:#7          //  a2:I
+  #21 = Utf8               A
+  #22 = Utf8               java/lang/Object
+{
+  public int a1;
+    Signature: I
+    flags: ACC_PUBLIC
+
+  private int a2;
+    Signature: I
+    flags: ACC_PRIVATE
+
+  public A();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: iconst_1      
+         6: putfield      #2                  // Field a1:I
+         9: aload_0       
+        10: iconst_2      
+        11: putfield      #3                  // Field a2:I
+        14: return        
+      LineNumberTable:
+        line 6: 0
+        line 3: 4
+        line 4: 9
+        line 8: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      15     0  this   LA;
+}
+Classfile /home/stefan/Projects/jvm-semantics/programs/NullObject.class
+  Last modified Jun 7, 2014; size 558 bytes
+  MD5 checksum 83182cf84840c1dc1fb6edd28302078b
+  Compiled from "NullObject.java"
+public class NullObject
+  SourceFile: "NullObject.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #7.#28         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #6.#29         //  NullObject.n1:I
+   #3 = Class              #30            //  A
+   #4 = Methodref          #3.#28         //  A."<init>":()V
+   #5 = Fieldref           #6.#31         //  NullObject.n2:I
+   #6 = Class              #32            //  NullObject
+   #7 = Class              #33            //  java/lang/Object
+   #8 = Utf8               n1
+   #9 = Utf8               I
+  #10 = Utf8               n2
+  #11 = Utf8               <init>
+  #12 = Utf8               ()V
+  #13 = Utf8               Code
+  #14 = Utf8               LineNumberTable
+  #15 = Utf8               LocalVariableTable
+  #16 = Utf8               this
+  #17 = Utf8               LNullObject;
+  #18 = Utf8               main
+  #19 = Utf8               ([Ljava/lang/String;)V
+  #20 = Utf8               args
+  #21 = Utf8               [Ljava/lang/String;
+  #22 = Utf8               obj
+  #23 = Utf8               LA;
+  #24 = Utf8               StackMapTable
+  #25 = Class              #30            //  A
+  #26 = Utf8               SourceFile
+  #27 = Utf8               NullObject.java
+  #28 = NameAndType        #11:#12        //  "<init>":()V
+  #29 = NameAndType        #8:#9          //  n1:I
+  #30 = Utf8               A
+  #31 = NameAndType        #10:#9         //  n2:I
+  #32 = Utf8               NullObject
+  #33 = Utf8               java/lang/Object
+{
+  public static int n1;
+    Signature: I
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static int n2;
+    Signature: I
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public NullObject();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LNullObject;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: aconst_null   
+         1: astore_1      
+         2: aload_1       
+         3: ifnonnull     10
+         6: iconst_1      
+         7: putstatic     #2                  // Field n1:I
+        10: new           #3                  // class A
+        13: dup           
+        14: invokespecial #4                  // Method A."<init>":()V
+        17: astore_1      
+        18: aload_1       
+        19: ifnull        26
+        22: iconst_2      
+        23: putstatic     #5                  // Field n2:I
+        26: aload_1       
+        27: ifnonnull     34
+        30: iconst_3      
+        31: putstatic     #2                  // Field n1:I
+        34: return        
+      LineNumberTable:
+        line 7: 0
+        line 9: 2
+        line 10: 6
+        line 13: 10
+        line 15: 18
+        line 16: 22
+        line 19: 26
+        line 20: 30
+        line 22: 34
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      35     0  args   [Ljava/lang/String;
+               2      33     1   obj   LA;
+      StackMapTable: number_of_entries = 3
+           frame_type = 252 /* append */
+             offset_delta = 10
+        locals = [ class A ]
+           frame_type = 15 /* same */
+           frame_type = 7 /* same */
+
+}

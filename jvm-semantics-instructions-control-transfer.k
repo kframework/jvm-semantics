@@ -327,6 +327,111 @@ module JVM-SEMANTICS-INSTRUCTIONS-CONTROL-TRANSFER
          when L1 =/=Int 0
 
 
+    //-------if_acmp<cond>-------
+    
+    rule <pc> I:Int => I +Int 3 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) ListItem(L2:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 3 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> if_acmpeq I2:Int ... </methodStmts>
+         when L1 =/=Int L2
+
+    rule <pc> I:Int => I2 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) ListItem(L2:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I2 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> if_acmpeq I2:Int ... </methodStmts>
+         when L1 ==Int L2
+
+    rule <pc> I:Int => I +Int 3 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) ListItem(L2:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 3 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> if_acmpne I2:Int ... </methodStmts>
+         when L1 ==Int L2
+
+    rule <pc> I:Int => I2 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) ListItem(L2:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I2 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> if_acmpne I2:Int ... </methodStmts>
+         when L1 =/=Int L2
+
+
+    //-------ifnull-------
+    
+    rule <pc> I:Int => I +Int 3 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 3 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> ifnull I2:Int ... </methodStmts>
+         when L1 =/=Int -1000
+
+    rule <pc> I:Int => I2 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I2 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> ifnull I2:Int ... </methodStmts>
+         when L1 ==Int -1000
+
+
+    //-------ifnonnull-------
+    
+    rule <pc> I:Int => I +Int 3 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 3 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> ifnonnull I2:Int ... </methodStmts>
+         when L1 ==Int -1000
+
+    rule <pc> I:Int => I2 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) => . </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I2 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> ifnonnull I2:Int ... </methodStmts>
+         when L1 =/=Int -1000
+
+
     //-------goto-------
     
     rule <pc> I:Int => I1 </pc>

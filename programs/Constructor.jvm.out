@@ -1,0 +1,475 @@
+<t>
+    <k>
+        runInstruction
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        8
+    </nextRefLoc>
+    <pc>
+        23
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        1
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class Constructor
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            4 |-> 0
+                            5 |-> 8
+                            6 |-> 19
+                            7 |-> 23
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> new # 2
+                            3 |-> dup
+                            4 |-> invokespecial # 3
+                            7 |-> astore_1
+                            8 |-> new # 2
+                            11 |-> dup
+                            12 |-> sipush 3000
+                            15 |-> invokespecial # 4
+                            18 |-> astore_2
+                            19 |-> aload_2
+                            20 |-> invokevirtual # 5
+                            23 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 3
+                            locals |-> 3
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 24,, args,, [  Ljava/ lang 
+                               / String ;)
+                            1 |-> '`(_,_,_,_`)(8,, 16,, myD,, LD ;)
+                            2 |-> '`(_,_,_,_`)(19,, 5,, myD2,, LD ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public Constructor ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        Constructor : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, LConstructor ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                .Bag
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |-> D
+                    # 3 |->  D. <init> : ( ) V 
+                    # 4 |->  D. <init> : ( I ) V 
+                    # 5 |->  D. m : ( ) V 
+                    # 6 |-> Constructor
+                    # 7 |->   java/ lang / Object 
+                    # 8 |-> <init>
+                    # 9 |-> ( ) V
+                    # 10 |-> Code
+                    # 11 |-> LineNumberTable
+                    # 12 |-> LocalVariableTable
+                    # 13 |-> this
+                    # 14 |-> LConstructor ;
+                    # 15 |-> main
+                    # 16 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 17 |-> args
+                    # 18 |-> [  Ljava/ lang  / String ;
+                    # 19 |-> myD
+                    # 20 |-> LD ;
+                    # 21 |-> myD2
+                    # 22 |-> SourceFile
+                    # 23 |->  Constructor. java 
+                    # 24 |-> <init> : ( ) V
+                    # 25 |-> D
+                    # 26 |-> <init> : ( I ) V
+                    # 27 |-> m : ( ) V
+                    # 28 |-> Constructor
+                    # 29 |->   java/ lang / Object 
+                    # 30 |-> ( I ) V
+                    # 31 |-> m
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 7 . # 24
+                    # 2 |-> Class . # 25
+                    # 3 |-> Methodref . # 2 . # 24
+                    # 4 |-> Methodref . # 2 . # 26
+                    # 5 |-> Methodref . # 2 . # 27
+                    # 6 |-> Class . # 28
+                    # 7 |-> Class . # 29
+                    # 8 |-> Utf8 . <init>
+                    # 9 |-> Utf8 . ( ) V
+                    # 10 |-> Utf8 . Code
+                    # 11 |-> Utf8 . LineNumberTable
+                    # 12 |-> Utf8 . LocalVariableTable
+                    # 13 |-> Utf8 . this
+                    # 14 |-> Utf8 . LConstructor ;
+                    # 15 |-> Utf8 . main
+                    # 16 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 17 |-> Utf8 . args
+                    # 18 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 19 |-> Utf8 . myD
+                    # 20 |-> Utf8 . LD ;
+                    # 21 |-> Utf8 . myD2
+                    # 22 |-> Utf8 . SourceFile
+                    # 23 |-> Utf8 .  Constructor. java 
+                    # 24 |-> NameAndType . # 8 : # 9
+                    # 25 |-> Utf8 . D
+                    # 26 |-> NameAndType . # 8 : # 30
+                    # 27 |-> NameAndType . # 31 : # 9
+                    # 28 |-> Utf8 . Constructor
+                    # 29 |-> Utf8 .   java/ lang / Object 
+                    # 30 |-> Utf8 . ( I ) V
+                    # 31 |-> Utf8 . m
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(Constructor : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / Constructor  . class
+                last_modified |-> ( May , 14 , 2014 )
+                md5_checksum |-> f14d2a443033d09641dcbe0b1dc36e3c
+                compiled_from |-> "Constructor.java"
+                sourcefile |-> "Constructor.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+        <class>
+            <classDecl>
+                public class D
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public void m ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        m : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            15 |-> 0
+                            16 |-> 7
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> sipush -2000
+                            4 |-> putfield # 3
+                            7 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 8,, this,, LD ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public D ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        D : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            3 |-> 4
+                            4 |-> 11
+                            6 |-> 0
+                            8 |-> 18
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> aload_0
+                            5 |-> sipush 1000
+                            8 |-> putfield # 2
+                            11 |-> aload_0
+                            12 |-> sipush 2000
+                            15 |-> putfield # 3
+                            18 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 19,, this,, LD ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public D ( int ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        D : ( I ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            3 |-> 4
+                            4 |-> 11
+                            10 |-> 0
+                            11 |-> 18
+                            12 |-> 23
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> aload_0
+                            5 |-> sipush 1000
+                            8 |-> putfield # 2
+                            11 |-> aload_0
+                            12 |-> sipush 2000
+                            15 |-> putfield # 3
+                            18 |-> aload_0
+                            19 |-> iload_1
+                            20 |-> putfield # 2
+                            23 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 2
+                            args_size |-> 2
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 24,, this,, LD ;)
+                            1 |-> '`(_,_,_,_`)(0,, 24,, x,, I)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                <field>
+                    <fieldDecl>
+                        private int d2 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public int d1 ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |->  D. d1 : I 
+                    # 3 |->  D. d2 : I 
+                    # 4 |-> D
+                    # 5 |->   java/ lang / Object 
+                    # 6 |-> d1
+                    # 7 |-> I
+                    # 8 |-> d2
+                    # 9 |-> <init>
+                    # 10 |-> ( ) V
+                    # 11 |-> Code
+                    # 12 |-> LineNumberTable
+                    # 13 |-> LocalVariableTable
+                    # 14 |-> this
+                    # 15 |-> LD ;
+                    # 16 |-> ( I ) V
+                    # 17 |-> x
+                    # 18 |-> m
+                    # 19 |-> SourceFile
+                    # 20 |->  D. java 
+                    # 21 |-> <init> : ( ) V
+                    # 22 |->  d1: I 
+                    # 23 |->  d2: I 
+                    # 24 |-> D
+                    # 25 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 5 . # 21
+                    # 2 |-> Fieldref . # 4 . # 22
+                    # 3 |-> Fieldref . # 4 . # 23
+                    # 4 |-> Class . # 24
+                    # 5 |-> Class . # 25
+                    # 6 |-> Utf8 . d1
+                    # 7 |-> Utf8 . I
+                    # 8 |-> Utf8 . d2
+                    # 9 |-> Utf8 . <init>
+                    # 10 |-> Utf8 . ( ) V
+                    # 11 |-> Utf8 . Code
+                    # 12 |-> Utf8 . LineNumberTable
+                    # 13 |-> Utf8 . LocalVariableTable
+                    # 14 |-> Utf8 . this
+                    # 15 |-> Utf8 . LD ;
+                    # 16 |-> Utf8 . ( I ) V
+                    # 17 |-> Utf8 . x
+                    # 18 |-> Utf8 . m
+                    # 19 |-> Utf8 . SourceFile
+                    # 20 |-> Utf8 .  D. java 
+                    # 21 |-> NameAndType . # 9 : # 10
+                    # 22 |-> NameAndType . # 6 : # 7
+                    # 23 |-> NameAndType . # 8 : # 7
+                    # 24 |-> Utf8 . D
+                    # 25 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_PRIVATE)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(D : ( ) V)
+                SetItem(D : ( I ) V)
+                SetItem(m : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / D  . class
+                last_modified |-> ( May , 14 , 2014 )
+                md5_checksum |-> 9b9468ba615eb1cbcd6f1b4fbb043a1d
+                compiled_from |-> "D.java"
+                sourcefile |-> "D.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                d1 |-> undefined
+                d2 |-> undefined
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( Constructor , <envStack> ( Constructor , <env> .Map 
+          </env> ) (   java/ lang / Object  , <env> .Map </env> ) </envStack> 
+          )
+        2 |-> object ( D , <envStack> ( D , <env> d1 |-> 3 d2 |-> 4 </env> ) (
+             java/ lang / Object  , <env> .Map </env> ) </envStack> )
+        3 |-> 1000
+        4 |-> 2000
+        5 |-> object ( D , <envStack> ( D , <env> d1 |-> 6 d2 |-> 7 </env> ) (
+             java/ lang / Object  , <env> .Map </env> ) </envStack> )
+        6 |-> 3000
+        7 |-> -2000
+    </heap>
+</t>

@@ -328,11 +328,10 @@ module JVM-SEMANTICS-INSTRUCTIONS-ARITHMETIC
 
 
     //-------frem-------
-    /*
+    
     rule <pc> I:Int => I +Int 1 </pc>
          <k> runInstruction ... </k>
-         <operandStack> ... ListItem(L1:Float) ListItem(L2:Float) => 
-                ListItem(L1 -Float (L2 *Float Float2Int(L1 /Float L2))) </operandStack>
+         <operandStack> ... ListItem(L1:Float) ListItem(L2:Float) => ListItem(L1 %Float L2) </operandStack>
          <frameMethod> C1:CValue : C2:CValue </frameMethod>
          <methodNameType> C1 : C2 </methodNameType>
          <classDecl> C:ClassDecl </classDecl>
@@ -340,15 +339,13 @@ module JVM-SEMANTICS-INSTRUCTIONS-ARITHMETIC
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
          <methodStmts> ... I |-> frem ... </methodStmts>    
-    */
-
+    
 
     //-------drem-------
-    /*
+    
     rule <pc> I:Int => I +Int 1 </pc>
          <k> runInstruction ... </k>
-         <operandStack> ... ListItem(L1:Float) ListItem(L2:Float) => 
-                ListItem(L1 -Float (L2 *Float Float2Int(L1 /Float L2))) </operandStack>
+         <operandStack> ... ListItem(L1:Float) ListItem(L2:Float) => ListItem(L1 %Float L2) </operandStack>
          <frameMethod> C1:CValue : C2:CValue </frameMethod>
          <methodNameType> C1 : C2 </methodNameType>
          <classDecl> C:ClassDecl </classDecl>
@@ -356,7 +353,6 @@ module JVM-SEMANTICS-INSTRUCTIONS-ARITHMETIC
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
          <methodStmts> ... I |-> drem ... </methodStmts>    
-    */
 
 
     //-------ineg-------
@@ -413,6 +409,90 @@ module JVM-SEMANTICS-INSTRUCTIONS-ARITHMETIC
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
          <methodStmts> ... I |-> dneg ... </methodStmts>
+
+
+    //-------ishl-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) ListItem(L2:Int) => ListItem(L1 <<Int L2) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> ishl ... </methodStmts>  
+
+
+    //-------ishr-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) ListItem(L2:Int) => ListItem(L1 >>Int L2) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> ishr ... </methodStmts> 
+
+    
+    //-------iushr-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) ListItem(L2:Int) => ListItem(L1 >>Int L2) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> iushr ... </methodStmts> 
+
+
+    //-------lshl-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) ListItem(L2:Int) => ListItem(L1 <<Int L2) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> lshl ... </methodStmts>  
+
+
+    //-------lshr-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) ListItem(L2:Int) => ListItem(L1 >>Int L2) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> lshr ... </methodStmts> 
+
+    
+    //-------lushr-------
+    
+    rule <pc> I:Int => I +Int 1 </pc>
+         <k> runInstruction ... </k>
+         <operandStack> ... ListItem(L1:Int) ListItem(L2:Int) => ListItem(L1 >>Int L2) </operandStack>
+         <frameMethod> C1:CValue : C2:CValue </frameMethod>
+         <methodNameType> C1 : C2 </methodNameType>
+         <classDecl> C:ClassDecl </classDecl>
+         <frameClass> C </frameClass>
+         <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 1 , C , C1 , C2) ... </frameStack>
+         <crntFrame> S:Int </crntFrame>
+         <methodStmts> ... I |-> lushr ... </methodStmts> 
 
 
     //-------ior-------
@@ -509,7 +589,7 @@ module JVM-SEMANTICS-INSTRUCTIONS-ARITHMETIC
          <frameClass> C </frameClass>
          <frameStack> ... S |-> (I , C , C1 , C2) => S |-> (I +Int 3 , C , C1 , C2) ... </frameStack>
          <crntFrame> S:Int </crntFrame>
-         <localVarArr> ... I1 |-> (I4:Id , I5:CValue , I6:Int) => I1 |-> (I4 , I5 , I6 +Int I2) ... </localVarArr>
+         <localVarArr> ... I1 |-> (I7:Int , I4:Id , I5:CValue , I6:Int) => I1 |-> (I7 , I4 , I5 , I6 +Int I2) ... </localVarArr>
          <methodStmts> ... I |-> iinc I1:Int , I2:Int ... </methodStmts>
 
 

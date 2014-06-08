@@ -1,0 +1,288 @@
+Classfile /home/stefan/Projects/jvm-semantics/programs/A.class
+  Last modified May 15, 2014; size 300 bytes
+  MD5 checksum 365317d31d7cebd5294d09eebbb07135
+  Compiled from "A.java"
+public class A
+  SourceFile: "A.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #5.#18         //  java/lang/Object."<init>":()V
+   #2 = Fieldref           #4.#19         //  A.a1:I
+   #3 = Fieldref           #4.#20         //  A.a2:I
+   #4 = Class              #21            //  A
+   #5 = Class              #22            //  java/lang/Object
+   #6 = Utf8               a1
+   #7 = Utf8               I
+   #8 = Utf8               a2
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               LA;
+  #16 = Utf8               SourceFile
+  #17 = Utf8               A.java
+  #18 = NameAndType        #9:#10         //  "<init>":()V
+  #19 = NameAndType        #6:#7          //  a1:I
+  #20 = NameAndType        #8:#7          //  a2:I
+  #21 = Utf8               A
+  #22 = Utf8               java/lang/Object
+{
+  public int a1;
+    Signature: I
+    flags: ACC_PUBLIC
+
+  private int a2;
+    Signature: I
+    flags: ACC_PRIVATE
+
+  public A();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: iconst_1      
+         6: putfield      #2                  // Field a1:I
+         9: aload_0       
+        10: iconst_2      
+        11: putfield      #3                  // Field a2:I
+        14: return        
+      LineNumberTable:
+        line 6: 0
+        line 3: 4
+        line 4: 9
+        line 8: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      15     0  this   LA;
+}
+Classfile /home/stefan/Projects/jvm-semantics/programs/MethodReturn.class
+  Last modified Jun 7, 2014; size 1107 bytes
+  MD5 checksum 21f52405d2dfec2cb685e77322615203
+  Compiled from "MethodReturn.java"
+public class MethodReturn
+  SourceFile: "MethodReturn.java"
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #25.#59        //  java/lang/Object."<init>":()V
+   #2 = Methodref          #24.#60        //  MethodReturn.intAdd:(II)I
+   #3 = Fieldref           #24.#61        //  MethodReturn.a:I
+   #4 = Long               5l
+   #6 = Long               7l
+   #8 = Methodref          #24.#62        //  MethodReturn.longSub:(JJ)J
+   #9 = Fieldref           #24.#63        //  MethodReturn.b:J
+  #10 = Float              2.3f
+  #11 = Float              5.2f
+  #12 = Methodref          #24.#64        //  MethodReturn.floatMul:(FF)F
+  #13 = Fieldref           #24.#65        //  MethodReturn.c:F
+  #14 = Double             9.3d
+  #16 = Double             3.1d
+  #18 = Methodref          #24.#66        //  MethodReturn.doubleDiv:(DD)D
+  #19 = Fieldref           #24.#67        //  MethodReturn.d:D
+  #20 = Methodref          #24.#68        //  MethodReturn.newA:()LA;
+  #21 = Fieldref           #24.#69        //  MethodReturn.objA:LA;
+  #22 = Class              #70            //  A
+  #23 = Methodref          #22.#59        //  A."<init>":()V
+  #24 = Class              #71            //  MethodReturn
+  #25 = Class              #72            //  java/lang/Object
+  #26 = Utf8               a
+  #27 = Utf8               I
+  #28 = Utf8               b
+  #29 = Utf8               J
+  #30 = Utf8               c
+  #31 = Utf8               F
+  #32 = Utf8               d
+  #33 = Utf8               D
+  #34 = Utf8               objA
+  #35 = Utf8               LA;
+  #36 = Utf8               <init>
+  #37 = Utf8               ()V
+  #38 = Utf8               Code
+  #39 = Utf8               LineNumberTable
+  #40 = Utf8               LocalVariableTable
+  #41 = Utf8               this
+  #42 = Utf8               LMethodReturn;
+  #43 = Utf8               main
+  #44 = Utf8               ([Ljava/lang/String;)V
+  #45 = Utf8               args
+  #46 = Utf8               [Ljava/lang/String;
+  #47 = Utf8               intAdd
+  #48 = Utf8               (II)I
+  #49 = Utf8               longSub
+  #50 = Utf8               (JJ)J
+  #51 = Utf8               floatMul
+  #52 = Utf8               (FF)F
+  #53 = Utf8               doubleDiv
+  #54 = Utf8               (DD)D
+  #55 = Utf8               newA
+  #56 = Utf8               ()LA;
+  #57 = Utf8               SourceFile
+  #58 = Utf8               MethodReturn.java
+  #59 = NameAndType        #36:#37        //  "<init>":()V
+  #60 = NameAndType        #47:#48        //  intAdd:(II)I
+  #61 = NameAndType        #26:#27        //  a:I
+  #62 = NameAndType        #49:#50        //  longSub:(JJ)J
+  #63 = NameAndType        #28:#29        //  b:J
+  #64 = NameAndType        #51:#52        //  floatMul:(FF)F
+  #65 = NameAndType        #30:#31        //  c:F
+  #66 = NameAndType        #53:#54        //  doubleDiv:(DD)D
+  #67 = NameAndType        #32:#33        //  d:D
+  #68 = NameAndType        #55:#56        //  newA:()LA;
+  #69 = NameAndType        #34:#35        //  objA:LA;
+  #70 = Utf8               A
+  #71 = Utf8               MethodReturn
+  #72 = Utf8               java/lang/Object
+{
+  public static int a;
+    Signature: I
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static long b;
+    Signature: J
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static float c;
+    Signature: F
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static double d;
+    Signature: D
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public static A objA;
+    Signature: LA;
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public MethodReturn();
+    Signature: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return        
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       5     0  this   LMethodReturn;
+
+  public static void main(java.lang.String[]);
+    Signature: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: bipush        7
+         2: bipush        8
+         4: invokestatic  #2                  // Method intAdd:(II)I
+         7: putstatic     #3                  // Field a:I
+        10: ldc2_w        #4                  // long 5l
+        13: ldc2_w        #6                  // long 7l
+        16: invokestatic  #8                  // Method longSub:(JJ)J
+        19: putstatic     #9                  // Field b:J
+        22: ldc           #10                 // float 2.3f
+        24: ldc           #11                 // float 5.2f
+        26: invokestatic  #12                 // Method floatMul:(FF)F
+        29: putstatic     #13                 // Field c:F
+        32: ldc2_w        #14                 // double 9.3d
+        35: ldc2_w        #16                 // double 3.1d
+        38: invokestatic  #18                 // Method doubleDiv:(DD)D
+        41: putstatic     #19                 // Field d:D
+        44: invokestatic  #20                 // Method newA:()LA;
+        47: putstatic     #21                 // Field objA:LA;
+        50: return        
+      LineNumberTable:
+        line 10: 0
+        line 11: 10
+        line 12: 22
+        line 13: 32
+        line 14: 44
+        line 15: 50
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      51     0  args   [Ljava/lang/String;
+
+  public static int intAdd(int, int);
+    Signature: (II)I
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: iload_0       
+         1: iload_1       
+         2: iadd          
+         3: ireturn       
+      LineNumberTable:
+        line 18: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       4     0     a   I
+               0       4     1     b   I
+
+  public static long longSub(long, long);
+    Signature: (JJ)J
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=4, args_size=2
+         0: lload_0       
+         1: lload_2       
+         2: lsub          
+         3: lreturn       
+      LineNumberTable:
+        line 22: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       4     0     a   J
+               0       4     2     b   J
+
+  public static float floatMul(float, float);
+    Signature: (FF)F
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: fload_0       
+         1: fload_1       
+         2: fmul          
+         3: freturn       
+      LineNumberTable:
+        line 26: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       4     0     a   F
+               0       4     1     b   F
+
+  public static double doubleDiv(double, double);
+    Signature: (DD)D
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=4, args_size=2
+         0: dload_0       
+         1: dload_2       
+         2: ddiv          
+         3: dreturn       
+      LineNumberTable:
+        line 30: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       4     0     a   D
+               0       4     2     b   D
+
+  public static A newA();
+    Signature: ()LA;
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: new           #22                 // class A
+         3: dup           
+         4: invokespecial #23                 // Method A."<init>":()V
+         7: areturn       
+      LineNumberTable:
+        line 34: 0
+}

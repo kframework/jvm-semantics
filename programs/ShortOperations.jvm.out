@@ -1,0 +1,263 @@
+<t>
+    <k>
+        .K
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        2
+    </nextRefLoc>
+    <pc>
+        54
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        6
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class ShortOperations
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            number_of_entries = 3 frame_type = 253 
+                              offset_delta = 16 locals = [ int, int ] 
+                              frame_type = 1 frame_type = 18
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            4 |-> 0
+                            5 |-> 2
+                            6 |-> 5
+                            7 |-> 11
+                            8 |-> 16
+                            8 |-> 29
+                            9 |-> 24
+                            10 |-> 37
+                            11 |-> 42
+                            12 |-> 46
+                            13 |-> 54
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> iconst_5
+                            1 |-> istore_1
+                            2 |-> bipush 20
+                            4 |-> istore_2
+                            5 |-> iload_1
+                            6 |-> bipush 10
+                            8 |-> if_icmpge 16
+                            11 |-> iload_1
+                            12 |-> iconst_2
+                            13 |-> imul
+                            14 |-> i2s
+                            15 |-> istore_2
+                            16 |-> iconst_0
+                            17 |-> istore_1
+                            18 |-> iload_1
+                            19 |-> bipush 8
+                            21 |-> if_icmpge 37
+                            24 |-> iload_2
+                            25 |-> iconst_1
+                            26 |-> iadd
+                            27 |-> i2s
+                            28 |-> istore_2
+                            29 |-> iload_1
+                            30 |-> iconst_2
+                            31 |-> iadd
+                            32 |-> i2s
+                            33 |-> istore_1
+                            34 |-> goto 18
+                            37 |-> iload_1
+                            38 |-> iload_2
+                            39 |-> iadd
+                            40 |-> i2s
+                            41 |-> istore_3
+                            42 |-> bipush 6
+                            44 |-> istore 4
+                            46 |-> iload_2
+                            47 |-> iload 4
+                            49 |-> idiv
+                            50 |-> iconst_3
+                            51 |-> isub
+                            52 |-> i2s
+                            53 |-> istore_2
+                            54 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 5
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 55,, args,, [  Ljava/ lang 
+                               / String ;)
+                            1 |-> '`(_,_,_,_`)(2,, 53,, i,, S)
+                            2 |-> '`(_,_,_,_`)(5,, 50,, j,, S)
+                            3 |-> '`(_,_,_,_`)(42,, 13,, k,, S)
+                            4 |-> '`(_,_,_,_`)(46,, 9,, l,, S)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public ShortOperations ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        ShortOperations : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, LShortOperations
+                               ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                .Bag
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |-> ShortOperations
+                    # 3 |->   java/ lang / Object 
+                    # 4 |-> <init>
+                    # 5 |-> ( ) V
+                    # 6 |-> Code
+                    # 7 |-> LineNumberTable
+                    # 8 |-> LocalVariableTable
+                    # 9 |-> this
+                    # 10 |-> LShortOperations ;
+                    # 11 |-> main
+                    # 12 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 13 |-> args
+                    # 14 |-> [  Ljava/ lang  / String ;
+                    # 15 |-> i
+                    # 16 |-> S
+                    # 17 |-> j
+                    # 18 |-> k
+                    # 19 |-> l
+                    # 20 |-> StackMapTable
+                    # 21 |-> SourceFile
+                    # 22 |->  ShortOperations. java 
+                    # 23 |-> <init> : ( ) V
+                    # 24 |-> ShortOperations
+                    # 25 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 3 . # 23
+                    # 2 |-> Class . # 24
+                    # 3 |-> Class . # 25
+                    # 4 |-> Utf8 . <init>
+                    # 5 |-> Utf8 . ( ) V
+                    # 6 |-> Utf8 . Code
+                    # 7 |-> Utf8 . LineNumberTable
+                    # 8 |-> Utf8 . LocalVariableTable
+                    # 9 |-> Utf8 . this
+                    # 10 |-> Utf8 . LShortOperations ;
+                    # 11 |-> Utf8 . main
+                    # 12 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 13 |-> Utf8 . args
+                    # 14 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 15 |-> Utf8 . i
+                    # 16 |-> Utf8 . S
+                    # 17 |-> Utf8 . j
+                    # 18 |-> Utf8 . k
+                    # 19 |-> Utf8 . l
+                    # 20 |-> Utf8 . StackMapTable
+                    # 21 |-> Utf8 . SourceFile
+                    # 22 |-> Utf8 .  ShortOperations. java 
+                    # 23 |-> NameAndType . # 4 : # 5
+                    # 24 |-> Utf8 . ShortOperations
+                    # 25 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(ShortOperations : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / ShortOperations  . class
+                last_modified |-> ( May , 14 , 2014 )
+                md5_checksum |-> 4f8b87a472d2488ffed79ca84acf9f52
+                compiled_from |-> "ShortOperations.java"
+                sourcefile |-> "ShortOperations.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                .Map
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( ShortOperations , <envStack> ( ShortOperations , <env> 
+          .Map </env> ) (   java/ lang / Object  , <env> .Map </env> ) 
+          </envStack> )
+    </heap>
+</t>

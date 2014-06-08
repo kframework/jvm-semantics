@@ -1,0 +1,329 @@
+<t>
+    <k>
+        .K
+    </k>
+    <crntMethod>
+        .K
+    </crntMethod>
+    <preparation>
+        .K
+    </preparation>
+    <nextRefLoc>
+        2
+    </nextRefLoc>
+    <pc>
+        34
+    </pc>
+    <crntField>
+        .K
+    </crntField>
+    <localVarTblCnt>
+        2
+    </localVarTblCnt>
+    <crntClass>
+        .K
+    </crntClass>
+    <tempOperandStack>
+        .List
+    </tempOperandStack>
+    <envStack>
+        .List
+    </envStack>
+    <stack>
+        <crntFrame>
+            -1
+        </crntFrame>
+        <frames>
+            .Bag
+        </frames>
+        <frameStack>
+            .Map
+        </frameStack>
+    </stack>
+    <classes>
+        <class>
+            <classDecl>
+                public class BitwiseOperations
+            </classDecl>
+            <methods>
+                <method>
+                    <methodDecl>
+                        public static void main (java.lang.String[]) ;
+                    </methodDecl>
+                    <methodNameType>
+                        main : ( [  Ljava/ lang  / String ; ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            11 |-> 0
+                            12 |-> 6
+                            13 |-> 11
+                            14 |-> 16
+                            15 |-> 22
+                            16 |-> 28
+                            17 |-> 34
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> sipush 128
+                            3 |-> putstatic # 2
+                            6 |-> bipush 8
+                            8 |-> putstatic # 3
+                            11 |-> ldc # 4
+                            13 |-> putstatic # 5
+                            16 |-> ldc2_w # 6
+                            19 |-> putstatic # 8
+                            22 |-> ldc2_w # 9
+                            25 |-> putstatic # 11
+                            28 |-> ldc2_w # 12
+                            31 |-> putstatic # 14
+                            34 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 2
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 35,, args,, [  Ljava/ lang 
+                               / String ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+                <method>
+                    <methodDecl>
+                        public BitwiseOperations ( ) ;
+                    </methodDecl>
+                    <methodNameType>
+                        BitwiseOperations : ( ) V
+                    </methodNameType>
+                    <code>
+                        <stackMapTbl>
+                            .K
+                        </stackMapTbl>
+                        <lineNoTbl>
+                            1 |-> 0
+                        </lineNoTbl>
+                        <methodStmts>
+                            0 |-> aload_0
+                            1 |-> invokespecial # 1
+                            4 |-> return
+                        </methodStmts>
+                        <metaInfo>
+                            stack |-> 1
+                            locals |-> 1
+                            args_size |-> 1
+                        </metaInfo>
+                        <localVarTbl>
+                            0 |-> '`(_,_,_,_`)(0,, 5,, this,, 
+                              LBitwiseOperations ;)
+                        </localVarTbl>
+                    </code>
+                    <methodFlags>
+                        .Set
+                    </methodFlags>
+                </method>
+            </methods>
+            <fields>
+                <field>
+                    <fieldDecl>
+                        public static int a ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static int b ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static int c ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static long d ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static long e ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+                <field>
+                    <fieldDecl>
+                        public static long f ;
+                    </fieldDecl>
+                    <constVal>
+                        .K
+                    </constVal>
+                    <fieldFlags>
+                        .Set
+                    </fieldFlags>
+                </field>
+            </fields>
+            <cpool>
+                <cpoolVals>
+                    # 1 |->   java/ lang / Object  . <init> : ( ) V
+                    # 2 |->  BitwiseOperations. a : I 
+                    # 3 |->  BitwiseOperations. b : I 
+                    # 4 |-> 1073741816
+                    # 5 |->  BitwiseOperations. c : I 
+                    # 6 |-> 256
+                    # 8 |->  BitwiseOperations. d : J 
+                    # 9 |-> 64
+                    # 11 |->  BitwiseOperations. e : J 
+                    # 12 |-> 4294967295
+                    # 14 |->  BitwiseOperations. f : J 
+                    # 15 |-> BitwiseOperations
+                    # 16 |->   java/ lang / Object 
+                    # 17 |-> a
+                    # 18 |-> I
+                    # 19 |-> b
+                    # 20 |-> c
+                    # 21 |-> d
+                    # 22 |-> J
+                    # 23 |-> e
+                    # 24 |-> f
+                    # 25 |-> <init>
+                    # 26 |-> ( ) V
+                    # 27 |-> Code
+                    # 28 |-> LineNumberTable
+                    # 29 |-> LocalVariableTable
+                    # 30 |-> this
+                    # 31 |-> LBitwiseOperations ;
+                    # 32 |-> main
+                    # 33 |-> ( [  Ljava/ lang  / String ; ) V
+                    # 34 |-> args
+                    # 35 |-> [  Ljava/ lang  / String ;
+                    # 36 |-> SourceFile
+                    # 37 |->  BitwiseOperations. java 
+                    # 38 |-> <init> : ( ) V
+                    # 39 |->  a: I 
+                    # 40 |->  b: I 
+                    # 41 |->  c: I 
+                    # 42 |->  d: J 
+                    # 43 |->  e: J 
+                    # 44 |->  f: J 
+                    # 45 |-> BitwiseOperations
+                    # 46 |->   java/ lang / Object 
+                </cpoolVals>
+                <cpoolStmts>
+                    # 1 |-> Methodref . # 16 . # 38
+                    # 2 |-> Fieldref . # 15 . # 39
+                    # 3 |-> Fieldref . # 15 . # 40
+                    # 4 |-> Integer . 1073741816
+                    # 5 |-> Fieldref . # 15 . # 41
+                    # 6 |-> Long . 256l
+                    # 8 |-> Fieldref . # 15 . # 42
+                    # 9 |-> Long . 64l
+                    # 11 |-> Fieldref . # 15 . # 43
+                    # 12 |-> Long . 4294967295l
+                    # 14 |-> Fieldref . # 15 . # 44
+                    # 15 |-> Class . # 45
+                    # 16 |-> Class . # 46
+                    # 17 |-> Utf8 . a
+                    # 18 |-> Utf8 . I
+                    # 19 |-> Utf8 . b
+                    # 20 |-> Utf8 . c
+                    # 21 |-> Utf8 . d
+                    # 22 |-> Utf8 . J
+                    # 23 |-> Utf8 . e
+                    # 24 |-> Utf8 . f
+                    # 25 |-> Utf8 . <init>
+                    # 26 |-> Utf8 . ( ) V
+                    # 27 |-> Utf8 . Code
+                    # 28 |-> Utf8 . LineNumberTable
+                    # 29 |-> Utf8 . LocalVariableTable
+                    # 30 |-> Utf8 . this
+                    # 31 |-> Utf8 . LBitwiseOperations ;
+                    # 32 |-> Utf8 . main
+                    # 33 |-> Utf8 . ( [  Ljava/ lang  / String ; ) V
+                    # 34 |-> Utf8 . args
+                    # 35 |-> Utf8 . [  Ljava/ lang  / String ;
+                    # 36 |-> Utf8 . SourceFile
+                    # 37 |-> Utf8 .  BitwiseOperations. java 
+                    # 38 |-> NameAndType . # 25 : # 26
+                    # 39 |-> NameAndType . # 17 : # 18
+                    # 40 |-> NameAndType . # 19 : # 18
+                    # 41 |-> NameAndType . # 20 : # 18
+                    # 42 |-> NameAndType . # 21 : # 22
+                    # 43 |-> NameAndType . # 23 : # 22
+                    # 44 |-> NameAndType . # 24 : # 22
+                    # 45 |-> Utf8 . BitwiseOperations
+                    # 46 |-> Utf8 .   java/ lang / Object 
+                </cpoolStmts>
+            </cpool>
+            <classFlags>
+                SetItem(ACC_PUBLIC)
+                SetItem(ACC_STATIC)
+                SetItem(ACC_SUPER)
+            </classFlags>
+            <implMethods>
+                SetItem(main : ( [  Ljava/ lang  / String ; ) V)
+                SetItem(BitwiseOperations : ( ) V)
+            </implMethods>
+            <classInfo>
+                classfile |-> /    home/ stefan / Projects / jvm  -   
+                  semantics/ programs / BitwiseOperations  . class
+                last_modified |-> ( Jun , 7 , 2014 )
+                md5_checksum |-> 3daaa42e740138f22e0aacad629f2fd9
+                compiled_from |-> "BitwiseOperations.java"
+                sourcefile |-> "BitwiseOperations.java"
+                minor_version |-> 0
+                major_version |-> 51
+            </classInfo>
+            <staticFields>
+                a |-> 128
+                b |-> 8
+                c |-> 1073741816
+                d |-> 256
+                e |-> 64
+                f |-> 4294967295
+            </staticFields>
+            <env>
+                .Map
+            </env>
+        </class>
+    </classes>
+    <heap>
+        1 |-> object ( BitwiseOperations , <envStack> ( BitwiseOperations , 
+          <env> .Map </env> ) (   java/ lang / Object  , <env> .Map </env> ) 
+          </envStack> )
+    </heap>
+</t>
